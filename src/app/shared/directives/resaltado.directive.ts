@@ -1,10 +1,11 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[appResaltado]'
+  selector: '[appResaltado]',
 })
 export class ResaltadoDirective {
-
-  constructor() { }
-
+  constructor(private eRef: ElementRef) {
+    this.eRef.nativeElement.style.fontSize = '20px';
+    this.eRef.nativeElement.style.fontWeight = '700';
+  }
 }
