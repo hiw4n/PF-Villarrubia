@@ -21,7 +21,7 @@ export class StudentsDialogComponent {
   ) {
     this.studentForm = this.fb.group({
       name: [null, Validators.required],
-      lastname: [],
+      lastName: [],
       courses: [],
     });
     if (this.editingStudent) {

@@ -11,14 +11,9 @@ import { Course } from './models/course.interface';
   styleUrl: './students.component.scss',
 })
 export class StudentsComponent {
-  nombreCurso: string = '';
-  displayedColumns: string[] = [
-    'id',
-    'name',
-    'startDate',
-    'endDate',
-    'actions',
-  ];
+  nombreStudent: string = '';
+  apellidoStudent: string = '';
+  displayedColumns: string[] = ['id', 'name', 'lastName', 'courses', 'actions'];
   /* dataSource = ELEMENT_DATA;*/
   dataSource: Course[] = courseList;
 
@@ -32,9 +27,8 @@ export class StudentsComponent {
         next: (value) => {
           console.log('recibimos este valor: ', value);
           value.id = this.dataSource.length + 1;
-          this.nombreCurso = value.name;
-          value.startDate = new Date();
-          value.endDate = new Date();
+          this.nombreStudent = value.name;
+          this.apellidoStudent = value.lastName;
 
           this.dataSource = [...this.dataSource, value];
         },
