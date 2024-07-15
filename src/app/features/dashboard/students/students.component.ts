@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { StudentsDialogComponent } from './components/students-dialog/students-dialog.component';
 import { Students } from './models/students.interface';
@@ -13,7 +13,14 @@ import { Course } from './models/course.interface';
 export class StudentsComponent {
   nombreStudent: string = '';
   apellidoStudent: string = '';
-  displayedColumns: string[] = ['id', 'name', 'lastName', 'courses', 'actions'];
+  displayedColumns: string[] = [
+    'id',
+    'nameLastname',
+    'name',
+    'lastName',
+    'courses',
+    'actions',
+  ];
   /* dataSource = ELEMENT_DATA;*/
   dataSource: Course[] = courseList;
 

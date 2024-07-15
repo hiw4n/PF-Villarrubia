@@ -11,9 +11,12 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTableModule } from '@angular/material/table';
-import { StudentsDialogComponent } from './components/students-dialog/students-dialog.component';
+import { MatSelectModule } from '@angular/material/select';
 
+import { StudentsDialogComponent } from './components/students-dialog/students-dialog.component';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { SharedModule } from '../../../shared/shared.module';
+import { StudenNameLastnamePipe } from '../../../shared/pipes/studen-name-lastname.pipe';
 
 @NgModule({
   declarations: [StudentsComponent, StudentsDialogComponent],
@@ -22,16 +25,17 @@ import { provideNativeDateAdapter } from '@angular/material/core';
   imports: [
     CommonModule,
     StudentsRoutingModule,
+    SharedModule,
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
     MatFormFieldModule,
-    MatInputModule,
     ReactiveFormsModule,
     MatDatepickerModule,
     MatTableModule,
+    MatSelectModule,
   ],
 })
 export class StudentsModule {}
