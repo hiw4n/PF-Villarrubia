@@ -9,11 +9,19 @@ const routes: Routes = [
   /*  {
     path: 'auth',
     component: LoginComponent,
-  }, */
+  }, */ {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  },
   {
     path: 'dashboard',
     component: DashboardComponent,
     children: [
+      {
+        path: '',
+        component: StudentsComponent,
+      },
       {
         path: 'courses',
         component: CoursesComponent,
@@ -27,12 +35,6 @@ const routes: Routes = [
   {
     path: '**',
     component: DashboardComponent,
-    children: [
-      {
-        path: 'students',
-        component: StudentsComponent,
-      },
-    ],
   },
 ];
 
