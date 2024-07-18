@@ -1,13 +1,7 @@
-<button (click)="openDialog()" mat-flat-button>
-  <mat-icon>
-    add
-  </mat-icon>
-  Dar de alta a un Alumno
-</button>
 <!-- <div *ngIf="nombreCurso" class="p-3">
   <p>Nombre Curso Creado: {{nombreCurso}}</p>
 </div> -->
-
+<h1>Lista de Estudiantes <mat-icon>face</mat-icon></h1>
 <div class="table table-courses p-3">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -52,7 +46,7 @@
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
         <button (click)="deleteById(element.id)" mat-icon-button>
-          <mat-icon>deleted</mat-icon>
+          <mat-icon>person_remove</mat-icon>
         </button>
         <button (click)="edit(element)" mat-icon-button>
           <mat-icon>edit</mat-icon>
@@ -65,3 +59,9 @@
 
   </table>
 </div>
+<button (click)="openDialog()" mat-flat-button class="button-send">
+  Incluir estudiante
+  <mat-icon>
+    person_add
+  </mat-icon>
+</button>
