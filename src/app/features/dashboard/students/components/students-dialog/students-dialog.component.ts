@@ -32,7 +32,7 @@ export class StudentsDialogComponent {
     if (this.studentForm.valid) {
       this.matDialogRef.close(this.studentForm.value);
     } else {
-      //warning
+      alert('por favor incluye un nombre');
     }
 
     /* if (
