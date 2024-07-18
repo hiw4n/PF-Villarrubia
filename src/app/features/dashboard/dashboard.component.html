@@ -3,9 +3,9 @@
   <mat-drawer [opened]="false" #drawer class="example-sidenav" mode="side">
     <mat-nav-list>
       <a mat-list-item href="...">Inicio</a>
-      <a mat-list-item href="...">Cursos</a>
-      <a mat-list-item href="...">Alumnos</a>
-      <a mat-list-item href="...">Inscripciones</a>
+      <a mat-list-item routerLink="courses">Cursos</a>
+      <a mat-list-item routerLink="students">Alumnos</a>
+      <!-- <a mat-list-item href="...">Inscripciones</a>-->
     </mat-nav-list>
   </mat-drawer>
   <!-- SIDEBAR -------------------------------------------------- FIN -->
@@ -31,13 +31,17 @@
     </mat-toolbar>
     <!-- TOOLBAR --------------------------------------------------  FIN -->
 
+
+
     <main class="p-1">
       <div class="container">
         <div class="row">
+          <router-outlet />
           <app-students />
+          <!--
         </div>
         <div class="row">
-          <app-courses />
+          <app-courses /> -->
         </div>
       </div>
     </main>
