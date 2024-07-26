@@ -16,6 +16,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { CoursesModule } from './courses/courses.module';
 import { StudentsModule } from './students/students.module';
 import { SharedModule } from '../../shared/shared.module';
+import { AuthModule } from '../auth/auth.module';
 /* import { AuthModule } from '../auth/auth.module'; */
 
 @NgModule({

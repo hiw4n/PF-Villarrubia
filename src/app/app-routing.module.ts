@@ -4,6 +4,7 @@ import { LoginComponent } from './features/auth/login/login.component';
 import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { CoursesComponent } from './features/dashboard/courses/courses.component';
 import { StudentsComponent } from './features/dashboard/students/students.component';
+import { RegisterComponent } from './features/auth/register/register.component';
 
 const routes: Routes = [
   /*  {
@@ -14,6 +15,11 @@ const routes: Routes = [
     redirectTo: 'dashboard',
     pathMatch: 'full',
   },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  { path: 'register', component: RegisterComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,

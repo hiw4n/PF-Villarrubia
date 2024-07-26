@@ -9,10 +9,15 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { DashboardModule } from './features/dashboard/dashboard.module';
 import { AuthModule } from './features/auth/auth.module';
 import { SharedModule } from './shared/shared.module';
-import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
+import { provideNativeDateAdapter } from '@angular/material/core';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+//import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
 
 @NgModule({
-  declarations: [AppComponent, StudentsDialogComponent],
+  declarations: [
+    AppComponent,
+    //StudentsDialogComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,7 +25,15 @@ import { StudentsDialogComponent } from './src/app/features/dashboard/students/c
     AuthModule,
     SharedModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [
+    provideAnimationsAsync(),
+    provideNativeDateAdapter(),
+    /* Material change style form */
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { apparence: 'outline' },
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

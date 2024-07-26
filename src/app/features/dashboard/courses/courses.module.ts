@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { provideNativeDateAdapter } from '@angular/material/core';
 
@@ -32,6 +33,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatTableModule,
+    MatProgressSpinnerModule,
   ],
 })
 export class CoursesModule {}

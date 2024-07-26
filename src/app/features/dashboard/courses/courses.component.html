@@ -1,3 +1,6 @@
+@if(isLoading){
+<mat-spinner></mat-spinner>
+}@else{
 <button (click)="openDialog()" mat-flat-button>
   <mat-icon>
     add
@@ -5,14 +8,14 @@
   Crear curso
 </button>
 <!-- <div *ngIf="nombreCurso" class="p-3">
-  <p>Nombre Curso Creado: {{nombreCurso}}</p>
-</div> -->
+    <p>Nombre Curso Creado: {{nombreCurso}}</p>
+  </div> -->
 
 <div class="table table-courses p-3">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
+            The actual rendered columns are set as a property on the row definition" -->
 
     <!-- id Column -->
     <ng-container matColumnDef="id">
@@ -56,3 +59,4 @@
 
   </table>
 </div>
+}

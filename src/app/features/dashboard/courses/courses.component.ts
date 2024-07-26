@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CoursesDialogComponent } from './components/courses-dialog/courses-dialog.component';
 import { Course } from './models/course.interface';
-import { courseList } from './models/course.json';
+import { CoursesService } from '../../../core/services/courses.service';
 
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss',
 })
-export class CoursesComponent {
+export class CoursesComponent implements OnInit {
   nombreCurso: string = '';
   displayedColumns: string[] = [
     'id',
@@ -19,9 +19,28 @@ export class CoursesComponent {
     'actions',
   ];
   /* dataSource = ELEMENT_DATA;*/
-  dataSource: Course[] = courseList;
+  dataSource: Course[] = [];
+  isLoading: boolean = false;
 
-  constructor(private matDialog: MatDialog) {}
+  constructor(
+    private matDialog: MatDialog,
+    private CoursesService: CoursesService
+  ) {}
+
+  ngOnInit(): void {
+    this.loadCourses();
+  }
+  loadCourses() {
+    this.isLoading = true;
+    this.CoursesService.getCourses().subscribe({
+      next: (courses) => {
+        this.dataSource = courses;
+      },
+      complete: () => {
+        this.isLoading = false;
+      },
+    });
+  }
   openDialog(): void {
     // Dialog form course
     this.matDialog
