@@ -1,10 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { StudentsDialogComponent } from './components/students-dialog/students-dialog.component';
-import { Students } from './models/students.interface';
-import { studentsList } from './models/students.json';
-import { courseList } from './models/course.json';
-import { Course } from './models/course.interface';
+import { Student } from '../../../core/models/students.interface';
+import { studentsList } from './models_OLD/students.json';
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
@@ -22,11 +20,11 @@ export class StudentsComponent {
     'actions',
   ];
   /* dataSource = ELEMENT_DATA;*/
-  dataSource: Course[] = courseList;
+  dataSource: Student[] = studentsList;
 
   constructor(private matDialog: MatDialog) {}
   openDialog(): void {
-    // Dialog form course
+    // Dialog form student
     this.matDialog
       .open(StudentsDialogComponent)
       .afterClosed()
@@ -47,7 +45,7 @@ export class StudentsComponent {
       this.dataSource = this.dataSource.filter((e) => e.id != id);
     }
   }
-  edit(editingStudent: Course) {
+  edit(editingStudent: Student) {
     this.matDialog
       .open(StudentsDialogComponent, { data: editingStudent })
       .afterClosed()

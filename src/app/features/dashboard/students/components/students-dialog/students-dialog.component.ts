@@ -2,9 +2,7 @@ import { Component, Inject, signal } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { Students } from '../../models/students.interface';
-import { Course } from '../../models/course.interface';
-import { courseList } from '../../models/course.json';
+import { Student } from '../../../../../core/models/students.interface';
 
 @Component({
   selector: 'app-students-dialog',
@@ -17,7 +15,7 @@ export class StudentsDialogComponent {
   constructor(
     private fb: FormBuilder,
     private matDialogRef: MatDialogRef<StudentsDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public editingStudent?: Course
+    @Inject(MAT_DIALOG_DATA) public editingStudent?: Student
   ) {
     this.studentForm = this.fb.group({
       name: [null, Validators.required],
@@ -34,11 +32,5 @@ export class StudentsDialogComponent {
     } else {
       alert('por favor incluye un nombre');
     }
-
-    /* if (
-      this.studentForm.value.name == null ||
-      this.studentForm.value.name == ''
-    ) {
-    }  */
   }
 }
