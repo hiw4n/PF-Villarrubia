@@ -32,9 +32,9 @@ export class CoursesComponent implements OnInit {
   }
   loadCourses() {
     this.isLoading = true;
-    this.CoursesService.getCourses().subscribe({
-      next: (courses) => {
-        this.dataSource = courses;
+    this.CoursesService.get().subscribe({
+      next: (o) => {
+        this.dataSource = o;
       },
       complete: () => {
         this.isLoading = false;
@@ -47,33 +47,48 @@ export class CoursesComponent implements OnInit {
       .open(CoursesDialogComponent)
       .afterClosed()
       .subscribe({
-        next: (value) => {
-          console.log('recibimos este valor: ', value);
-          value.id = this.dataSource.length + 1;
-          this.nombreCurso = value.name;
-          value.startDate = new Date();
-          value.endDate = new Date();
-
-          this.dataSource = [...this.dataSource, value];
+        next: (v) => {
+          v.id = this.dataSource.length + 1;
+          this.nombreCurso = v.name;
+          v.startDate = new Date();
+          v.endDate = new Date();
+          this.isLoading = true;
+          this.CoursesService.add(v).subscribe({
+            next: (o) => {
+              this.dataSource = [...o];
+            },
+            complete: () => {
+              this.isLoading = false;
+            },
+          });
         },
       });
   }
   //table form
   deleteById(id: string) {
     if (confirm('Esta seguro?')) {
-      this.dataSource = this.dataSource.filter((e) => e.id != id);
+      this.isLoading = true;
+      this.CoursesService.deletedById(id).subscribe({
+        next: (o) => {
+          this.dataSource = [...o];
+        },
+        complete: () => {
+          this.isLoading = false;
+        },
+      });
+      /* this.dataSource = this.dataSource.filter((e) => e.id != id); */
     }
   }
-  edit(editingCourse: Course) {
+  editById(data: Course) {
     this.matDialog
-      .open(CoursesDialogComponent, { data: editingCourse })
+      .open(CoursesDialogComponent, { data: data })
       .afterClosed()
       .subscribe({
-        next: (v) => {
-          if (!!v) {
-            this.dataSource = this.dataSource.map((e) =>
-              e.id === editingCourse.id ? { ...v, id: editingCourse.id } : e
-            );
+        next: (e) => {
+          if (!!e) {
+            this.CoursesService.editById(data.id, e).subscribe({
+              next: (o) => (this.dataSource = [...o]),
+            });
           }
         },
       });
