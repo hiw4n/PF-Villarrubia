@@ -18,9 +18,9 @@ export class StudentsDialogComponent {
     @Inject(MAT_DIALOG_DATA) public editingStudent?: Student
   ) {
     this.studentForm = this.fb.group({
-      name: [null, Validators.required],
-      lastName: [],
-      courses: [],
+      name: ['Name', Validators.required],
+      lastName: ['Lastname', Validators.required],
+      courses: ['Course', Validators.required],
     });
     if (this.editingStudent) {
       this.studentForm.patchValue(this.editingStudent);

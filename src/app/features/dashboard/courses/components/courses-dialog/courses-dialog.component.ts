@@ -19,8 +19,8 @@ export class CoursesDialogComponent {
   ) {
     this.courseForm = this.fb.group({
       name: [null, Validators.required],
-      startDate: [],
-      endDate: [],
+      startDate: [Validators.required],
+      endDate: [Validators.required],
     });
     if (this.editingCourse) {
       this.courseForm.patchValue(this.editingCourse);
