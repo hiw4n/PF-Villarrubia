@@ -12,7 +12,6 @@ import { MatSelectModule } from '@angular/material/select';
 /* App */
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { CoursesModule } from './courses/courses.module';
 import { StudentsModule } from './students/students.module';
 import { SharedModule } from '../../shared/shared.module';
@@ -20,7 +19,7 @@ import { AuthModule } from '../auth/auth.module';
 /* import { AuthModule } from '../auth/auth.module'; */
 
 @NgModule({
-  declarations: [DashboardComponent, SidebarComponent],
+  declarations: [DashboardComponent],
 
   imports: [
     CommonModule,

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CoursesDialogComponent } from './components/courses-dialog/courses-dialog.component';
-import { Course } from './models/course.interface';
 import { CoursesService } from '../../../core/services/courses.service';
+import { Course } from '../../../core/models/course.interface';
 
 @Component({
   selector: 'app-courses',

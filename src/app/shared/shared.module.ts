@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     StudenNameLastnamePipe,
     ResaltadoDirective,
     NavComponent,
+    SidebarComponent,
     LoadingComponent,
   ],
   exports: [
@@ -32,6 +34,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     StudenNameLastnamePipe,
     ResaltadoDirective,
     NavComponent,
+    SidebarComponent,
     LoadingComponent,
   ],
   imports: [

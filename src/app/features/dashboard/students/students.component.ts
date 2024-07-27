@@ -14,8 +14,8 @@ export class StudentsComponent {
   displayedColumns: string[] = [
     'id',
     'nameLastname',
-    'name',
-    'lastName',
+    /* 'name',
+    'lastName', */
     'courses',
     'actions',
   ];

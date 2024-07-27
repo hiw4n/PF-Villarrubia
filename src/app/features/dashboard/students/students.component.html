@@ -16,21 +16,21 @@
 
     <!-- Name Column -->
     <ng-container matColumnDef="nameLastname">
-      <th mat-header-cell *matHeaderCellDef appResaltado> Nombre (pipe)</th>
+      <th mat-header-cell *matHeaderCellDef appResaltado> Nombre y Apellidos</th>
       <td mat-cell *matCellDef="let element"> {{ element.lastName | studenNameLastname: element.name}}</td>
     </ng-container>
 
     <!-- LastName Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef appResaltado> Apellidos </th>
+    <!-- <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef appResaltado> Nombre </th>
       <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
-    </ng-container>
+    </ng-container> -->
 
     <!-- LastName Column -->
-    <ng-container matColumnDef="lastName">
+    <!-- <ng-container matColumnDef="lastName">
       <th mat-header-cell *matHeaderCellDef appResaltado> Apellidos </th>
       <td mat-cell *matCellDef="let element"> {{ element.lastName }} </td>
-    </ng-container>
+    </ng-container> -->
 
     <!-- Name And LastNAme Column -->
 
