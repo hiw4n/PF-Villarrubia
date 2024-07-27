@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { StudentsDialogComponent } from './components/students-dialog/students-dialog.component';
 import { Student } from '../../../core/models/students.interface';
-import { studentsList } from './models_OLD/students.json';
+import { studentsList } from '../../../core/data/student.json';
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
