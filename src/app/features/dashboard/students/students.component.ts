@@ -11,15 +11,7 @@ import { studentsList } from '../../../core/data/student.json';
 export class StudentsComponent {
   nombreStudent: string = '';
   apellidoStudent: string = '';
-  displayedColumns: string[] = [
-    'id',
-    'nameLastname',
-    /* 'name',
-    'lastName', */
-    'courses',
-    'actions',
-  ];
-  /* dataSource = ELEMENT_DATA;*/
+  displayedColumns: string[] = ['id', 'nameLastname', 'courses', 'actions'];
   dataSource: Student[] = studentsList;
 
   constructor(private matDialog: MatDialog) {}
@@ -34,7 +26,6 @@ export class StudentsComponent {
           value.id = this.dataSource.length + 1;
           this.nombreStudent = value.name;
           this.apellidoStudent = value.lastName;
-
           this.dataSource = [...this.dataSource, value];
         },
       });

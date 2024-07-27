@@ -15,8 +15,7 @@ import { DashboardComponent } from './dashboard.component';
 import { CoursesModule } from './courses/courses.module';
 import { StudentsModule } from './students/students.module';
 import { SharedModule } from '../../shared/shared.module';
-import { AuthModule } from '../auth/auth.module';
-/* import { AuthModule } from '../auth/auth.module'; */
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [DashboardComponent],
@@ -24,6 +23,7 @@ import { AuthModule } from '../auth/auth.module';
   imports: [
     CommonModule,
     DashboardRoutingModule,
+    ReactiveFormsModule,
     /* AuthModule, */
     StudentsModule,
     CoursesModule,

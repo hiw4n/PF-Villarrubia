@@ -7,3 +7,6 @@
 .example-full-width {
   width: 100%;
 }
+.mdc-floating-label--required:not(.mdc-floating-label--hide-required-marker)::after{
+  color: rgb(255,0,0)!important;
+}
