@@ -17,9 +17,14 @@ import { StudentsDialogComponent } from './components/students-dialog/students-d
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { SharedModule } from '../../../shared/shared.module';
 import { StudenNameLastnamePipe } from '../../../shared/pipes/studen-name-lastname.pipe';
+import { StudentDetailsComponent } from './pages/student-details/student-details.component';
 
 @NgModule({
-  declarations: [StudentsComponent, StudentsDialogComponent],
+  declarations: [
+    StudentsComponent,
+    StudentsDialogComponent,
+    StudentDetailsComponent,
+  ],
   exports: [StudentsComponent],
   providers: [provideNativeDateAdapter()],
   imports: [

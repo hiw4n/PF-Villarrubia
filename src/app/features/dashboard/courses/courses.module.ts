@@ -15,9 +15,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { CourseDetailsComponent } from './pages/course-details/course-details.component';
 
 @NgModule({
-  declarations: [CoursesComponent, CoursesDialogComponent],
+  declarations: [
+    CoursesComponent,
+    CoursesDialogComponent,
+    CourseDetailsComponent,
+  ],
   exports: [CoursesComponent],
   providers: [provideNativeDateAdapter()],
   imports: [
