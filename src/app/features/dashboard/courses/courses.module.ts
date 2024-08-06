@@ -17,6 +17,11 @@ import { MaterialModule } from '../../../shared/material/material.module';
   ],
   exports: [CoursesComponent],
   providers: [provideNativeDateAdapter()],
-  imports: [CommonModule, CoursesRoutingModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    CoursesRoutingModule,
+    ReactiveFormsModule,
+    MaterialModule,
+  ],
 })
 export class CoursesModule {}

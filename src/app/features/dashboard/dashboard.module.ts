@@ -2,13 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 /* Material */
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
-import { MatSelectModule } from '@angular/material/select';
-
+import { MaterialModule } from '../../shared/material/material.module';
 /* App */
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
@@ -28,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     StudentsModule,
     CoursesModule,
     SharedModule,
+    MaterialModule,
   ],
-  exports: [DashboardComponent],
+  exports: [DashboardComponent, MaterialModule],
 })
 export class DashboardModule {}

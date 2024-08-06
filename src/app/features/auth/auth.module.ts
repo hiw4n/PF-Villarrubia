@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 /* ANGULAR MATERIAL */
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from '../../core/services/auth.service';
+import { MaterialModule } from '../../shared/material/material.module';
 @NgModule({
   declarations: [LoginComponent, RegisterComponent],
   imports: [
@@ -15,6 +16,7 @@ import { AuthService } from '../../core/services/auth.service';
     ReactiveFormsModule,
     /* components */
     AuthRoutingModule,
+    MaterialModule,
   ],
   exports: [LoginComponent],
   providers: [AuthService],
