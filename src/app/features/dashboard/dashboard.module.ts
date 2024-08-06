@@ -28,13 +28,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     StudentsModule,
     CoursesModule,
     SharedModule,
-    /* ANGULAR MATERIAL */
-    MatSidenavModule /* sidebar angular material */,
-    MatToolbarModule /* tollbar for sidebar */,
-    MatIconModule /* iconos for sidebar */,
-    MatButtonModule /* Buttons */,
-    MatListModule,
-    MatSelectModule,
   ],
   exports: [DashboardComponent],
 })

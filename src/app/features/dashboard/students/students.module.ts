@@ -3,15 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { StudentsRoutingModule } from './students-routing.module';
 import { StudentsComponent } from './students.component';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatTableModule } from '@angular/material/table';
-import { MatSelectModule } from '@angular/material/select';
 
 import { StudentsDialogComponent } from './components/students-dialog/students-dialog.component';
 import { provideNativeDateAdapter } from '@angular/material/core';
@@ -31,16 +23,7 @@ import { StudentDetailsComponent } from './pages/student-details/student-details
     CommonModule,
     StudentsRoutingModule,
     SharedModule,
-    MatIconModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatFormFieldModule,
     ReactiveFormsModule,
-    MatDatepickerModule,
-    MatTableModule,
-    MatSelectModule,
   ],
 })
 export class StudentsModule {}

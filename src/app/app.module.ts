@@ -9,6 +9,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { SharedModule } from './shared/shared.module';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MaterialModule } from './shared/material/material.module';
 //import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
 
 @NgModule({
@@ -16,12 +17,14 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
     AppComponent,
     //StudentsDialogComponent
   ],
+  exports: [MaterialModule],
   imports: [
     BrowserModule,
     AppRoutingModule,
     /* DashboardModule, */
     /* AuthModule, */
     SharedModule,
+    MaterialModule,
   ],
   providers: [
     provideAnimationsAsync(),
