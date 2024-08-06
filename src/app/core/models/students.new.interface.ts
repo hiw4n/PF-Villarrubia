@@ -1,11 +1,11 @@
 export interface StudentNew {
-  id: string;
-  name: string;
-  lastName: string;
-  birth_date: Date;
-  address: string;
-  courses: string[];
-  grades: number[];
-  teacher_evaluation: string;
+  id: number;
+  first_name: string;
+  last_name: string;
+  email: string;
+  birthdate: Date;
   photo: string;
+  evaluation: number;
+  address: string;
+  course_ids: number[];
 }
