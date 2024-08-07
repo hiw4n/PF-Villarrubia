@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "backend": "json-server --watch data/bd.json",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "backendOld": "npm json-server db.json"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
     "bootstrap": "^5.3.3",
+    "primeflex": "^3.3.1",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.12.4",
     "tslib": "^2.3.0",
@@ -32,6 +35,7 @@
     "@angular/compiler-cli": "^18.1.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
+    "json-server": "^0.17.4",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",

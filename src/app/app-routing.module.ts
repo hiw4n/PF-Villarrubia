@@ -5,16 +5,16 @@ import { RegisterComponent } from './features/auth/register/register.component';
 import { authGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
-  {
+  /* {
     path: '',
     redirectTo: 'auth/login',
     pathMatch: 'full',
-  },
-  /* {
+  }, */
+  {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
-  }, */
+  },
   {
     path: 'auth',
     loadChildren: () =>

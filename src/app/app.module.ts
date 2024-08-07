@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MaterialModule } from './shared/material/material.module';
+import { HttpClientModule } from '@angular/common/http';
 //import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MaterialModule } from './shared/material/material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     /* DashboardModule, */
     /* AuthModule, */
     SharedModule,

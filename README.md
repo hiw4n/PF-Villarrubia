@@ -1,4 +1,126 @@
-# PFVillarrubia
+# ANGULAR PROJECT
+
+(---)
+
+# EXPLORESAPP
+## DEV
+
+1. Clone the project.
+2. run ```npm install```.
+3. up backend ```npm run backend```.
+4. run app ```npm start```or ```ng server -o```.
+
+(---)
+
+### BACKEND
+```
+ // Resources
+  // http://localhost:3000/usersOld
+  // http://localhost:3000/users
+  // http://localhost:3000/coursesOld
+  // http://localhost:3000/courses
+  // http://localhost:3000/students
+  // http://localhost:3000/teachers
+  // 
+  // Home
+  // http://localhost:3000
+  
+```
+
+
+## Complements:
+
+```
+npm install
+```
+
+
+### Angular Material: 
+* [link](https://material.angular.io/guide/getting-started)
+```
+  ng add @angular/material
+```
+### Boodstrap: 
+* [link](https://getbootstrap.com/)
+```
+  npm i bootstrap@5.3.3
+```
+### Primeflex: 
+* [link](https://primeflex.org/)
+```
+  npm i primeflex
+```
+### fontAwesome: 
+* [link](https://github.com/FortAwesome/angular-fontawesome),
+* [npm](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)
+```
+  npm install @fortawesome/angular-fontawesome@18.x
+```
+### json to interface:
+* transform.tools: [link](https://transform.tools/json-to-typescript)
+
+### json server:
+* [link](https://www.npmjs.com/package/json-server)
+```
+  npm install json-server
+```
+```
+  // package.json
+   "scripts": {
+    ...
+    "backend":"npx json-server db.json",
+    ...
+   }
+```
+  npm run backend
+  // Index:
+  // http://localhost:3000/
+  //
+  // Static files:
+  // Serving ./public directory if it exists
+
+  // Endpoints:
+  // http://localhost:3000/usersOld
+  // http://localhost:3000/users
+  // http://localhost:3000/coursesOld
+  // http://localhost:3000/courses
+  // http://localhost:3000/students
+  // http://localhost:3000/teachers
+
+```
+
+
+### Software:
+* VisualStudio code.
+* Figma.
+* Photoshop.
+
+* Angular 18.
+* Node.
+* Js.
+* Html.
+* Scss / Sass.
+
+### obtención de info / IA:
+* JSon creados por: 
+ * chatGpt: [link](https://chatgpt.com/)
+* Imágenes creadas por: 
+ * Adobe firefly: [link](https://firefly.adobe.com/ ) 
+ * Freepick: [link](https://www.freepik.es/ai/imagenes) 
+ * OpenArt: [link](https://openart.ai/create) 
+* Tutoriales de referencia:
+  * Dev.to: 
+    * How to create a responsive sidebar and mini navigation with Material Angular [link](https://dev.to/davidihl/how-to-create-a-responsive-sidebar-and-mini-navigation-with-material-angular-o5l)
+
+
+
+
+
+
+
+
+
+# PFVillarrubiaMoreno
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
 

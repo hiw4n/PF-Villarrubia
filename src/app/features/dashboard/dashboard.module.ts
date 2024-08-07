@@ -8,22 +8,23 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { CoursesModule } from './courses/courses.module';
 import { StudentsModule } from './students/students.module';
-import { SharedModule } from '../../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CoursesSpaceComponent } from './courses-space/courses-space.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, CoursesSpaceComponent],
 
   imports: [
     CommonModule,
     DashboardRoutingModule,
     ReactiveFormsModule,
+    /* material */
+    SharedModule,
     /* AuthModule, */
     StudentsModule,
     CoursesModule,
-    SharedModule,
-    MaterialModule,
   ],
-  exports: [DashboardComponent, MaterialModule],
+  exports: [DashboardComponent, SharedModule],
 })
 export class DashboardModule {}

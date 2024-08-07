@@ -1,4 +1,4 @@
-export interface StudentNew {
+export interface StudentSpace {
   id: number;
   first_name: string;
   last_name: string;
@@ -7,5 +7,6 @@ export interface StudentNew {
   photo: string;
   evaluation: number;
   address: string;
+  planet_of_birth: string;
   course_ids: number[];
 }

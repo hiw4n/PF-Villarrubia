@@ -1,4 +1,4 @@
-<mat-drawer-container class="example-container" autosize>
+<mat-drawer-container class="example-container">
   <!-- <app-nav /> -->
   <!-- SIDEBAR -------------------------------------------------- INICIO -->
   <mat-drawer [opened]="false" #drawer class="example-sidenav" mode="side">
@@ -6,6 +6,7 @@
       <a mat-list-item routerLink="/auth/login">Login</a>
       <a mat-list-item routerLink="students">Alumnos</a>
       <a mat-list-item routerLink="courses">Cursos</a>
+      <a mat-list-item routerLink="courses-space">Cursos Espaciales</a>
       <!-- (click)="logOut()" -->
       <a mat-list-item>Cerrar Sesión</a>
       <!-- <a mat-list-item href="...">Inscripciones</a>-->

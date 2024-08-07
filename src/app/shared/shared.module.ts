@@ -11,26 +11,30 @@ import { ResaltadoDirective } from './directives/resaltado.directive';
 /* Material */
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { MaterialModule } from './material/material.module';
+import { imageUrlPipe } from './pipes/imageUrl.pipe';
 
 @NgModule({
   declarations: [
-    NamesAuthPipe,
-    ResaltadoDirective,
-    StudenNameLastnamePipe,
     ResaltadoDirective,
     NavComponent,
     SidebarComponent,
     LoadingComponent,
+    /* Pipe */
+    NamesAuthPipe,
+    StudenNameLastnamePipe,
+    imageUrlPipe,
   ],
   exports: [
-    NamesAuthPipe,
-    ResaltadoDirective,
-    StudenNameLastnamePipe,
     ResaltadoDirective,
     NavComponent,
     SidebarComponent,
     LoadingComponent,
+    /* ANGULAR MATERIAL */
     MaterialModule,
+    /* Pipe */
+    NamesAuthPipe,
+    StudenNameLastnamePipe,
+    imageUrlPipe,
   ],
   imports: [
     CommonModule,
