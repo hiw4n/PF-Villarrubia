@@ -20,7 +20,7 @@ export class DetailComponent implements OnInit {
   ngOnInit(): void {
     this.activateRoute.params
       .pipe(
-        delay(3000),
+        delay(1000),
         switchMap(({ id }) => this.courseService.getById(id))
       )
       .subscribe((c) => {
@@ -29,5 +29,8 @@ export class DetailComponent implements OnInit {
         console.log(c);
         return;
       });
+  }
+  goBack(): void {
+    this.router.navigateByUrl('dashboard/courses-space');
   }
 }

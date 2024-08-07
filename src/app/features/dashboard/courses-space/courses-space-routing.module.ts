@@ -5,31 +5,34 @@ import { DetailComponent } from './pages/detail/detail.component';
 import { NewComponent } from './pages/new/new.component';
 import { EditComponent } from './pages/edit/edit.component';
 import { SearchComponent } from './pages/search/search.component';
+import { CoursesSpaceComponent } from './courses-space.component';
 // courses
 const routes: Routes = [
   {
     path: '',
-    component: ListComponent,
-  },
-  {
-    path: 'new',
-    component: NewComponent,
-  },
-  {
-    path: 'edit/:id',
-    component: EditComponent,
-  },
-  {
-    path: ':id',
-    component: DetailComponent,
-  },
-  {
-    path: 'search',
-    component: SearchComponent,
-  },
-  {
-    path: '**',
-    component: ListComponent,
+    component: CoursesSpaceComponent,
+    children: [
+      {
+        path: 'new',
+        component: NewComponent,
+      },
+      {
+        path: 'edit/:id',
+        component: EditComponent,
+      },
+      {
+        path: ':id',
+        component: DetailComponent,
+      },
+      {
+        path: 'search',
+        component: SearchComponent,
+      },
+      {
+        path: '**',
+        component: ListComponent,
+      },
+    ],
   },
 ];
 

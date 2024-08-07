@@ -9,29 +9,32 @@
 
 </ng-template>
 
-<div *ngIf="course; else divLoading" class="grid">
-  {{ course | json}}
-  <mat-card-header>
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>{{course.name}}</mat-card-title>
-        <mat-card-subtitle>{{course.schedule}}</mat-card-subtitle>
-      </mat-card-header>
-      <img matCardImage src="Card wide image source">
-      <mat-card-content>
-        {{course.description}}
-      </mat-card-content>
-      <!-- <mat-card-actions align="start">
+<div *ngIf="course; else divLoading" class="grid p-2">
+  <mat-card class="col-12 sm:col-6">
+    <mat-card-header>
+      <mat-card-title>{{course.name}}</mat-card-title>
+      <mat-card-subtitle>{{course.schedule}}</mat-card-subtitle>
+    </mat-card-header>
+    <img matCardImage [src]=" course.image | imageUrl">
+
+  </mat-card>
+  <mat-card class="col-12 sm:col-6">
+    <mat-card-content>
+      <h3>
+        Descripción
+      </h3>
+      {{course.description}}
+    </mat-card-content>
+    <mat-card-actions align="start">
+      <button mat-button (click)="goBack()">Regresar</button>
+
+    </mat-card-actions>
+    <!--  <mat-card-actions align="start">
         <button mat-button (click)="onAction1">Action1</button>
 
       </mat-card-actions> -->
-      <!--  <mat-card-actions align="start">
-        <button mat-button (click)="onAction1">Action1</button>
-
-      </mat-card-actions> -->
-      <mat-card-footer>
-        Footer
-      </mat-card-footer>
-    </mat-card>
-  </mat-card-header>
+    <mat-card-footer>
+      start: {{ course.start_date}} - end: {{ course.end_date }}
+    </mat-card-footer>
+  </mat-card>
 </div>
