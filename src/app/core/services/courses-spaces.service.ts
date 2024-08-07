@@ -15,7 +15,7 @@ export class CoursesSpacesService {
   }
   getById(id: String): Observable<CourseSpace | undefined> {
     return this.http
-      .get<CourseSpace>(`${this.baseUrl}/courses-space/$${id}`)
+      .get<CourseSpace>(`${this.baseUrl}/courses-space/${id}`)
       .pipe(catchError((e) => of(undefined)));
   }
 }
