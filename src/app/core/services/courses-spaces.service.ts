@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
 import { CourseSpace } from '../interfaces/course-space.interface';
 import { environments } from '../../../environments/environments';
 
@@ -14,6 +14,8 @@ export class CoursesSpacesService {
     return this.http.get<CourseSpace[]>(`${this.baseUrl}/courses-space`);
   }
   getById(id: String): Observable<CourseSpace | undefined> {
-    return this.http.get<CourseSpace>(`${this.baseUrl}/courses-space/$${id}`);
+    return this.http
+      .get<CourseSpace>(`${this.baseUrl}/courses-space/$${id}`)
+      .pipe(catchError((e) => of(undefined)));
   }
 }
