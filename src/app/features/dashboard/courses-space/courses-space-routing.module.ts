@@ -6,15 +6,23 @@ import { NewComponent } from './pages/new/new.component';
 import { EditComponent } from './pages/edit/edit.component';
 import { SearchComponent } from './pages/search/search.component';
 import { CoursesSpaceComponent } from './courses-space.component';
-// courses
+
 const routes: Routes = [
   {
-    path: '',
+    path: '', // courses-space
     component: CoursesSpaceComponent,
     children: [
       {
+        path: 'list',
+        component: ListComponent,
+      },
+      {
         path: 'new',
         component: NewComponent,
+      },
+      {
+        path: 'search',
+        component: SearchComponent,
       },
       {
         path: 'edit/:id',
@@ -23,10 +31,6 @@ const routes: Routes = [
       {
         path: ':id',
         component: DetailComponent,
-      },
-      {
-        path: 'search',
-        component: SearchComponent,
       },
       {
         path: '**',

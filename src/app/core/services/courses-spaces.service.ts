@@ -18,4 +18,10 @@ export class CoursesSpacesService {
       .get<CourseSpace>(`${this.baseUrl}/courses-space/${id}`)
       .pipe(catchError((e) => of(undefined)));
   }
+
+  getSuggestion(query: string): Observable<CourseSpace[]> {
+    return this.http.get<CourseSpace[]>(
+      `${this.baseUrl}/courses-space?=${query}&limit=6`
+    );
+  }
 }

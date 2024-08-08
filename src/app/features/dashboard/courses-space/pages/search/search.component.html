@@ -1,1 +1,25 @@
-<p>search works!</p>
+<div class="flex flex-column">
+
+  <h3>Buscador</h3>
+  <mat-form-field>
+    <mat-label>
+      Buscador de cursos
+    </mat-label>
+    <input type="text" matInput [formControl]="searchInput" (input)="search()" [matAutocomplete]="auto" />
+
+
+
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="onSelectedOption($event)">
+      <mat-option *ngFor="let c of courses" [value]="c">{{c.name}}</mat-option>
+      <mat-option *ngIf="courses.length === 0 && searchInput.value && searchInput.value!.length > 0">
+        No se encontró ningún curso con el termino {{ searchInput.value}}
+      </mat-option>
+    </mat-autocomplete>
+
+  </mat-form-field>
+
+  {{ selectedCourse | json}}
+
+
+
+</div>
