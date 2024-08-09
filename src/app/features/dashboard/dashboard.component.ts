@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../core/services/auth.service';
+import { User } from '../../core/models/user.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,9 +12,15 @@ export class DashboardComponent {
   /* SIDEBAR -------- STAR */
   showFiller = false;
   /* SIDEBAR -------- END */
-  constructor(/* private authService: AuthService */) {}
-
+  constructor(private authService: AuthService, private router: Router) {}
+  get user(): User | undefined {
+    return this.authService.currentUser;
+  }
   /* logOut() {
     this.authService.logOut();
   } */
+  onLogout() {
+    this.authService.logOut();
+    this.router.navigate(['/auth/login']);
+  }
 }

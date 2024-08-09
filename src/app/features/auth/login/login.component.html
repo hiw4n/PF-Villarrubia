@@ -1,81 +1,25 @@
-<div style="
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: azure;
-  ">
-  <mat-card style="max-width: 400px">
-    <mat-card-header>
-      <h1>Iniciar sesion</h1>
-    </mat-card-header>
+<div class="flex flex-column">
 
-    <mat-card-content>
-      <form (ngSubmit)="onSubmit()" [formGroup]="  loginForm">
-        <mat-form-field class="w-full mb-3">
-          <mat-label>Email</mat-label>
-          <input formControlName="email" matInput />
-          <mat-hint>Debe ingresar un correo electronico valido</mat-hint>
-          <mat-icon matSuffix>email</mat-icon>
-        </mat-form-field>
-        <mat-form-field class="w-full mb-3">
-          <mat-label>Contrasena</mat-label>
-          <input formControlName="password" matInput />
-          <mat-icon matSuffix>key</mat-icon>
-        </mat-form-field>
+  <span class="text-lg mb-4">Login</span>
 
-        <!--  <mat-form-field class="w-full">
-          <mat-label>Rol</mat-label>
-          <mat-select formControlName="role">
-            <mat-option value="ADMIN">ADMIN</mat-option>
-            <mat-option value="USER">USER</mat-option>
-          </mat-select>
-        </mat-form-field> -->
+  <mat-form-field>
+    <mat-label>Usuario</mat-label>
+    <input type="text" matInput placeholder="Nombre de usuario">
+  </mat-form-field>
 
-        <button type="submit" class="w-full mt-5" mat-flat-button>
-          Iniciar sesion
-        </button>
-      </form>
-    </mat-card-content>
-  </mat-card>
-</div>
+  <mat-form-field>
+    <mat-label>Contraseña</mat-label>
+    <input type="password" matInput placeholder="Contraseña">
+  </mat-form-field>
+
+  <button mat-button mat-flat-button color="primary" (click)="onLogin()">
+    <mat-icon>save</mat-icon>
+    Ingresar
+  </button>
 
 
-<!-- <div class="login">
-  <mat-card appearance="outlined">
-    <mat-card-header>
-      <mat-card-title>Iniciar Sesión</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-
-      <form>
-        <mat-form-field>
-          <mat-label>Usuario</mat-label>
-          <input matInput />
-          <mat-icon matPrefix>email</mat-icon>
-          <mat-hint>Escribir el mail con el que te registraste.</mat-hint>
-        </mat-form-field>
-        <div class="example-button-row">
-          <button mat-flat-button>Enviar</button>
-        </div>
-      </form>
-    </mat-card-content>
-
-  </mat-card>
-</div> -->
-
-<!-- <div class="container">
-  <div class="row justify-content-md-center">
-    <div class="col-6">
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-    </div>
+  <div class="flex justify-content-end mt-5">
+    <a routerLink="/auth/new-account">¿Ya tienes cuenta?</a>
   </div>
-</div> -->
+
+</div>

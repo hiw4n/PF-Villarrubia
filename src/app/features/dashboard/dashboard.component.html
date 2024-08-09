@@ -8,7 +8,7 @@
       <a mat-list-item routerLink="courses">Cursos</a>
       <a mat-list-item routerLink="courses-space">Cursos Espaciales</a>
       <!-- (click)="logOut()" -->
-      <a mat-list-item>Cerrar Sesión</a>
+      <a mat-list-item (click)="onLogout()">Cerrar Sesión</a>
       <!-- <a mat-list-item href="...">Inscripciones</a>-->
     </mat-nav-list>
   </mat-drawer>
@@ -21,6 +21,8 @@
       <button (click)="drawer.toggle()" mat-icon-button class="example-icon"
         aria-label="Example icon-button with menu icon">
         <mat-icon>menu</mat-icon>
+        <span class="spacer"></span>
+        <span>{{user?.firstName}}</span>
       </button>
       <span class="example-spacer"></span>
       <!-- ICON RIGHT -------------------------------------------------- INICIO -->

@@ -1,24 +1,26 @@
 import { Component, Input } from '@angular/core';
 import { AuthService } from '../../../core/services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 /* import { APP_CONFIG } from '../../../core/injection-tokens'; */
 
-@Component({
+/* @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
-})
+}) */
 export class LoginComponent {
+  /* @Input() id: string; */
+  loginForm: FormGroup;
+  /* */
   constructor(
     private authService: AuthService,
-    private router: Router,
-    private fb: FormBuilder
-  ) {}
-  onLogin(): void {
-    console.log('login');
-    this.authService.login('admin', 'admin').subscribe((user) => {
-      this.router.navigate(['/dashboard/courses-space']);
+    private fb: FormBuilder /* @Inject(APP_CONFIG) private appConfig: any */
+  ) {
+    this.loginForm = this.fb.group({
+      email: ['test@test.com', [Validators.required, Validators.email]],
+      password: ['12345', [Validators.required]],
     });
   }
+
+  onSubmit() {}
 }
