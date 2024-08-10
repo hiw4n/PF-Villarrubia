@@ -101,7 +101,7 @@ npm install
 * Html.
 * Scss / Sass.
 
-### obtención de info / IA:
+### Bibliografía / IA:
 * JSon creados por: 
  * chatGpt: [link](https://chatgpt.com/)
 * Imágenes creadas por: 
@@ -111,6 +111,9 @@ npm install
 * Tutoriales de referencia:
   * Dev.to: 
     * How to create a responsive sidebar and mini navigation with Material Angular [link](https://dev.to/davidihl/how-to-create-a-responsive-sidebar-and-mini-navigation-with-material-angular-o5l)
+  * medium.com:
+    * @bosarreyesrodrigo
+      * Creación de Pruebas Unitarias con Jasmine y Karma en Angular [Link](https://medium.com/@bosarreyesrodrigo/creaci%C3%B3n-de-pruebas-unitarias-con-jasmine-y-karma-en-angular-d720de52deea)
 
 
 
