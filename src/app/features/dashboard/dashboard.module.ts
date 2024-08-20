@@ -11,10 +11,10 @@ import { StudentsModule } from './students/students.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CoursesSpaceComponent } from './courses-space/courses-space.component';
 import { SharedModule } from '../../shared/shared.module';
+import { NavModule } from '../../shared/component/nav/nav.module';
 
 @NgModule({
   declarations: [DashboardComponent, CoursesSpaceComponent],
-
   imports: [
     CommonModule,
     DashboardRoutingModule,
@@ -24,6 +24,7 @@ import { SharedModule } from '../../shared/shared.module';
     /* AuthModule, */
     StudentsModule,
     CoursesModule,
+    NavModule,
   ],
   exports: [DashboardComponent, SharedModule],
 })

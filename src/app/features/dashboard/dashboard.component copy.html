@@ -1,0 +1,86 @@
+<mat-drawer-container class="dasboard-container">
+  <!-- <app-nav /> -->
+  <!-- SIDEBAR -------------------------------------------------- INICIO -->
+  <mat-drawer [opened]="false" #drawer class="dasboard-sidenav" mode="side">
+    <div class="nav-lat">
+      <mat-nav-list>
+        <ul>
+          <li>
+            <a routerLink="/">Inicio</a>
+          </li>
+          <li>
+            <a routerLink="/auth/login">Login</a>
+          </li>
+          <li>
+            <a routerLink="students">Alumnos</a>
+          </li>
+          <li>
+            <a routerLink="courses">Cursos</a>
+          </li>
+          <li>
+            <a routerLink="courses-space">Cursos Espaciales</a>
+          </li>
+        </ul>
+      </mat-nav-list>
+      <mat-nav-list>
+        <ul>
+          <li>
+            <a (click)="onLogout()">Cerrar Sesión</a>
+          </li>
+        </ul>
+      </mat-nav-list>
+    </div>
+    <!-- <mat-nav-list>
+      <a mat-list-item routerLink="/">Inicio</a>
+      <a mat-list-item routerLink="/auth/login">Login</a>
+      <a mat-list-item routerLink="students">Alumnos</a>
+      <a mat-list-item routerLink="courses">Cursos</a>
+      <a mat-list-item routerLink="courses-space">Cursos Espaciales</a>
+      <a mat-list-item (click)="onLogout()">Cerrar Sesión</a>
+    </mat-nav-list> -->
+  </mat-drawer>
+  <!-- SIDEBAR -------------------------------------------------- FIN -->
+
+  <!-- MAIN CONTENT --------------------------------------------------  INICIO-->
+  <div class="dasboard-sidenav-content">
+    <!-- TOOLBAR  -------------------------------------------------- INICIO -->
+    <mat-toolbar color="primary">
+      <button (click)="drawer.toggle()" mat-icon-button class="dasboard-icon"
+        aria-label="dasboard icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+        <span class="spacer"></span>
+        <span>{{user?.firstName}}</span>
+      </button>
+      <span class="dasboard-spacer"></span>
+      <!-- ICON RIGHT -------------------------------------------------- INICIO -->
+      <!-- <button mat-icon-button class="dasboard-icon favorite-icon" aria-label="dasboard icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="dasboard-icon" aria-label="dasboard icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button> -->
+      <!-- ICON RIGHT -------------------------------------------------- FIN -->
+
+    </mat-toolbar>
+    <!-- TOOLBAR --------------------------------------------------  FIN -->
+
+
+
+    <main class="p-1">
+      <div class="router-container">
+        <div class="row">
+          <router-outlet />
+          <!-- <app-students /> -->
+          <!--
+        </div>
+        <div class="row">
+          <app-courses /> -->
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <!-- MAIN CONTENT --------------------------------------------------  FIN-->
+
+
+</mat-drawer-container>

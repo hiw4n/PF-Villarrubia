@@ -1,0 +1,30 @@
+.nav{
+  &-container {
+    width: 100%;
+    height: 100vh;
+  }
+  &-sidenav {
+    padding: 20px;
+    width: 200px;
+  }
+  &-sidenav-content {
+    height: 100%;
+  }
+}
+.example{
+  &-container {
+    width: 100%;
+    height: 100vh;
+  }
+  &-sidenav {
+    padding: 20px;
+    width: 200px;
+  }
+  &-sidenav-content {
+    height: 100%;
+  }
+  /* TOOLBAR */
+  &-spacer {
+    /* flex: 1 1 auto; */
+  }
+}

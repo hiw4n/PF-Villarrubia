@@ -1,0 +1,45 @@
+.card{
+  &-round{
+    width: $card-round;
+    height: $card-round;
+    border-radius: 10000px;
+    outline: 3px solid $color-violet;
+    outline-offset: 6px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .image{
+      width: $card-round;
+      height: $card-round;
+      border-radius: 10000px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      background-color:$color-grey-neutral;
+      img{
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.button__card-round{
+  aspect-ratio: 1;
+  display: flex;
+  width: $button-float-size;
+  height: $button-float-size;
+  border-radius: 10000px;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-violet-opacity;
+  color: $color-violet;
+  backdrop-filter: blur(10px);
+  &__float{
+    position: absolute;
+
+    &-bottom{
+      bottom: -($button-float-size - ($button-float-size/2));
+    }
+  }
+}

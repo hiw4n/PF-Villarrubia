@@ -32,22 +32,22 @@ describe('TEST DE LOGIN -> LoginComponent', () => {
     /* form = new LoginComponent(new FormBuilder()); */
   });
 
-  it('should create, with all imports modules 😅', () => {
+  it(' ❤️‍🔥 should create, with all imports modules 😅', () => {
     expect(component).toBeTruthy();
   });
 
-  it('Form have form input email', () => {
+  it(' 💌 Form have form input email', () => {
     expect(component.loginForm.contains('email')).toBeTruthy();
   });
-  it('email is required', () => {
+  it(' 💌 email is required', () => {
     const control = component.loginForm.get('email');
     control?.setValue('');
     expect(control?.valid).toBeFalsy();
   });
-  it('Form have form input password', () => {
+  it(' 🔒 Form have form input password', () => {
     expect(component.loginForm.contains('password')).toBeTruthy();
   });
-  it('password is required', () => {
+  it(' 🔒 password is required', () => {
     const control = component.loginForm.get('password');
     control?.setValue('');
     expect(control?.valid).toBeFalsy();

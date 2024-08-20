@@ -11,11 +11,14 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MaterialModule } from './shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { IndexComponent } from './features/dashboard/index/index.component';
+import { NavModule } from './shared/component/nav/nav.module';
 //import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    IndexComponent,
     //StudentsDialogComponent
   ],
   exports: [MaterialModule],
@@ -27,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     /* AuthModule, */
     SharedModule,
     MaterialModule,
+    NavModule,
   ],
   providers: [
     provideAnimationsAsync(),

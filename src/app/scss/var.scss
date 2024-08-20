@@ -3,11 +3,27 @@
   $color-white: rgb(255,255,255);
   $color-violet: rgb(151, 59 ,122);
   $color-violet-opacity: rgba(151, 59, 122, 0.2);
+  $color-grey-neutral: rgb(147, 147,147);
 
   $color-bg: rgb(12 4 14);
 
 
+  $color-text-violet: rgb(223 196 233);
+
+
+  $border-radius: 10px;
+  $border-radius-big: 20px;
+
+
+  $botton-padding: 10px;
 
 
 
+// Card
+$card-round: 300px;
 
+.card{
+  --bs-card-bg: rgba(255,255,255,0);
+}
+//butons
+$button-float-size:50px;

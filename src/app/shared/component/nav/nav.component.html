@@ -1,29 +1,34 @@
-<mat-drawer-container class="example-container" autosize>
+<mat-drawer-container class="nav-containter">
+  <!-- <app-nav /> -->
   <!-- SIDEBAR -------------------------------------------------- INICIO -->
-  <mat-drawer [opened]="false" #drawer class="example-sidenav" mode="side">
+  <mat-drawer [opened]="false" #drawer class="nav-sidenav" mode="side">
     <mat-nav-list>
-      <a mat-list-item routerLink="login">Login</a>
+      <a mat-list-item routerLink="/auth/login">Login</a>
       <a mat-list-item routerLink="students">Alumnos</a>
       <a mat-list-item routerLink="courses">Cursos</a>
+      <a mat-list-item routerLink="courses-space">Cursos Espaciales</a>
+      <!-- (click)="logOut()" -->
+      <!-- <a mat-list-item (click)="onLogout()">Cerrar Sesión</a> -->
       <!-- <a mat-list-item href="...">Inscripciones</a>-->
     </mat-nav-list>
   </mat-drawer>
   <!-- SIDEBAR -------------------------------------------------- FIN -->
 
   <!-- MAIN CONTENT --------------------------------------------------  INICIO-->
-  <div class="example-sidenav-content">
+  <div class="nav-sidenav-content">
     <!-- TOOLBAR  -------------------------------------------------- INICIO -->
     <mat-toolbar color="primary">
-      <button (click)="drawer.toggle()" mat-icon-button class="example-icon"
-        aria-label="Example icon-button with menu icon">
+      <button (click)="drawer.toggle()" mat-icon-button class="nav-icon" aria-label="nav icon-button with menu icon">
         <mat-icon>menu</mat-icon>
+        <span class="spacer"></span>
+        <!-- <span>{{user?.firstName}}</span> -->
       </button>
-      <span class="example-spacer"></span>
+      <span class="nav-spacer"></span>
       <!-- ICON RIGHT -------------------------------------------------- INICIO -->
-      <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <!-- <button mat-icon-button class="nav-icon favorite-icon" aria-label="nav icon-button with heart icon">
           <mat-icon>favorite</mat-icon>
         </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <button mat-icon-button class="nav-icon" aria-label="nav icon-button with share icon">
           <mat-icon>share</mat-icon>
         </button> -->
       <!-- ICON RIGHT -------------------------------------------------- FIN -->
@@ -36,7 +41,8 @@
     <main class="p-1">
       <div class="container">
         <div class="row">
-
+          <!-- <router-outlet /> -->
+          <!-- <app-students /> -->
           <!--
         </div>
         <div class="row">

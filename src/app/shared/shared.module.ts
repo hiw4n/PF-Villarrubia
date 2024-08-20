@@ -12,6 +12,9 @@ import { ResaltadoDirective } from './directives/resaltado.directive';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import { MaterialModule } from './material/material.module';
 import { imageUrlPipe } from './pipes/imageUrl.pipe';
+import { NavLateralComponent } from './component/nav/nav-lateral/nav-lateral.component';
+import { NavTopComponent } from './component/nav/nav-top/nav-top.component';
+import { NavModule } from './component/nav/nav.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,7 @@ import { imageUrlPipe } from './pipes/imageUrl.pipe';
   ],
   imports: [
     CommonModule,
+    NavModule,
     /* ANGULAR MATERIAL */
     MaterialModule,
   ],

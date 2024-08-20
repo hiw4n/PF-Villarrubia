@@ -45,10 +45,35 @@ npm install
 ```
   npm i bootstrap@5.3.3
 ```
+```
+  // package.json
+  "options": {
+    "styles": [
+    ...
+      "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    ...
+    ],
+    "scripts": [
+    ...
+      "node_modules/bootstrap/dist/js/bootstrap.min.js"
+    ...
+    ]
+  }
+```
 ### Primeflex: 
 * [link](https://primeflex.org/)
 ```
   npm i primeflex
+```
+```
+  // package.json
+  "options": {
+    "styles": [
+    ...
+    "node_modules/primeflex/primeflex.css",
+    ...
+    ]
+  }
 ```
 ### fontAwesome: 
 * [link](https://github.com/FortAwesome/angular-fontawesome),
