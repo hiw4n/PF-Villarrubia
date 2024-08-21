@@ -39,7 +39,9 @@
     position: absolute;
 
     &-bottom{
-      bottom: -($button-float-size - ($button-float-size/2));
+      bottom: calc($button-float-size - ($button-float-size / 2) * -1);
+      /* bottom: -($button-float-size - ($button-float-size/2)); */
+      /* math.div($button-float-size, 2) or calc($button-float-size / 2) */
     }
   }
 }

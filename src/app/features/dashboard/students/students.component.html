@@ -3,7 +3,9 @@
 </div> -->
 <h1>Lista de Estudiantes <mat-icon>face</mat-icon></h1>
 <div class="table table-courses p-3">
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- {{ data | json}} -->
+  <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
+  <table mat-table [dataSource]="data" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -17,7 +19,7 @@
     <!-- Name Column -->
     <ng-container matColumnDef="nameLastname">
       <th mat-header-cell *matHeaderCellDef appResaltado> Nombre y Apellidos</th>
-      <td mat-cell *matCellDef="let element"> {{ element.lastName | studenNameLastname: element.name}}</td>
+      <td mat-cell *matCellDef="let element"> {{ element.last_Name | studenNameLastname: element.first_name}}</td>
     </ng-container>
 
     <!-- LastName Column -->
@@ -38,7 +40,7 @@
     <!-- Courses Column -->
     <ng-container matColumnDef="courses">
       <th mat-header-cell *matHeaderCellDef appResaltado> Cursos</th>
-      <td mat-cell *matCellDef="let element"> {{ element.courses }} </td>
+      <td mat-cell *matCellDef="let element"> {{ element.course_ids }} </td>
     </ng-container>
 
     <!-- Action Column -->

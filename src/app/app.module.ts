@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
+import { StoreModule } from '@ngrx/store';
+
 /* APP MODULES */
 import { SharedModule } from './shared/shared.module';
 import { provideNativeDateAdapter } from '@angular/material/core';
@@ -13,6 +15,8 @@ import { MaterialModule } from './shared/material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { IndexComponent } from './features/dashboard/index/index.component';
 import { NavModule } from './shared/component/nav/nav.module';
+import { rootReducer } from './core/store';
+import { EffectsModule } from '@ngrx/effects';
 //import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
 
 @NgModule({
@@ -23,6 +27,7 @@ import { NavModule } from './shared/component/nav/nav.module';
   ],
   exports: [MaterialModule],
   imports: [
+    StoreModule.forRoot(rootReducer, {}),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -31,6 +36,7 @@ import { NavModule } from './shared/component/nav/nav.module';
     SharedModule,
     MaterialModule,
     NavModule,
+    EffectsModule.forRoot([]),
   ],
   providers: [
     provideAnimationsAsync(),

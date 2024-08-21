@@ -13,22 +13,17 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent,
     children: [
-      /* {
-        path: '',
-        component: StudentsComponent,
-      }, */
-      /* {
-        path: '',
-        component: CoursesSpaceComponent,
-      }, */
       {
         path: '',
         component: IndexComponent,
       },
-      /* {
-        path: '',
-        redirectTo: 'courses-space',
-      }, */
+      {
+        path: 'enrollments',
+        loadChildren: () =>
+          import('./enrollments/enrollments.module').then(
+            (m) => m.EnrollmentsModule
+          ),
+      },
       {
         path: 'courses-space',
         loadChildren: () =>

@@ -1,5 +1,5 @@
 <h2 mat-dialog-title>
-  {{editingStudent ? 'Editar Alumno: '+editingStudent.name : 'Dar de alta a Alumno'}} <mat-icon>face</mat-icon>
+  {{editingStudent ? 'Editar Alumno: '+editingStudent.first_name : 'Dar de alta a Alumno'}} <mat-icon>face</mat-icon>
 </h2>
 <mat-dialog-content>
   <form [formGroup]="studentForm">
@@ -22,7 +22,7 @@
     <mat-form-field class="example-full-width">
       <mat-label>
         Apellidos : </mat-label>
-      <input formControlName="lastName" placeholder="Ex: Smith" matInput />
+      <input formControlName="last_name" placeholder="Ex: Smith" matInput />
       <mat-icon matSuffix>mode_edit</mat-icon>
       <mat-error>El campo es obligatorio, por favor incluir el valor</mat-error>
     </mat-form-field>

@@ -1,6 +1,11 @@
 export interface Student {
   id: string;
-  name: string;
-  lastName: string;
-  courses: string[];
+  first_name: string;
+  last_name: string;
+  email?: string;
+  birthdate?: string;
+  photo?: string;
+  evaluation?: number;
+  address?: string;
+  course_ids?: string[] | number[];
 }

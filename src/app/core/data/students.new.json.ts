@@ -1,6 +1,6 @@
-import { StudentNew } from '../models/students.new.interface';
+import { Student } from '../models/students.interface';
 
-export let studentsListNew: StudentNew[] = [
+export let studentsListNew: Student[] = [
   {
     id: 1,
     first_name: 'Alice',

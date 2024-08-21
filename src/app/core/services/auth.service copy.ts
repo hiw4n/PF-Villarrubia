@@ -9,7 +9,7 @@ import { Observable, tap } from 'rxjs';
 })
 export class AuthService {
   /* users: User[] = userData; */
-  private baseUrl = environments.baseUrl;
+  private apiUrl = environments.apiUrl;
   private user?: User;
 
   constructor(private http: HttpClient) {}
@@ -18,7 +18,7 @@ export class AuthService {
     return structuredClone(this.user);
   }
   login(email: string, password: string): Observable<User> {
-    return this.http.get<User>(`${this.baseUrl})/user/1`).pipe(
+    return this.http.get<User>(`${this.apiUrl})/user/1`).pipe(
       tap((user) => (this.user = user)),
       tap((user) => localStorage.setItem('token', user.id.toString()))
     );

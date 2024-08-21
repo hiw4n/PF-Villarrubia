@@ -1,4 +1,16 @@
 {
+  "enrollments":[
+    {
+      "id": "1",
+      "studentId":"1",
+      "courseId":"1"
+    },
+    {
+      "id": "2",
+      "studentId":"3",
+      "courseId":"4"
+    }
+  ],
   "usersOld": [
     {
       "id": "43j9",
@@ -199,7 +211,8 @@
       "description": "Protect space missions and systems from cyber threats using advanced cybersecurity techniques.",
       "image": "course10.jpeg"
     }
-  ],  "courses-space_NEW":[
+  ],
+  "courses-space_NEW":[
     {
       "id": 1,
       "name": "Navegación en la Galaxia",
