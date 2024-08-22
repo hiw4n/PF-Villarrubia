@@ -22,6 +22,7 @@ import { NavModule } from './shared/component/nav/nav.module';
 import { rootReducer } from './core/store';
 import { EffectsModule } from '@ngrx/effects';
 import { CoreModule } from './core/core.module';
+import { reducers, metaReducers } from './reducers';
 //import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
 
 @NgModule({
@@ -43,6 +44,9 @@ import { CoreModule } from './core/core.module';
     MaterialModule,
     NavModule,
     EffectsModule.forRoot([]),
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    }),
   ],
   providers: [
     provideAnimationsAsync(),
