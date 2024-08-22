@@ -2,7 +2,7 @@ import { Student } from '../models/students.interface';
 
 export let studentsListNew: Student[] = [
   {
-    id: 1,
+    id: '1',
     first_name: 'Alice',
     last_name: 'Smith',
     email: 'alice.smith@example.com',
@@ -13,7 +13,7 @@ export let studentsListNew: Student[] = [
     course_ids: [1, 3, 7],
   },
   {
-    id: 2,
+    id: '2',
     first_name: 'Bob',
     last_name: 'Johnson',
     email: 'bob.johnson@example.com',
@@ -24,7 +24,7 @@ export let studentsListNew: Student[] = [
     course_ids: [1, 2],
   },
   {
-    id: 3,
+    id: '3',
     first_name: 'Charlie',
     last_name: 'Brown',
     email: 'charlie.brown@example.com',
@@ -35,7 +35,7 @@ export let studentsListNew: Student[] = [
     course_ids: [1, 5, 10],
   },
   {
-    id: 4,
+    id: '4',
     first_name: 'Diana',
     last_name: 'Evans',
     email: 'diana.evans@example.com',
@@ -46,7 +46,7 @@ export let studentsListNew: Student[] = [
     course_ids: [2, 4, 8],
   },
   {
-    id: 5,
+    id: '5',
     first_name: 'Eve',
     last_name: 'Davis',
     email: 'eve.davis@example.com',
@@ -57,7 +57,7 @@ export let studentsListNew: Student[] = [
     course_ids: [2, 5],
   },
   {
-    id: 6,
+    id: '6',
     first_name: 'Frank',
     last_name: 'Miller',
     email: 'frank.miller@example.com',
@@ -68,7 +68,7 @@ export let studentsListNew: Student[] = [
     course_ids: [3, 6],
   },
   {
-    id: 7,
+    id: '7',
     first_name: 'Grace',
     last_name: 'Hall',
     email: 'grace.hall@example.com',
@@ -79,7 +79,7 @@ export let studentsListNew: Student[] = [
     course_ids: [3, 6],
   },
   {
-    id: 8,
+    id: '8',
     first_name: 'Harry',
     last_name: 'Wilson',
     email: 'harry.wilson@example.com',
@@ -90,7 +90,7 @@ export let studentsListNew: Student[] = [
     course_ids: [4, 9],
   },
   {
-    id: 9,
+    id: '9',
     first_name: 'Irene',
     last_name: 'Lewis',
     email: 'irene.lewis@example.com',
@@ -101,7 +101,7 @@ export let studentsListNew: Student[] = [
     course_ids: [4, 7],
   },
   {
-    id: 10,
+    id: '10',
     first_name: 'Jack',
     last_name: 'White',
     email: 'jack.white@example.com',
@@ -112,7 +112,7 @@ export let studentsListNew: Student[] = [
     course_ids: [5, 8],
   },
   {
-    id: 11,
+    id: '11',
     first_name: 'Kate',
     last_name: 'Black',
     email: 'kate.black@example.com',
@@ -123,7 +123,7 @@ export let studentsListNew: Student[] = [
     course_ids: [6, 9],
   },
   {
-    id: 12,
+    id: '12',
     first_name: 'Liam',
     last_name: 'Brown',
     email: 'liam.brown@example.com',
@@ -134,7 +134,7 @@ export let studentsListNew: Student[] = [
     course_ids: [7, 10],
   },
   {
-    id: 13,
+    id: '13',
     first_name: 'Mike',
     last_name: 'Green',
     email: 'mike.green@example.com',
@@ -145,7 +145,7 @@ export let studentsListNew: Student[] = [
     course_ids: [8],
   },
   {
-    id: 14,
+    id: '14',
     first_name: 'Nina',
     last_name: 'Blue',
     email: 'nina.blue@example.com',
@@ -156,7 +156,7 @@ export let studentsListNew: Student[] = [
     course_ids: [9],
   },
   {
-    id: 15,
+    id: '15',
     first_name: 'Oscar',
     last_name: 'Gray',
     email: 'oscar.gray@example.com',

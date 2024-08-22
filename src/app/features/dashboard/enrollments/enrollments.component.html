@@ -1,1 +1,102 @@
 <h1>Inscripciones</h1>
+<hr />
+
+<!-- @if (isLoading$ | async) {
+<p>Cargando....</p>
+} @else { @if(error$ | async) {
+
+<p>Ocurrio un error inesperado!!!</p>
+
+} @else {
+
+<form [formGroup]="enrollmentForm" class="grid formgrid">
+  <div class="col-6">
+    <mat-form-field class="w-full">
+      <mat-select formControlName="studentId" placeholder="Selecciona un student">
+        @for (student of students$ | async; track $index) {
+        <mat-option [value]="student.id">{{ student.name }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col-6">
+    <mat-form-field class="w-full">
+      <mat-select formControlName="productId" placeholder="Selecciona un producto">
+        @for (product of products$| async; track $index) {
+        <mat-option [value]="product.id">{{ product.name }} - {{ product.price | currency }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>
+
+<button (click)="addEnrollment()">+</button>
+
+<pre>{{ enrollments$ | async | json }}</pre>
+
+} } -->
+<div class="table table-courses">
+  <!-- {{ data | json}} -->
+  <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
+  <!-- <table mat-table [dataSource]="data" class="mat-elevation-z8"> -->
+
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- id Column -->
+  <!-- <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef appResaltado> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container> -->
+
+  <!-- Name Column -->
+  <!-- <ng-container matColumnDef="nameLastname">
+      <th mat-header-cell *matHeaderCellDef appResaltado> Nombre y Apellidos</th>
+      <td mat-cell *matCellDef="let element"> {{ element.last_Name | studenNameLastname: element.first_name}}</td>
+    </ng-container> -->
+
+  <!-- LastName Column -->
+  <!-- <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef appResaltado> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+    </ng-container> -->
+
+  <!-- LastName Column -->
+  <!-- <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef appResaltado> Apellidos </th>
+      <td mat-cell *matCellDef="let element"> {{ element.lastName }} </td>
+    </ng-container> -->
+
+  <!-- Name And LastNAme Column -->
+
+
+  <!-- Courses Column -->
+  <!-- <ng-container matColumnDef="courses">
+      <th mat-header-cell *matHeaderCellDef appResaltado> Cursos</th>
+      <td mat-cell *matCellDef="let element"> {{ element.course_ids }} </td>
+    </ng-container> -->
+
+  <!-- Action Column -->
+  <!-- <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <button (click)="deleteById(element.id)" mat-icon-button>
+          <mat-icon>person_remove</mat-icon>
+        </button>
+        <button (click)="edit(element)" mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+    </ng-container> -->
+
+  <!--     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+
+  <!--   </table>
+</div> -->
+  <!-- <button (click)="openDialog()" mat-flat-button class="button-send">
+  Incluir estudiante
+  <mat-icon>
+    person_add
+  </mat-icon>
+</button> -->

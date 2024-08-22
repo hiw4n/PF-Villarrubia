@@ -12,11 +12,16 @@ import { SharedModule } from './shared/shared.module';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MaterialModule } from './shared/material/material.module';
-import { HttpClientModule } from '@angular/common/http';
+import {
+  HttpClientModule,
+  provideHttpClient,
+  withFetch,
+} from '@angular/common/http';
 import { IndexComponent } from './features/dashboard/index/index.component';
 import { NavModule } from './shared/component/nav/nav.module';
 import { rootReducer } from './core/store';
 import { EffectsModule } from '@ngrx/effects';
+import { CoreModule } from './core/core.module';
 //import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
 
 @NgModule({
@@ -28,6 +33,7 @@ import { EffectsModule } from '@ngrx/effects';
   exports: [MaterialModule],
   imports: [
     StoreModule.forRoot(rootReducer, {}),
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -41,6 +47,7 @@ import { EffectsModule } from '@ngrx/effects';
   providers: [
     provideAnimationsAsync(),
     provideNativeDateAdapter(),
+    provideHttpClient(withFetch()),
     /* Material change style form */
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
