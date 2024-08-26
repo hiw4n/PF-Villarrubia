@@ -43,10 +43,11 @@ import { reducers, metaReducers } from './reducers';
     SharedModule,
     MaterialModule,
     NavModule,
-    EffectsModule.forRoot([]),
-    StoreModule.forRoot(reducers, {
-      metaReducers
+    /*    StoreModule.forRoot(reducers, {
+      metaReducers,
     }),
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]), */
   ],
   providers: [
     provideAnimationsAsync(),

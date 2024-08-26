@@ -50,6 +50,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 }
 #background-video {
+  filter: brightness(1.7) contrast(116%);
   width: 100vw;
   height: 100vh;
   object-fit: cover;

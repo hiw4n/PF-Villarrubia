@@ -7,6 +7,10 @@ import { EnrollmentsService } from '../../../../core/services/enrollments.servic
 
 @Injectable()
 export class EnrollmentsEffects {
+  constructor(
+    private actions$: Actions,
+    private enrollmentsService: EnrollmentsService
+  ) {}
   /* createEnrollment$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(EnrollmentsActions.createEnrollment),
@@ -56,9 +60,4 @@ export class EnrollmentsEffects {
       )
     );
   }); */
-
-  constructor(
-    private actions$: Actions,
-    private enrollmentsService: EnrollmentsService
-  ) {}
 }
