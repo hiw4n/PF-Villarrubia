@@ -1,8 +1,6 @@
 import { createFeature, createReducer, on } from '@ngrx/store';
 import { EnrollmentsActions } from './enrollments.actions';
-import { Enrollment } from '../../../../core/interfaces/enrollment.interface';
-import { Student } from '../../../../core/interfaces/student.interface';
-import { Course } from '../../../../core/interfaces/course.interface';
+import { Enrollment } from '../models';
 
 export const enrollmentsFeatureKey = 'enrollments';
 
@@ -10,8 +8,8 @@ export interface State {
   isLoading: boolean;
   isLoadingStudentsAndProducts: boolean;
   enrollments: Enrollment[];
-  students: Student[] | undefined;
-  courses: Course[] | undefined;
+  /* students: Student[]; */
+  /*  products: Product[]; */
   error: unknown;
 }
 
@@ -19,8 +17,8 @@ export const initialState: State = {
   isLoading: false,
   isLoadingStudentsAndProducts: false,
   enrollments: [],
-  students: [],
-  courses: [],
+  /* students: [], */
+  /*  products: [], */
   error: null,
 };
 
@@ -50,27 +48,27 @@ export const reducer = createReducer(
     };
   }),
 
-  on(EnrollmentsActions.loadStudentsAndCourses, (state) => ({
+  on(EnrollmentsActions.loadStudentsAndProducts, (state) => ({
     ...state,
     isLoadingStudentsAndProducts: true,
-  })),
+  }))
 
-  on(EnrollmentsActions.loadStudentsAndCoursesSuccess, (state, action) => ({
+  /*   on(EnrollmentsActions.loadStudentsAndProductsSuccess, (state, action) => ({
     ...state,
     isLoadingStudentsAndProducts: false,
-    courses: action.data.courses,
+    products: action.data.products,
     students: action.data.students,
     error: null,
-  })),
+  })), */
 
   // Create Enrollment
-  on(EnrollmentsActions.createEnrollmentSuccess, (state, action) => {
+  /* on(EnrollmentsActions.createEnrollmentSuccess, (state, action) => {
     return {
       ...state,
       enrollments: [...state.enrollments, action.data],
       error: null,
     };
-  })
+  })*/
 );
 
 export const enrollmentsFeature = createFeature({

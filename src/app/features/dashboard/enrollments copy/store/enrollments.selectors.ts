@@ -21,12 +21,12 @@ export const selectEnrollmentsError = createSelector(
   (state) => state.error
 );
 
-export const selectEnrollmentsStudents = createSelector(
-  selectEnrollmentsState,
-  (state) => state.students
-);
+/*   export const selectEnrollmentsStudents = createSelector(
+    selectEnrollmentsState,
+    (state) => state.students
+  );
 
-export const selectEnrollmentsCourses = createSelector(
-  selectEnrollmentsState,
-  (state) => state.courses
-);
+  export const selectEnrollmentsProducts = createSelector(
+    selectEnrollmentsState,
+    (state) => state.products
+  ); */

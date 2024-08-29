@@ -11,11 +11,11 @@ export class EnrollmentsEffects {
     private actions$: Actions,
     private enrollmentsService: EnrollmentsService
   ) {}
-  createEnrollment$ = createEffect(() => {
+  /* createEnrollment$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(EnrollmentsActions.createEnrollment),
       concatMap((action) =>
-        this.enrollmentsService.add(action.payload).pipe(
+        this.enrollmentsService.addEnrollment(action.payload).pipe(
           map((data) => EnrollmentsActions.createEnrollmentSuccess({ data })),
           catchError((error) =>
             of(EnrollmentsActions.createEnrollmentFailure({ error }))
@@ -23,7 +23,7 @@ export class EnrollmentsEffects {
         )
       )
     );
-  });
+  }); */
   loadEnrollments$ = createEffect(() => {
     return this.actions$.pipe(
       // Filtramos de todas las acciones solo, las que son de tipo EnrollmentsActions.loadEnrollments
@@ -45,19 +45,19 @@ export class EnrollmentsEffects {
     );
   });
 
-  loadStudentsAndCourses$ = createEffect(() => {
+  /*   loadStudentsAndProducts$ = createEffect(() => {
     return this.actions$.pipe(
-      ofType(EnrollmentsActions.loadStudentsAndCourses),
+      ofType(EnrollmentsActions.loadStudentsAndProducts),
       concatMap(() =>
-        this.enrollmentsService.getStudentsAndCourses().pipe(
+        this.enrollmentsService.getStudentsAndProducts().pipe(
           map((data) =>
-            EnrollmentsActions.loadStudentsAndCoursesSuccess({ data })
+            EnrollmentsActions.loadStudentsAndProductsSuccess({ data })
           ),
           catchError((error) =>
-            of(EnrollmentsActions.loadStudentsAndCoursesFailure({ error }))
+            of(EnrollmentsActions.loadStudentsAndProductsFailure({ error }))
           )
         )
       )
     );
-  });
+  }); */
 }

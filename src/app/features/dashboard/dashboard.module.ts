@@ -12,9 +12,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CoursesSpaceComponent } from './courses-space/courses-space.component';
 import { SharedModule } from '../../shared/shared.module';
 import { NavModule } from '../../shared/component/nav/nav.module';
+import { EnrollmentsModule } from './enrollments/enrollments.module';
 
 @NgModule({
-  declarations: [DashboardComponent, CoursesSpaceComponent],
+  declarations: [
+    DashboardComponent,
+    CoursesSpaceComponent,
+    /* InscripcionesComponent, */
+  ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
@@ -25,6 +30,7 @@ import { NavModule } from '../../shared/component/nav/nav.module';
     StudentsModule,
     CoursesModule,
     NavModule,
+    EnrollmentsModule,
   ],
   exports: [DashboardComponent, SharedModule],
 })

@@ -139,7 +139,8 @@ npm install
   * medium.com:
     * @bosarreyesrodrigo
       * Creación de Pruebas Unitarias con Jasmine y Karma en Angular [Link](https://medium.com/@bosarreyesrodrigo/creaci%C3%B3n-de-pruebas-unitarias-con-jasmine-y-karma-en-angular-d720de52deea)
-
+  * Patricio Soriano Castro:
+    * Crear una Fake REST API con JSON-Server [link](https://sigdeletras.com/2020/crear-una-fake-reat-api-con-json-server-copy/)
 
 
 
