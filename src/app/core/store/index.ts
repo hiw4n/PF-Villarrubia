@@ -1,11 +1,30 @@
 import { ActionReducerMap } from '@ngrx/store';
-/* import { authFeatureName, authReducer, AuthState } from './auth/auth.reducer'; */
+/* import {
+  counterFeatureName,
+  counterReducer,
+  CounterState,
+} from './counter/counter.reducer'; */
+// import { authFeatureName, authReducer, AuthState } from './auth/auth.reducer';
 
 export interface RootState {
-  /* [authFeatureName]: AuthState; */
+  // [counterFeatureName]: CounterState;
+  // [authFeatureName]: AuthState;
 }
 
 export const rootReducer: ActionReducerMap<RootState> = {
   // Listado de reducers
-  /* [authFeatureName]: authReducer, */
+  // [counterFeatureName]: counterReducer,
+  // [authFeatureName]: authReducer,
 };
+
+/* import { ActionReducerMap } from '@ngrx/store';
+import { authFeatureName, authReducer, AuthState } from './auth/auth.reducer';
+
+export interface RootState {
+  // [authFeatureName]: AuthState;
+}
+
+export const rootReducer: ActionReducerMap<RootState> = {
+  // Listado de reducers
+  // [authFeatureName]: authReducer,
+}; */

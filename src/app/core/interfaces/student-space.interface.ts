@@ -8,5 +8,5 @@ export interface StudentSpace {
   evaluation: number;
   address: string;
   planet_of_birth: string;
-  course_ids: number[];
+  courseId: number[];
 }

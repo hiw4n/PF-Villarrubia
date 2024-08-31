@@ -7,5 +7,5 @@ export interface Student {
   photo?: string;
   evaluation?: number;
   address?: string;
-  course_ids?: string[] | number[];
+  courseId?: string[] | number[];
 }

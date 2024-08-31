@@ -7,7 +7,7 @@ export interface TeacherSpace {
   title: string;
   specialty: string;
   planet_of_origin: string;
-  course_id: number;
+  courseId: number;
   rating: number;
   missions: Missions;
 }

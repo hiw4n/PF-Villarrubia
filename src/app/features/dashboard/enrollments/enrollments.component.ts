@@ -46,5 +46,8 @@ export class EnrollmentsComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.store.dispatch(EnrollmentsActions.loadEnrollments());
+    /* this.store.dispatch(EnrollmentsActions.loadStudentsAndProducts()); */
+  }
 }

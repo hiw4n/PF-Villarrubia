@@ -8,7 +8,7 @@ export interface Student {
   evaluation?: number;
   address?: string;
   planet_of_birth?: string;
-  course_ids?: string[] | number[];
+  courseId?: string[] | number[];
 
   enrollmentId?: string | number | string[] | number[];
 }
