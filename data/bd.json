@@ -1,4 +1,10 @@
 {
+  "hero": [
+    {
+      "text": "",
+      "photo": "hero_1.jpeg"
+    }
+  ],
   "products": [
     {
       "id": "f459",

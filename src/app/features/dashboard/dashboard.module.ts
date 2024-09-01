@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-/* Material */
-import { MaterialModule } from '../../shared/material/material.module';
 /* App */
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
@@ -15,11 +13,7 @@ import { NavModule } from '../../shared/component/nav/nav.module';
 import { EnrollmentsModule } from './enrollments/enrollments.module';
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
-    CoursesSpaceComponent,
-    /* InscripcionesComponent, */
-  ],
+  declarations: [DashboardComponent, CoursesSpaceComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
@@ -32,6 +26,6 @@ import { EnrollmentsModule } from './enrollments/enrollments.module';
     NavModule,
     EnrollmentsModule,
   ],
-  exports: [DashboardComponent, SharedModule],
+  exports: [DashboardComponent],
 })
 export class DashboardModule {}

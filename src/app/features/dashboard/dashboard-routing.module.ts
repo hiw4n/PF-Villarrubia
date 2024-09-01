@@ -1,11 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StudentsComponent } from './students/students.component';
 import { DashboardComponent } from './dashboard.component';
-import { CoursesSpaceModule } from './courses-space/courses-space.module';
-import { CoursesSpaceComponent } from './courses-space/courses-space.component';
-import { LoginComponent } from '../auth/login/login.component';
-import { IndexComponent } from './index/index.component';
 
 //  "/dashboard"
 const routes: Routes = [
@@ -13,11 +8,10 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent,
     children: [
-      {
+      /*       {
         path: '',
         component: IndexComponent,
-      },
-
+      }, */
       {
         path: 'enrollments',
         loadChildren: () =>

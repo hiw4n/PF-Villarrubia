@@ -1,0 +1,75 @@
+<mat-sidenav-container class="features-container">
+  <!-- NAV ----------------------------- INI -->
+  <mat-sidenav #sidenav>
+    <div class="nav-lat">
+      <button class="bt-close" mat-button (click)="sidenav.toggle()"><mat-icon class="mat-18">close</mat-icon></button>
+      <mat-nav-list>
+        <ul>
+          <li>
+            <a (click)="sidenav.toggle()" routerLink="/">Inicio</a>
+          </li>
+          <li>
+            <a (click)="sidenav.toggle()" routerLink="/auth/login">Login</a>
+          </li>
+          <li>
+            <a (click)="sidenav.toggle()" routerLink="dashboard/students">Alumnos</a>
+          </li>
+          <li>
+            <a (click)="sidenav.toggle()" routerLink="dashboard/enrollments">Inscripciones</a>
+          </li>
+          <li>
+            <a (click)="sidenav.toggle()" routerLink="dashboard/courses">Cursos</a>
+          </li>
+          <li>
+            <a (click)="sidenav.toggle()" routerLink="dashboard/courses-space">Cursos Espaciales</a>
+          </li>
+        </ul>
+      </mat-nav-list>
+      <mat-nav-list>
+        <ul>
+          <li>
+            <a (click)="onLogout()">Cerrar Sesión</a>
+          </li>
+        </ul>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+  <!-- NAV ----------------------------- END -->
+
+  <!-- CONTENT ----------------------------- INI -->
+  <mat-sidenav-content>
+    <!--  <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p> -->
+
+    <!-- TOOLBAR  -------------------------------------------------- INICIO -->
+    <mat-toolbar color="primary">
+      <button (click)="sidenav.toggle()" mat-icon-button class="features-icon"
+        aria-label="features icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+        <span class="spacer"></span>
+        <!-- <span>{{user?.firstName}}</span> -->
+      </button>
+      <span class="features-spacer"></span>
+      <!-- ICON RIGHT -------------------------------------------------- INICIO -->
+      <!-- <button mat-icon-button class="features-icon favorite-icon" aria-label="features icon-button with heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button class="features-icon" aria-label="features icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button> -->
+      <!-- ICON RIGHT -------------------------------------------------- FIN -->
+
+    </mat-toolbar>
+    <!-- TOOLBAR --------------------------------------------------  FIN -->
+
+    <!-- CONTENT ----------------------------- INI -->
+    <main class="p-1 router-container">
+      <div class="container">
+        <div class="row">
+          <router-outlet />
+        </div>
+      </div>
+    </main>
+    <!-- CONTENT ----------------------------- END -->
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -24,6 +24,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { CoreModule } from './core/core.module';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { FeaturesModule } from './features/features.module';
 //import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
 
 @NgModule({
@@ -42,10 +43,11 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     /* DashboardModule, */
     /* AuthModule, */
     SharedModule,
-    MaterialModule,
+    /* MaterialModule, */
     NavModule,
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    FeaturesModule,
     /*    StoreModule.forRoot(reducers, {
       metaReducers,
     }),
