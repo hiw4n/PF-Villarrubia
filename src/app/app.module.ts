@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +23,7 @@ import { rootReducer } from './core/store';
 import { EffectsModule } from '@ngrx/effects';
 import { CoreModule } from './core/core.module';
 import { reducers, metaReducers } from './reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 //import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
 
 @NgModule({
@@ -43,6 +44,8 @@ import { reducers, metaReducers } from './reducers';
     SharedModule,
     MaterialModule,
     NavModule,
+    EffectsModule.forRoot([]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     /*    StoreModule.forRoot(reducers, {
       metaReducers,
     }),

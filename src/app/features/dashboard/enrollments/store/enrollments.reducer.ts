@@ -26,13 +26,14 @@ export const initialState: State = {
 
 export const reducer = createReducer(
   initialState,
+  //disparador de una secuencia de acciones
   on(EnrollmentsActions.loadEnrollments, (state) => {
     return {
       ...state,
       isLoading: true,
     };
   }),
-
+  //cuando se cargan correctamente qye es que hacen
   on(EnrollmentsActions.loadEnrollmentsSuccess, (state, action) => {
     return {
       ...state,

@@ -35,7 +35,6 @@ export class EnrollmentsEffects {
         this.enrollmentsService.get().pipe(
           // Manejar una respuesta satisfactoria
           map((data) => EnrollmentsActions.loadEnrollmentsSuccess({ data })),
-
           // Manejar una respuesta con error
           catchError((error) =>
             of(EnrollmentsActions.loadEnrollmentsFailure({ error }))

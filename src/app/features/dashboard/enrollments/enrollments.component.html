@@ -1,8 +1,11 @@
 <h1>Inscripciones</h1>
 <hr />
 
+@if (isLoading$ | async) {
+<p>Cargando....</p>
+} @else {
 <pre>{{ enrollments$ | async | json }}</pre>
-
+}
 
 
 

@@ -1,6 +1,11 @@
 import { Course } from '../../../../core/interfaces/course.interface';
 import { Student } from '../../../../core/interfaces/student.interface';
 
+// const store = createStore(
+//   PlayerReducer,
+//   window.devToolsExtention && window.devToolsExtention()
+// );
+
 export interface Enrollment {
   id: string;
   studentId: string;
