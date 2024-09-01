@@ -12,16 +12,13 @@ export class DashboardComponent {
   /* SIDEBAR -------- STAR */
   showFiller = false;
   /* SIDEBAR -------- END */
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(/* private authService: AuthService, */ private router: Router) {}
 
-  get user(): User | undefined {
+  /*   get user(): User | undefined {
     return this.authService.currentUser;
-  }
-  /* logOut() {
-    this.authService.logOut();
   } */
   onLogout() {
-    this.authService.logOut();
+    /* this.authService.logOut(); */
     this.router.navigate(['/auth/login']);
   }
 }

@@ -17,7 +17,7 @@ import {
   provideHttpClient,
   withFetch,
 } from '@angular/common/http';
-import { IndexComponent } from './features/dashboard/index/index.component';
+/* import { IndexComponent } from './features/dashboard/index/index.component'; */
 import { NavModule } from './shared/component/nav/nav.module';
 import { rootReducer } from './core/store';
 import { EffectsModule } from '@ngrx/effects';
@@ -30,7 +30,7 @@ import { FeaturesModule } from './features/features.module';
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent,
+    /* IndexComponent, */
     //StudentsDialogComponent
   ],
   exports: [MaterialModule],

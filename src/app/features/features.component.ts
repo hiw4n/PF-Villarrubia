@@ -18,6 +18,7 @@ export class FeaturesComponent {
   } */
   onLogout() {
     this.authService.logOut();
-    this.router.navigate(['/auth/login']);
+    /* this.router.navigate(['/auth/login']); */
+    this.router.navigate(['/']);
   }
 }

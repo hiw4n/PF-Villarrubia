@@ -8,10 +8,6 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent,
     children: [
-      /*       {
-        path: '',
-        component: IndexComponent,
-      }, */
       {
         path: 'enrollments',
         loadChildren: () =>
