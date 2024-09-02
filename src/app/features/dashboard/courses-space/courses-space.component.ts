@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CoursesServiceSpace } from '../../../core/services/courses-space.service';
 import { CourseSpace } from '../../../core/interfaces/course-space.interface';
-import { CoursesSpacesService } from '../../../core/services/courses-spaces.service';
 
 @Component({
   selector: 'app-courses-space',
@@ -10,7 +10,7 @@ import { CoursesSpacesService } from '../../../core/services/courses-spaces.serv
 export class CoursesSpaceComponent implements OnInit {
   public courses: CourseSpace[] = [];
 
-  constructor(private coursesService: CoursesSpacesService) {}
+  constructor(private coursesService: CoursesServiceSpace) {}
 
   ngOnInit(): void {
     this.coursesService.get().subscribe((arg) => (this.courses = arg));

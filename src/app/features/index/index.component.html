@@ -1,23 +1,29 @@
-{{hero | json}}
-
-
 <div class="container">
   <div class="row">
     <div class="col-12">
       <h1> formate en la mejor escuela de espacio</h1>
     </div>
 
+    <!-- SLIDER --------------------------- START -->
+    @if(slider$){
     <div class="col-12">
       <div id="carouselExample" class="carousel slide">
 
-        @for (item of hero; track $index) {}
         <div class="carousel-inner">
+          @for (s of slider$; track slider$) {
           <div class="carousel-item active">
-            <img src="" class="d-block w-100" alt="...">
+
+            @if (s.text) {
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{s.text}}</h5>
+            </div>
+            }
+            <img [src]="s.image | imageUrl" class="d-block w-100" alt="{{s.text}}">
+
           </div>
-
-
+          }
         </div>
+        @if (slider$.length >1) {
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
@@ -26,8 +32,87 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+        }
       </div>
     </div>
+    }
+
+    <!-- SLIDER --------------------------- FIN -->
+    <!-- COURSE --------------------------- START -->
+    @if(courses$){
+    <div class="col-12">
+      <h2>Cursos</h2>
+      <!-- {{courses$[0] | json}} -->
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        @for (i of courses$; track courses$) {
+        <div class="col">
+          <div class="card card-space">
+            @if(i.image){
+            <img [src]="i.image| imageUrl" class="card-img-top" alt="{{i.name}}">
+            }
+            <div class="card-body">
+              <h5 class="card-title">{{i.name}}</h5>
+              <p class="card-text">{{i.short_description}}</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    }
+    <!-- COURSE --------------------------- FIN -->
+    <!-- TEACHERS --------------------------- START -->
+    @if(teachers$){
+    <div class="col-12">
+      <!-- {{teachers$ | json}} -->
+      <h2>Profesores</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        @for (i of teachers$; track teachers$) {
+        <div class="col">
+          <div class="card card-space">
+            @if(i.image){
+            <img [src]="i.image| imageUrl" class="card-img-top" alt="{{i.first_name}}">
+            }
+            <div class="card-body">
+              <h5 class="card-title">{{i.specialty}}</h5>
+              <!-- <p class="card-text"></p> -->
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+
+
+
+    </div>
+
+    }
+
+
+    <!-- TEACHERS --------------------------- FIN -->
+    <!-- STUDENT --------------------------- START -->
+    <!-- {{students$ | json}} -->
+    @if(students$){
+    <div class="col-12">
+      <h2>Nuestros estudiantes</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        @for (i of students$; track students$) {
+        <div class="col">
+          <div class="card card-space">
+            @if(i.image){
+            <img [src]="i.image| imageUrl" class="card-img-top" alt="{{i.first_name}}">
+            }
+            <div class="card-body">
+              <h5 class="card-title">{{i.first_name}} {{i.last_name}}</h5>
+              <p class="card-text">{{i.opinion}}</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    }
+    <!-- STUDENT --------------------------- FIN -->
 
 
 

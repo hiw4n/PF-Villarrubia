@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { CourseSpace } from '../../../../../core/interfaces/course-space.interface';
-import { CoursesSpacesService } from '../../../../../core/services/courses-spaces.service';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { CoursesServiceSpace } from '../../../../../core/services/courses-space.service';
+import { CourseSpace } from '../../../../../core/interfaces/course-space.interface';
 
 @Component({
   selector: 'app-search',
@@ -14,11 +14,11 @@ export class SearchComponent {
   public courses: CourseSpace[] = [];
   public selectedCourse?: CourseSpace;
 
-  constructor(private coursesSpacesService: CoursesSpacesService) {}
+  constructor(private coursesService: CoursesServiceSpace) {}
   search() {
     const value: string = this.searchInput.value || '';
 
-    this.coursesSpacesService.getSuggestion(value).subscribe((c) => {
+    this.coursesService.getSuggestion(value).subscribe((c) => {
       this.courses = c;
     });
   }
@@ -28,7 +28,9 @@ export class SearchComponent {
       return;
     }
     const course: CourseSpace = event.option.value;
-    this.searchInput.setValue(course.name);
+    if (course.name) {
+      this.searchInput.setValue(course.name);
+    }
     this.selectedCourse = course;
   }
 }

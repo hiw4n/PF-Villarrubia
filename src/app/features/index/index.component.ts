@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../../core/interfaces/hero.interface';
-import { HeroService } from '../../core/services/hero.service';
+
+import { Slider } from '../../core/interfaces/slider.interface';
+import { SliderService } from '../../core/services/slider.service';
+import { Student } from '../../core/interfaces/student.interface';
+import { StudentsService } from '../../core/services/students.service';
+import { Teacher } from '../../core/interfaces/teacher.interface';
+import { TeachersService } from '../../core/services/teachers.service';
+import { CoursesServiceSpace } from '../../core/services/courses-space.service';
+import { CourseSpace } from '../../core/interfaces/course-space.interface';
 
 @Component({
   selector: 'app-index',
@@ -8,11 +15,22 @@ import { HeroService } from '../../core/services/hero.service';
   styleUrl: './index.component.scss',
 })
 export class IndexComponent implements OnInit {
-  public hero: Hero[] = [];
+  public slider$: Slider[] = [];
+  public students$: Student[] = [];
+  public courses$: CourseSpace[] = [];
+  public teachers$: Teacher[] = [];
 
-  constructor(private heroservice: HeroService) {}
+  constructor(
+    private sliderservice: SliderService,
+    private studentsService: StudentsService,
+    private courseService: CoursesServiceSpace,
+    private teacherService: TeachersService
+  ) {}
 
   ngOnInit() {
-    this.heroservice.get().subscribe((arg) => (this.hero = arg));
+    this.sliderservice.get().subscribe((arg) => (this.slider$ = arg));
+    this.studentsService.get().subscribe((arg) => (this.students$ = arg));
+    this.courseService.get().subscribe((arg) => (this.courses$ = arg));
+    this.teacherService.get().subscribe((arg) => (this.teachers$ = arg));
   }
 }

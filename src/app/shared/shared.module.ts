@@ -15,6 +15,7 @@ import { imageUrlPipe } from './pipes/imageUrl.pipe';
 import { NavLateralComponent } from './component/nav/nav-lateral/nav-lateral.component';
 import { NavTopComponent } from './component/nav/nav-top/nav-top.component';
 import { NavModule } from './component/nav/nav.module';
+import { CardComponent } from './component/card/card.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,14 @@ import { NavModule } from './component/nav/nav.module';
     NamesAuthPipe,
     StudenNameLastnamePipe,
     imageUrlPipe,
+    CardComponent,
   ],
   exports: [
     ResaltadoDirective,
     NavComponent,
     SidebarComponent,
     LoadingComponent,
+    CardComponent,
     /* ANGULAR MATERIAL */
     MaterialModule,
     /* Pipe */

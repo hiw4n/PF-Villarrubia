@@ -1,10 +1,9 @@
-import { Component, Inject, signal } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Student } from '../../../../../core/models/students.interface';
 import { courseList } from '../../../../../core/data/course.json';
-import { Course } from '../../../../../core/models/course.interface';
+import { Course } from '../../../../../core/interfaces/course.interface';
 
 @Component({
   selector: 'app-students-dialog',

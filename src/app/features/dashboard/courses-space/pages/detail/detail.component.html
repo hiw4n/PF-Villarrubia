@@ -15,7 +15,7 @@
       <mat-card-title>{{course.name}}</mat-card-title>
       <mat-card-subtitle>{{course.schedule}}</mat-card-subtitle>
     </mat-card-header>
-    <img matCardImage [src]=" course.image | imageUrl">
+    <!-- <img matCardImage [src]=" course.image | imageUrl"> -->
 
   </mat-card>
   <mat-card class="col-12 sm:col-6">
@@ -23,7 +23,7 @@
       <h3>
         Descripción
       </h3>
-      {{course.description}}
+      <!-- {{course.description}} -->
     </mat-card-content>
     <mat-card-actions align="start">
       <button mat-button (click)="goBack()">Regresar</button>

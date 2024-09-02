@@ -1,27 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, of } from 'rxjs';
-import { CourseSpace } from '../interfaces/course-space.interface';
 import { environments } from '../../../environments/environments';
+import { CourseSpace } from '../interfaces/course-space.interface';
 
 @Injectable({ providedIn: 'root' })
-export class CoursesSpacesService {
-  private baseUrl = environments.baseUrl;
+export class CoursesServiceSpace {
+  private baseUrl = environments.baseUrl + '/courses';
 
   constructor(private http: HttpClient) {}
 
   get(): Observable<CourseSpace[]> {
-    return this.http.get<CourseSpace[]>(`${this.baseUrl}/courses-space`);
+    return this.http.get<CourseSpace[]>(`${this.baseUrl}`);
   }
   getById(id: String): Observable<CourseSpace | undefined> {
     return this.http
-      .get<CourseSpace>(`${this.baseUrl}/courses-space/${id}`)
+      .get<CourseSpace>(`${this.baseUrl}/${id}`)
       .pipe(catchError((e) => of(undefined)));
   }
 
   getSuggestion(query: string): Observable<CourseSpace[]> {
-    return this.http.get<CourseSpace[]>(
-      `${this.baseUrl}/courses-space?=${query}&limit=6`
-    );
+    return this.http.get<CourseSpace[]>(`${this.baseUrl}?=${query}&limit=6`);
   }
 }

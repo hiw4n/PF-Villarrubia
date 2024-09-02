@@ -1,20 +1,20 @@
 <mat-card class="example-card shadow-3" appearance="outlined">
   <!--!TODO: FOTO PROFESOR-->
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image" style="background-image:url( {{courseInput.image | imageUrl}} )">
-    </div>
+    <!-- <div mat-card-avatar class="example-header-image" style="background-image:url( {{courseInput.image | imageUrl}} )">
+    </div>-->
 
     <mat-card-title class="mat-label-large">{{ courseInput.teacher_name }}</mat-card-title>
     <mat-card-subtitle class="mat-label-small">{{ courseInput.schedule }}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="courseInput.image | imageUrl" alt="{{courseInput.name}}">
+  <!-- <img mat-card-image [src]="courseInput.image | imageUrl" alt="{{courseInput.name}}"> -->
 
   <mat-card-content class="mt-2">
     <h6>
       {{ courseInput.name }}
     </h6>
     <p>
-      <strong>Description</strong> {{ courseInput.description }}
+      <!-- <strong>Description</strong> {{ courseInput.description }} -->
       <br>
       <!-- <mat-chip-listbox>
         <mat-chip *ngFor="let name of courseInput.characters.split(',') | slice:0:3">
