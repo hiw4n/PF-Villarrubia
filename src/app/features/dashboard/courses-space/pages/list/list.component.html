@@ -1,9 +1,10 @@
 <h1 class="title">Cursos</h1>
+
 @if(courses$){
 <!-- <p>cargo info</p> -->
 <!-- {{ courses$[0] | json}} -->
-}
-<mat-divider />
+
+<!-- <mat-divider /> -->
 <div class="grid bm-8 pt-2">
   <div class="col-12 sm:col-14 md:col-3 xl:col-3 ">
     <!-- <courses-space-card [courseInput]="c" /> -->
@@ -19,13 +20,16 @@
       <tbody>
         @for (i of courses$; track courses$) {
         <tr>
-          <th scope="row">courses$.id</th>
-          <td>courses$.name</td>
-          <td>courses$.star_date</td>
-          <td>courses$.end_date</td>
+          <th scope="row">{{i.id}}</th>
+          <td>{{i.name}}</td>
+          <td>{{i.start_date| date: 'dd/mm/yy'}}</td>
+          <td>{{i.end_date | date: 'dd/mm/yy'}}</td>
         </tr>
         }
       </tbody>
     </table>
   </div>
 </div>
+}@else {
+<p>Actualmente no hay cursos que mostrar</p>
+}
