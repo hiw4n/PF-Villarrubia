@@ -8,9 +8,15 @@
           <li>
             <a (click)="sidenav.toggle()" routerLink="/">Inicio</a>
           </li>
+        </ul>
+      </mat-nav-list>
+      <h6>Zona privada</h6>
+      <mat-nav-list>
+        <ul>
           <li>
-            <a (click)="sidenav.toggle()" routerLink="/auth/login">Login</a>
+            <a (click)="sidenav.toggle()" routerLink="/">Inicio</a>
           </li>
+
           <li>
             <a (click)="sidenav.toggle()" routerLink="dashboard/students">Alumnos</a>
           </li>
@@ -25,8 +31,12 @@
           </li>
         </ul>
       </mat-nav-list>
+      <h6>Sección Administración</h6>
       <mat-nav-list>
         <ul>
+          <li>
+            <a (click)="sidenav.toggle()" routerLink="/auth/login">Login</a>
+          </li>
           <li>
             <a (click)="onLogout()">Cerrar Sesión</a>
           </li>
