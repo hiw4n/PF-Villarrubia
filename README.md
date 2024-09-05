@@ -40,6 +40,8 @@ npm install
 ```
   ng add @angular/material
 ```
+* [icon Reference](https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/)
+  
 ### Boodstrap: 
 * [link](https://getbootstrap.com/)
 ```

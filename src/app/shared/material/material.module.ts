@@ -11,7 +11,7 @@ import {
   MatFormFieldModule,
 } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -24,6 +24,7 @@ import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   exports: [
+    MatIconModule,
     MatAutocompleteModule,
     MatCardModule,
     MatChipsModule,
@@ -45,10 +46,15 @@ import { MatTableModule } from '@angular/material/table';
   declarations: [],
   imports: [CommonModule],
   providers: [
+    MatIconRegistry,
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: { appearance: 'outline' },
     },
   ],
 })
-export class MaterialModule {}
+export class MaterialModule {
+  constructor(public matIconRegistry: MatIconRegistry) {
+    matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
+  }
+}

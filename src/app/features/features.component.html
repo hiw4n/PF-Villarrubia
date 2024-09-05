@@ -1,4 +1,4 @@
-<mat-sidenav-container class="features-container">
+<mat-sidenav-container class="features-container nav-principal">
   <!-- NAV ----------------------------- INI -->
   <mat-sidenav #sidenav>
     <div class="nav-lat">
@@ -6,39 +6,46 @@
       <mat-nav-list>
         <ul>
           <li>
-            <a (click)="sidenav.toggle()" routerLink="/">Inicio</a>
+            <a (click)="sidenav.toggle()" routerLink="/"><mat-icon>rocket_launch</mat-icon> home <sup>Good</sup></a>
           </li>
         </ul>
       </mat-nav-list>
-      <h6>Zona privada</h6>
+      <h6><mat-icon>settings_accessibility</mat-icon> sección privada</h6>
       <mat-nav-list>
         <ul>
           <li>
-            <a (click)="sidenav.toggle()" routerLink="/">Inicio</a>
-          </li>
-
-          <li>
-            <a (click)="sidenav.toggle()" routerLink="dashboard/students">Alumnos</a>
+            <a (click)="sidenav.toggle()" routerLink="dashboard/students"><mat-icon>diversity_3</mat-icon> Alumnos
+              <sup>Good</sup></a>
           </li>
           <li>
-            <a (click)="sidenav.toggle()" routerLink="dashboard/enrollments">Inscripciones</a>
+            <a (click)="sidenav.toggle()" routerLink="dashboard/enrollments"><mat-icon>my_location</mat-icon>
+              Inscripciones
+              <sup>Failed</sup></a>
           </li>
           <li>
-            <a (click)="sidenav.toggle()" routerLink="dashboard/courses">Cursos</a>
+            <a (click)="sidenav.toggle()" routerLink="dashboard/courses"><mat-icon>assistant_photo</mat-icon> Cursos
+              <sup>Good</sup></a>
           </li>
           <li>
-            <a (click)="sidenav.toggle()" routerLink="dashboard/courses-space">Cursos Espaciales</a>
+            <a (click)="sidenav.toggle()" routerLink="dashboard/courses-space"><mat-icon>vibration</mat-icon> Cursos
+              Espaciales <sup>in
+                progress</sup></a>
+          </li>
+          <li>
+            <a (click)="sidenav.toggle()" routerLink="dashboard"><mat-icon>group_work</mat-icon>
+              Profesores
+              <sup>Failed</sup></a>
           </li>
         </ul>
       </mat-nav-list>
-      <h6>Sección Administración</h6>
+      <h6><mat-icon>assignment_ind</mat-icon> Sección Administración</h6>
       <mat-nav-list>
         <ul>
           <li>
-            <a (click)="sidenav.toggle()" routerLink="/auth/login">Login</a>
+            <a (click)=" sidenav.toggle()" routerLink="/auth/login"><mat-icon>account_circle</mat-icon> Login</a>
           </li>
           <li>
-            <a (click)="onLogout()">Cerrar Sesión</a>
+            <a (click)="onLogout()"><mat-icon>https</mat-icon> Cerrar Sesión</a>
           </li>
         </ul>
       </mat-nav-list>
@@ -72,7 +79,7 @@
     <!-- TOOLBAR --------------------------------------------------  FIN -->
 
     <!-- CONTENT ----------------------------- INI -->
-    <main class="p-1 router-container">
+    <main class="router-container">
       <div class="container">
         <div class="row">
           <router-outlet />
