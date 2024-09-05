@@ -37,7 +37,6 @@
               }
             ],
             "styles": [
-              "node_modules/font-awesome/scss/font-awesome.scss",
               "@angular/material/prebuilt-themes/magenta-violet.css",
               "node_modules/primeflex/primeflex.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",

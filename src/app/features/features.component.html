@@ -3,7 +3,7 @@
   <mat-sidenav #sidenav>
     <div class="nav-lat">
       <button class="bt-close" mat-button (click)="sidenav.toggle()"><mat-icon class="mat-18">close</mat-icon></button>
-      <mat-nav-list>
+      <mat-nav-list class="border-animated">
         <ul>
           <li>
             <a (click)="sidenav.toggle()" routerLink="/"><mat-icon>rocket_launch</mat-icon> home <sup>Good</sup></a>
@@ -11,7 +11,7 @@
         </ul>
       </mat-nav-list>
       <h6><mat-icon>settings_accessibility</mat-icon> sección privada</h6>
-      <mat-nav-list>
+      <mat-nav-list class="border-animated">
         <ul>
           <li>
             <a (click)="sidenav.toggle()" routerLink="dashboard/students"><mat-icon>diversity_3</mat-icon> Alumnos
@@ -39,7 +39,7 @@
         </ul>
       </mat-nav-list>
       <h6><mat-icon>assignment_ind</mat-icon> Sección Administración</h6>
-      <mat-nav-list>
+      <mat-nav-list class="border-animated">
         <ul>
           <li>
             <a (click)=" sidenav.toggle()" routerLink="/auth/login"><mat-icon>account_circle</mat-icon> Login</a>
