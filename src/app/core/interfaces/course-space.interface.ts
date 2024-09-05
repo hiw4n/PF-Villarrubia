@@ -2,9 +2,7 @@ export interface CourseSpace {
   id: number | string;
   name?: string;
   start_date?: string | Date;
-  startDate?: string | Date;
   end_date?: string | Date;
-  endDate?: string | Date;
   students?: number[];
   enrollment_date?: string;
   schedule?: string;

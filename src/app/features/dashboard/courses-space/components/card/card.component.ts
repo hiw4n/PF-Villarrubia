@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Course } from '../../../../../core/interfaces/course.interface';
+import { CourseSpace } from '../../../../../core/interfaces/course-space.interface';
 
 @Component({
   selector: 'courses-space-card',
@@ -7,7 +7,7 @@ import { Course } from '../../../../../core/interfaces/course.interface';
   styleUrl: './card.component.scss',
 })
 export class CardComponent implements OnInit {
-  @Input() public courseInput!: Course;
+  @Input() public courseInput!: CourseSpace;
 
   ngOnInit(): void {
     if (!this.courseInput) throw new Error('Course propertu is required');

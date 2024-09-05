@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CoursesSpaceRoutingModule } from './courses-space-routing.module';
 import { CardComponent } from './components/card/card.component';
@@ -14,17 +14,21 @@ import { NewComponent } from './pages/new/new.component';
 
 @NgModule({
   declarations: [
-    CardComponent,
+    // CardComponent,
     ListComponent,
-    DetailComponent,
-    EditComponent,
-    SearchComponent,
+    // DetailComponent,
+    // EditComponent,
+    // SearchComponent,
     NewComponent,
   ],
+  exports: [],
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     CoursesSpaceRoutingModule,
+
+    ReactiveFormsModule,
+    FormsModule,
+
     MaterialModule,
     SharedModule,
   ],

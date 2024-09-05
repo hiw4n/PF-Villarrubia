@@ -1,7 +1,31 @@
 <h1 class="title">Cursos</h1>
+@if(courses$){
+<!-- <p>cargo info</p> -->
+<!-- {{ courses$[0] | json}} -->
+}
 <mat-divider />
 <div class="grid bm-8 pt-2">
-  <div *ngFor="let c of course" class="col-12 sm:col-14 md:col-3 xl:col-3 ">
-    <courses-space-card [courseInput]="c" />
+  <div class="col-12 sm:col-14 md:col-3 xl:col-3 ">
+    <!-- <courses-space-card [courseInput]="c" /> -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Fecha Inicio</th>
+          <th scope="col">Fecha Fin</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (i of courses$; track courses$) {
+        <tr>
+          <th scope="row">courses$.id</th>
+          <td>courses$.name</td>
+          <td>courses$.star_date</td>
+          <td>courses$.end_date</td>
+        </tr>
+        }
+      </tbody>
+    </table>
   </div>
 </div>

@@ -13,6 +13,6 @@ export class TeachersService {
   constructor(private http: HttpClient) {}
 
   get(): Observable<Teacher[]> {
-    return this.http.get<Teacher[]>(this.baseUrl);
+    return this.http.get<Teacher[]>(`${this.baseUrl}`);
   }
 }

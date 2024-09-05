@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { delay, switchMap } from 'rxjs';
-import { Course } from '../../../../../core/interfaces/course.interface';
-import { CoursesService } from '../../../../../core/services/courses.service';
+import { CourseSpace } from '../../../../../core/interfaces/course-space.interface';
+import { CoursesServiceSpace } from '../../../../../core/services/courses-space.service';
 
 @Component({
   selector: 'app-detail',
@@ -10,9 +10,9 @@ import { CoursesService } from '../../../../../core/services/courses.service';
   styleUrl: './detail.component.scss',
 })
 export class DetailComponent implements OnInit {
-  public course?: Course;
+  public course?: CourseSpace;
   constructor(
-    private courseService: CoursesService,
+    private courseService: CoursesServiceSpace,
     private activateRoute: ActivatedRoute,
     private router: Router
   ) {}

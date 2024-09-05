@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Course } from '../../../../../core/interfaces/course.interface';
-import { CoursesService } from '../../../../../core/services/courses.service';
+import { CoursesServiceSpace } from '../../../../../core/services/courses-space.service';
+import { CourseSpace } from '../../../../../core/interfaces/course-space.interface';
 
 @Component({
   selector: 'app-list',
@@ -8,11 +8,11 @@ import { CoursesService } from '../../../../../core/services/courses.service';
   /* styleUrl: './list.component.scss', */
 })
 export class ListComponent implements OnInit {
-  public course: Course[] = [];
+  public courses$: CourseSpace[] = [];
 
-  constructor(private coursesService: CoursesService) {}
+  constructor(private coursesService: CoursesServiceSpace) {}
 
   ngOnInit(): void {
-    this.coursesService.get().subscribe((c) => (this.course = c));
+    this.coursesService.get().subscribe((c) => (this.courses$ = c));
   }
 }
