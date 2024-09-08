@@ -1,4 +1,4 @@
-import { Student } from '../models/students.interface';
+import { Student } from '../interfaces/student.interface';
 
 export let studentsList: Student[] = [
   {

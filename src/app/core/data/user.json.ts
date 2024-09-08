@@ -1,4 +1,4 @@
-import { User } from '../models/user.interface';
+import { User } from '../interfaces/user.interface';
 
 export let userData: User[] = [
   /*   {

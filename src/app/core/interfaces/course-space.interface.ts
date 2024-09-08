@@ -1,5 +1,5 @@
 export interface CourseSpace {
-  id: number | string;
+  id: string | number;
   name?: string;
   start_date?: string | Date;
   end_date?: string | Date;

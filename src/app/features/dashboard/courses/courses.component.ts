@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CoursesDialogComponent } from './components/courses-dialog/courses-dialog.component';
 import { CoursesService } from '../../../core/services/courses.service';
-import { Course } from '../../../core/models/course.interface';
+import { Course } from '../../../core/interfaces/course.interface';
 
 @Component({
   selector: 'app-courses',

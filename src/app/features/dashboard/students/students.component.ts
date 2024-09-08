@@ -1,9 +1,8 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { StudentsDialogComponent } from './components/students-dialog/students-dialog.component';
-import { Student } from '../../../core/models/students.interface';
-import { studentsList } from '../../../core/data/student.json';
 import { StudentsService } from '../../../core/services/students.service';
+import { Student } from '../../../core/interfaces/student.interface';
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',

@@ -46,7 +46,7 @@
       // padding-top: $p;
       // padding-bottom: $p;
         color: $color-white;
-        $s-left: $s-thumb/2;
+        $s-left:calc($s-thumb/2);
       h3, &__content  {
         margin-left: $s-left*2!important;
       }
@@ -83,7 +83,7 @@
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      padding-right: $s-thumb/2y;
+      padding-right:calc($s-thumb/2);
     }
   }
 }

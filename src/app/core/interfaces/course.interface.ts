@@ -1,8 +1,8 @@
 export interface Course {
   id: string | number;
   name: string;
-  start_date?: string;
-  end_date?: string;
+  start_date?: string | Date;
+  end_date?: string | Date;
   students?: string | number | string[] | number[];
   enrollment_date?: string;
   schedule?: string;

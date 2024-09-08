@@ -1,0 +1,21 @@
+.btn{
+  &.btn-custom{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    color:$color-white;
+    text-transform: uppercase;
+    background-color: $color-violet;
+    padding: 6px !important;
+    gap: 6px;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    &:hover{
+      background-color: $color-white-opacity;
+      &,mat-icon{
+        color:$color-violet;
+      }
+    }
+  }
+}

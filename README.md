@@ -14,19 +14,24 @@
 
 ### BACKEND
 
-base data is in: data/bd.json
+Data Base is at: "/data/bd.json"
 
 ```
- // Resources
-  // http://localhost:3000/usersOld
-  // http://localhost:3000/users
-  // http://localhost:3000/coursesOld
-  // http://localhost:3000/courses
-  // http://localhost:3000/students
-  // http://localhost:3000/teachers
-  // 
-  // Home
-  // http://localhost:3000
+ Resources
+  http://localhost:3000/posts
+  http://localhost:3000/comments
+  http://localhost:3000/profile
+  http://localhost:3000/slider
+  http://localhost:3000/products
+  http://localhost:3000/enrollments
+  http://localhost:3000/users
+  http://localhost:3000/courses
+  http://localhost:3000/courses-space
+  http://localhost:3000/students
+  http://localhost:3000/teachers
+
+  Home
+  http://localhost:3000
   
 ```
 
@@ -118,6 +123,13 @@ npm install
   // http://localhost:3000/teachers
 
 ```
+### ngrx:
+* [link install](https://ngrx.io/guide/effects/install)
+* [Extension Chrome](https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es)
+```
+  ng add @ngrx/store@latest // app.module.ts add: StoreModule.forRoot(rootReducer, {}),
+  ng add @ngrx/store-devtools@latest // app.module.ts add: StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+```
 
 
 ### Software:
@@ -142,10 +154,12 @@ npm install
   * Dev.to: 
     * How to create a responsive sidebar and mini navigation with Material Angular [link](https://dev.to/davidihl/how-to-create-a-responsive-sidebar-and-mini-navigation-with-material-angular-o5l)
   * medium.com:
-    * @bosarreyesrodrigo
+    * @bosarreyesrodrigo:
       * Creación de Pruebas Unitarias con Jasmine y Karma en Angular [Link](https://medium.com/@bosarreyesrodrigo/creaci%C3%B3n-de-pruebas-unitarias-con-jasmine-y-karma-en-angular-d720de52deea)
   * Patricio Soriano Castro:
     * Crear una Fake REST API con JSON-Server [link](https://sigdeletras.com/2020/crear-una-fake-reat-api-con-json-server-copy/)
+  * Leifer Mendez:
+    * [ngrx](https://www.youtube.com/playlist?list=PL_WGMLcL4jzVkzMox4UxGcsBLvFurCDax)
 
 
 

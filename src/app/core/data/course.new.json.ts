@@ -1,4 +1,4 @@
-import { CourseNew } from '../models/course.new.interface';
+import { CourseNew } from '../interfaces/course.new.interface';
 
 export let courseListNew: CourseNew[] = [
   {

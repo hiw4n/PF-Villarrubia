@@ -1,5 +1,7 @@
+import { Course } from './course.interface';
+
 export interface Teacher {
-  id: number;
+  id: string | number;
   first_name: string;
   last_name: string;
   email: string;
@@ -7,7 +9,8 @@ export interface Teacher {
   title: string;
   specialty: string;
   planet_of_origin: string;
-  courseId: number;
+  courseId: string | number;
+  course?: Course | Course[];
   rating: number;
   missions: Missions;
 }

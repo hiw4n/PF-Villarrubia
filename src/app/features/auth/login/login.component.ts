@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { AuthService } from '../../../core/services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from '../../../core/models/user.interface';
+import { User } from '../../../core/interfaces/user.interface';
 /* import { APP_CONFIG } from '../../../core/injection-tokens'; */
 
 @Component({

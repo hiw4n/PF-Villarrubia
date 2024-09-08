@@ -1,4 +1,15 @@
 {
+  "posts": [
+    { "id": "1", "title": "a title", "views": 100, "commentId": "1" },
+    { "id": "2", "title": "another title", "views": 200 }
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
   "slider": [
     {
       "text": "Formate como explorador",
@@ -109,7 +120,7 @@
       "students": [1, 2, 3],
       "enrollment_date": "2024-08-15",
       "schedule": "Star Date 4321.0 - 4321.9",
-      "teachersId": 1,
+      "teacherId": 1,
       "teacher_name": "Captain James Nebula",
       "description": "Learn the skills and techniques required to navigate through the vast and complex galaxy using advanced star maps and navigation tools.",
       "image": "course1.jpg"
@@ -122,7 +133,7 @@
       "students": [2, 4, 5],
       "enrollment_date": "2024-08-20",
       "schedule": "Star Date 4330.5 - 4333.7",
-      "teachersId": 2,
+      "teacherId": 2,
       "teacher_name": "Dr. Lyra Starbound",
       "description": "Master the art of communicating with alien species using advanced holographic devices and translation technologies.",
       "image": "course2.jpg"
@@ -135,7 +146,7 @@
       "students": [1, 6, 7],
       "enrollment_date": "2024-08-25",
       "schedule": "Star Date 4340.0 - 4341.8",
-      "teachersId": 3,
+      "teacherId": 3,
       "teacher_name": "Engineer Stella Skyforge",
       "description": "Gain foundational knowledge and practical skills in building and maintaining spacecraft and space stations.",
       "image": "course3.jpg"
@@ -148,7 +159,7 @@
       "students": [4, 8, 9],
       "enrollment_date": "2024-08-28",
       "schedule": "Star Date 4345.2 - 4349.1",
-      "teachersId": 4,
+      "teacherId": 4,
       "teacher_name": "Commander Orion Pulsar",
       "description": "Dive deep into the operation and management of advanced spacecraft systems and controls.",
       "image": "course4.jpg"
@@ -161,7 +172,7 @@
       "students": [3, 5, 10],
       "enrollment_date": "2024-09-10",
       "schedule": "Star Date 4350.0 - 4355.5",
-      "teachersId": 5,
+      "teacherId": 5,
       "teacher_name": "Lieutenant Nova Starflare",
       "description": "Learn essential survival tactics for thriving in harsh cosmic environments and on unknown planets.",
       "image": "course5.jpg"
@@ -174,7 +185,7 @@
       "students": [6, 7, 11],
       "enrollment_date": "2024-09-15",
       "schedule": "Star Date 4360.1 - 4362.3",
-      "teachersId": 6,
+      "teacherId": 6,
       "teacher_name": "Navigator Vega Lightyear",
       "description": "Explore the intricacies of navigating through quantum space with cutting-edge technology.",
       "image": "course6.jpg"
@@ -187,7 +198,7 @@
       "students": [1, 9, 12],
       "enrollment_date": "2024-09-20",
       "schedule": "Star Date 4365.4 - 4370.2",
-      "teachersId": 7,
+      "teacherId": 7,
       "teacher_name": "Ambassador Luna Eclipse",
       "description": "Develop skills for negotiating and building relationships with various alien civilizations.",
       "image": "course7.jpg"
@@ -200,7 +211,7 @@
       "students": [4, 10, 13],
       "enrollment_date": "2024-09-25",
       "schedule": "Star Date 4372.7 - 4375.6",
-      "teachersId": 8,
+      "teacherId": 8,
       "teacher_name": "Explorer Kai Meteor",
       "description": "Learn the techniques and tools needed to explore and document unknown planets and their ecosystems.",
       "image": "course8.jpg"
@@ -213,7 +224,7 @@
       "students": [8, 11, 14],
       "enrollment_date": "2024-09-30",
       "schedule": "Star Date 4377.5 - 4380.9",
-      "teachersId": 9,
+      "teacherId": 9,
       "teacher_name": "Professor Celeste Comet",
       "description": "Study the cultures, rituals, and social structures of alien species across the galaxy.",
       "image": "course9.jpg"
@@ -226,7 +237,7 @@
       "students": [3, 12, 15],
       "enrollment_date": "2024-10-10",
       "schedule": "Star Date 4385.0 - 4390.0",
-      "teachersId": 10,
+      "teacherId": 10,
       "teacher_name": "Analyst Rigel Matrix",
       "description": "Protect space missions and systems from cyber threats using advanced cybersecurity techniques.",
       "image": "course10.jpg"
@@ -238,10 +249,10 @@
       "name": "Navegación en la Galaxia",
       "start_date": "2024-09-01",
       "end_date": "2024-11-01",
-      "studentsId": [1, 2, 3],
+      "studentId": [1, 2, 3],
       "enrollment_date": "2024-08-15",
       "schedule": "Fecha Estelar 4321.0 - 4321.9",
-      "teachersId": 1,
+      "teacherId": 1,
       "teacher_name": "Capitán James Nebula",
       "short_description": "Domina el arte de la navegación galáctica a través de lecciones teóricas y simulaciones prácticas.",
       "long_description": "Este curso está diseñado para futuros navegantes espaciales que deseen dominar las complejidades de los viajes galácticos. Bajo la guía del Capitán James Nebula, un explorador espacial experimentado con más de dos décadas de experiencia en navegación interestelar, los estudiantes aprenderán a usar eficazmente mapas estelares, navegar por las diversas regiones del espacio y comprender los principios físicos y teóricos que rigen los viajes intergalácticos. El curso combina conocimientos teóricos con simulaciones prácticas, asegurando que los estudiantes estén bien preparados para misiones espaciales reales. Al final del curso, los participantes serán capaces de trazar rutas a través de regiones inexploradas del espacio, evitar peligros cósmicos comunes y optimizar rutas para la eficiencia de combustible y la gestión del tiempo.",
@@ -349,12 +360,12 @@
       "review_score": 4.7,
       "reviews": [
         {
-          "student_id": 1,
+          "studentId": 1,
           "rating": 5,
           "comment": "Un curso excelente para entender los fundamentos de la navegación galáctica."
         },
         {
-          "student_id": 3,
+          "studentId": 3,
           "rating": 4.5,
           "comment": "Desafiante pero gratificante, excelentes simulaciones prácticas."
         }
@@ -363,12 +374,12 @@
       "course_level": "Intermedio",
       "student_ratings": [
         {
-          "student_id": 1,
+          "studentId": 1,
           "rating": 5,
           "comment": "La mejor experiencia educativa intergaláctica que he tenido."
         },
         {
-          "student_id": 2,
+          "studentId": 2,
           "rating": 4,
           "comment": "Buena cobertura de los temas, pero algunas simulaciones fueron difíciles."
         }
@@ -379,10 +390,10 @@
       "name": "Exploración de Planetas Exóticos",
       "start_date": "2024-10-01",
       "end_date": "2024-12-15",
-      "studentsId": [4, 5, 7, 9],
+      "studentId": [4, 5, 7, 9],
       "enrollment_date": "2024-09-15",
       "schedule": "Fecha Estelar 4325.3 - 4328.6",
-      "teachersId": 8,
+      "teacherId": 8,
       "teacher_name": "Exploradora Luna Stardust",
       "short_description": "Descubre los secretos de planetas no mapeados en nuestro curso práctico de exploración planetaria.",
       "long_description": "Prepárate para ser parte de la vanguardia de la exploración espacial aprendiendo a manejar ambientes desconocidos y extremos en este curso detallado. Bajo la experta tutela de la Exploradora Luna Stardust, explorarás técnicas de supervivencia, recolección de datos y análisis de muestras planetarias que te capacitarán para liderar misiones en nuevos mundos. Este curso es esencial para aquellos que aspiran a expandir los límites conocidos del espacio habitable y descubrir nuevos recursos.",
@@ -476,12 +487,12 @@
       "review_score": 4.9,
       "reviews": [
         {
-          "student_id": 4,
+          "studentId": 4,
           "rating": 5,
           "comment": "Una experiencia transformadora que me ha preparado para ser pionero en nuevos mundos."
         },
         {
-          "student_id": 7,
+          "studentId": 7,
           "rating": 4.8,
           "comment": "Muy desafiante, pero increíblemente gratificante. Las simulaciones son de primer nivel."
         }
@@ -490,7 +501,7 @@
       "course_level": "Avanzado",
       "student_ratings": [
         {
-          "student_id": 9,
+          "studentId": 9,
           "rating": 5,
           "comment": "El curso superó todas mis expectativas con su profundidad y aplicación práctica."
         }
@@ -501,10 +512,10 @@
       "name": "Astroingeniería Avanzada",
       "start_date": "2024-09-15",
       "end_date": "2024-12-15",
-      "studentsId": [2, 4, 6],
+      "studentId": [2, 4, 6],
       "enrollment_date": "2024-08-20",
       "schedule": "Fecha Estelar 4332.0 - 4336.0",
-      "teachersId": 3,
+      "teacherId": 3,
       "teacher_name": "Ingeniero Leo Starcrafter",
       "short_description": "Construye y mantén estructuras espaciales utilizando las últimas tecnologías en astroingeniería.",
       "long_description": "Este curso sumerge a los estudiantes en los principios avanzados y aplicaciones prácticas de la ingeniería espacial. A través de una combinación de teoría detallada y extensos proyectos prácticos, los participantes aprenderán sobre la construcción de naves espaciales, estaciones espaciales y la infraestructura necesaria para futuras colonias en otros planetas. Bajo la tutela del Ingeniero Leo Starcrafter, los estudiantes no solo adquirirán conocimientos técnicos, sino también habilidades prácticas en el uso de herramientas de astroingeniería en entornos de microgravedad.",
@@ -579,12 +590,12 @@
       "review_score": 4.8,
       "reviews": [
         {
-          "student_id": 2,
+          "studentId": 2,
           "rating": 5,
           "comment": "Curso imprescindible para cualquier aspirante a ingeniero espacial."
         },
         {
-          "student_id": 4,
+          "studentId": 4,
           "rating": 4.5,
           "comment": "Los proyectos prácticos fueron increíblemente enriquecedores."
         }
@@ -593,7 +604,7 @@
       "course_level": "Avanzado",
       "student_ratings": [
         {
-          "student_id": 6,
+          "studentId": 6,
           "rating": 4.9,
           "comment": "La combinación de teoría y práctica fue perfecta."
         }
@@ -604,10 +615,10 @@
       "name": "Tácticas de Supervivencia Cósmica",
       "start_date": "2024-10-05",
       "end_date": "2024-12-20",
-      "studentsId": [3, 8, 10],
+      "studentId": [3, 8, 10],
       "enrollment_date": "2024-09-20",
       "schedule": "Fecha Estelar 4333.0 - 4338.0",
-      "teachersId": 4,
+      "teacherId": 4,
       "teacher_name": "Comandante Sarah Galaxy",
       "short_description": "Aprende a sobrevivir en los entornos más hostiles del cosmos con técnicas avanzadas de supervivencia.",
       "long_description": "En este curso, los estudiantes se entrenarán para manejar situaciones extremas en ambientes espaciales, incluyendo vacío espacial, planetas con atmósferas tóxicas y campos de asteroides. Guiados por la Comandante Sarah Galaxy, una veterana en misiones de alto riesgo, los participantes desarrollarán habilidades críticas que van desde la creación de refugios temporales hasta la reparación de trajes espaciales en condiciones de emergencia. El curso está diseñado no solo para enseñar tácticas de supervivencia, sino también para fortalecer la resiliencia mental y física necesaria para enfrentar y superar desafíos imprevistos en el espacio.",
@@ -684,12 +695,12 @@
       "review_score": 4.9,
       "reviews": [
         {
-          "student_id": 3,
+          "studentId": 3,
           "rating": 5,
           "comment": "Un curso desafiante que te prepara para lo inesperado en el espacio."
         },
         {
-          "student_id": 10,
+          "studentId": 10,
           "rating": 4.8,
           "comment": "Las simulaciones de supervivencia fueron increíblemente realistas y útiles."
         }
@@ -698,7 +709,7 @@
       "course_level": "Avanzado",
       "student_ratings": [
         {
-          "student_id": 8,
+          "studentId": 8,
           "rating": 4.9,
           "comment": "Excelente entrenamiento para situaciones críticas, totalmente recomendado para futuros exploradores."
         }
@@ -709,10 +720,10 @@
       "name": "Comunicaciones Intergalácticas",
       "start_date": "2024-10-10",
       "end_date": "2024-12-05",
-      "studentsId": [5, 11, 13],
+      "studentId": [5, 11, 13],
       "enrollment_date": "2024-09-25",
       "schedule": "Fecha Estelar 4340.0 - 4345.0",
-      "teachersId": 5,
+      "teacherId": 5,
       "teacher_name": "Doctora Hila Signal",
       "short_description": "Domina las tecnologías de comunicación espacial para mantener conectados a los exploradores de la galaxia.",
       "long_description": "Este curso intensivo proporciona a los estudiantes una comprensión profunda de las tecnologías de comunicación que son críticas para las operaciones intergalácticas. Dirigido por la Doctora Hila Signal, una pionera en comunicaciones cuánticas, los participantes aprenderán sobre la transmisión de datos a través de vastas distancias espaciales, el manejo de señales en entornos interferentes y las últimas innovaciones en criptografía espacial. A través de lecciones teóricas y muchos ejercicios prácticos, los estudiantes estarán preparados para diseñar y mantener sistemas de comunicación que puedan operar eficazmente en el entorno espacial.",
@@ -795,12 +806,12 @@
       "review_score": 4.9,
       "reviews": [
         {
-          "student_id": 5,
+          "studentId": 5,
           "rating": 5,
           "comment": "El curso me proporcionó una sólida comprensión de las comunicaciones espaciales avanzadas."
         },
         {
-          "student_id": 11,
+          "studentId": 11,
           "rating": 4.8,
           "comment": "Los ejercicios prácticos fueron esenciales para entender la teoría."
         }
@@ -809,7 +820,7 @@
       "course_level": "Avanzado",
       "student_ratings": [
         {
-          "student_id": 13,
+          "studentId": 13,
           "rating": 4.7,
           "comment": "Increíble detalle en la enseñanza de criptografía espacial."
         }
@@ -820,10 +831,10 @@
       "name": "Diplomacia Intergaláctica",
       "start_date": "2024-11-01",
       "end_date": "2025-01-31",
-      "studentsId": [7, 12, 15],
+      "studentId": [7, 12, 15],
       "enrollment_date": "2024-10-15",
       "schedule": "Fecha Estelar 4346.0 - 4350.0",
-      "teachersId": 6,
+      "teacherId": 6,
       "teacher_name": "Embajador Rex Galaxion",
       "short_description": "Navega los complejos desafíos de la diplomacia en un universo multiespecie.",
       "long_description": "Este curso prepara a los estudiantes para manejar las sutilezas de la diplomacia en un contexto intergaláctico. Guiados por el Embajador Rex Galaxion, un experto en negociaciones extraterrestres, los participantes aprenderán a diseñar tratados, manejar conflictos interestelares y fomentar la paz y la cooperación entre diversas civilizaciones espaciales. A través de simulaciones interactivas, estudios de caso y ejercicios de rol, los estudiantes se convertirán en diplomáticos capaces de influir en las políticas a escala galáctica.",
@@ -908,12 +919,12 @@
       "review_score": 4.8,
       "reviews": [
         {
-          "student_id": 7,
+          "studentId": 7,
           "rating": 5,
           "comment": "Una formación excepcional que me ha preparado para liderar en el ámbito diplomático."
         },
         {
-          "student_id": 15,
+          "studentId": 15,
           "rating": 4.7,
           "comment": "Los ejercicios prácticos y las simulaciones fueron invaluables para mi aprendizaje."
         }
@@ -922,7 +933,7 @@
       "course_level": "Avanzado",
       "student_ratings": [
         {
-          "student_id": 12,
+          "studentId": 12,
           "rating": 4.9,
           "comment": "Profundamente informativo y increíblemente práctico."
         }
@@ -933,10 +944,10 @@
       "name": "Tecnologías de Propulsión Espacial",
       "start_date": "2024-11-15",
       "end_date": "2025-02-10",
-      "studentsId": [1, 6, 14],
+      "studentId": [1, 6, 14],
       "enrollment_date": "2024-10-30",
       "schedule": "Fecha Estelar 4351.0 - 4355.0",
-      "teachersId": 7,
+      "teacherId": 7,
       "teacher_name": "Ingeniero Mara Pulse",
       "short_description": "Explora las fronteras de la propulsión espacial y aprende a diseñar sistemas que definirán el futuro de los viajes intergalácticos.",
       "long_description": "Este curso avanzado ofrece una visión profunda de los sistemas de propulsión que impulsan las naves a través del cosmos. A cargo de la Ingeniero Mara Pulse, una innovadora en tecnología de propulsión, los estudiantes se sumergirán en la física de la propulsión, explorando desde sistemas de cohetes convencionales hasta tecnologías experimentales como la propulsión iónica y la antimateria. Los participantes tendrán la oportunidad de diseñar y simular sus propios sistemas de propulsión, evaluando su eficacia en escenarios reales y simulados.",
@@ -1021,12 +1032,12 @@
       "review_score": 4.9,
       "reviews": [
         {
-          "student_id": 1,
+          "studentId": 1,
           "rating": 5,
           "comment": "Este curso ha ampliado mi comprensión de lo que es posible en la tecnología de propulsión."
         },
         {
-          "student_id": 14,
+          "studentId": 14,
           "rating": 4.8,
           "comment": "Los proyectos y las simulaciones fueron desafiantes y extremadamente informativos."
         }
@@ -1035,7 +1046,7 @@
       "course_level": "Experto",
       "student_ratings": [
         {
-          "student_id": 6,
+          "studentId": 6,
           "rating": 5,
           "comment": "Una experiencia increíble que ha profundizado mi amor por la ingeniería espacial."
         }
@@ -1046,10 +1057,10 @@
       "name": "Exploración de Exoplanetas",
       "start_date": "2024-11-20",
       "end_date": "2025-02-20",
-      "studentsId": [8, 10, 16],
+      "studentId": [8, 10, 16],
       "enrollment_date": "2024-11-05",
       "schedule": "Fecha Estelar 4356.0 - 4360.0",
-      "teachersId": 8,
+      "teacherId": 8,
       "teacher_name": "Doctora Elara Moonwalker",
       "short_description": "Descubre y estudia nuevos mundos más allá de nuestro sistema solar.",
       "long_description": "El curso de Exploración de Exoplanetas lleva a los estudiantes en un viaje a través del cosmos para descubrir y analizar mundos fuera de nuestro sistema solar. Dirigido por la Doctora Elara Moonwalker, una renombrada astrónoma y exploradora planetaria, este curso cubre todo desde la detección de exoplanetas hasta las técnicas avanzadas para analizar su atmósfera y potencial habitabilidad. A través de conferencias, laboratorios prácticos y observaciones telescopicas, los estudiantes ganarán una comprensión profunda de cómo identificar y estudiar estos planetas distantes.",
@@ -1134,12 +1145,12 @@
       "review_score": 4.7,
       "reviews": [
         {
-          "student_id": 8,
+          "studentId": 8,
           "rating": 5,
           "comment": "Un curso fascinante que abre una ventana a nuevos mundos."
         },
         {
-          "student_id": 16,
+          "studentId": 16,
           "rating": 4.9,
           "comment": "Las sesiones prácticas y las observaciones nocturnas fueron lo más destacado para mí."
         }
@@ -1148,7 +1159,7 @@
       "course_level": "Intermedio",
       "student_ratings": [
         {
-          "student_id": 10,
+          "studentId": 10,
           "rating": 4.8,
           "comment": "Aprendí técnicas increíbles para la detección de planetas fuera de nuestro sistema solar."
         }
@@ -1159,10 +1170,10 @@
       "name": "Bioingeniería de Ecosistemas Espaciales",
       "start_date": "2024-12-01",
       "end_date": "2025-03-01",
-      "studentsId": [12, 15, 17],
+      "studentId": [12, 15, 17],
       "enrollment_date": "2024-11-15",
       "schedule": "Fecha Estelar 4361.0 - 4365.0",
-      "teachersId": 9,
+      "teacherId": 9,
       "teacher_name": "Doctor Bio Terra",
       "short_description": "Diseña e implementa ecosistemas sostenibles para la vida humana en otros planetas.",
       "long_description": "Este curso innovador introduce a los estudiantes en el campo emergente de la bioingeniería de ecosistemas espaciales. Bajo la guía del Doctor Bio Terra, un pionero en biotecnología aplicada a hábitats extraterrestres, los estudiantes aprenderán a diseñar, construir y mantener ecosistemas artificiales que soporten la vida humana en entornos espaciales. Desde la teoría hasta la implementación práctica, el curso cubre técnicas de ingeniería genética, biología sintética y manejo de recursos biológicos, preparando a los estudiantes para contribuir a futuras misiones de colonización planetaria.",
@@ -1247,12 +1258,12 @@
       "review_score": 4.8,
       "reviews": [
         {
-          "student_id": 12,
+          "studentId": 12,
           "rating": 5,
           "comment": "Un curso revolucionario que redefine lo que es posible en la bioingeniería."
         },
         {
-          "student_id": 17,
+          "studentId": 17,
           "rating": 4.7,
           "comment": "Los proyectos prácticos me dieron una verdadera comprensión de lo que se necesita para construir ecosistemas sostenibles en el espacio."
         }
@@ -1261,7 +1272,7 @@
       "course_level": "Experto",
       "student_ratings": [
         {
-          "student_id": 15,
+          "studentId": 15,
           "rating": 4.9,
           "comment": "Profundamente informativo y desafiante, este curso me preparó para contribuir a la ciencia espacial."
         }
@@ -1272,10 +1283,10 @@
       "name": "Neurociencia Espacial",
       "start_date": "2025-01-05",
       "end_date": "2025-04-05",
-      "studentsId": [14, 18, 20],
+      "studentId": [14, 18, 20],
       "enrollment_date": "2024-12-20",
       "schedule": "Fecha Estelar 4366.0 - 4370.0",
-      "teachersId": 10,
+      "teacherId": 10,
       "teacher_name": "Doctor Nero Synapse",
       "short_description": "Estudia los efectos del espacio en la neurología humana y desarrolla técnicas para mitigar los impactos negativos.",
       "long_description": "Este curso ofrece una exploración profunda de cómo el ambiente espacial afecta la función y la salud del cerebro humano. Dirigido por el Doctor Nero Synapse, un líder en el campo de la neurociencia espacial, los estudiantes investigarán temas como la adaptación cerebral a la microgravedad, el impacto de la radiación cósmica en la neurología, y las estrategias para mantener la salud cognitiva en misiones de larga duración. A través de conferencias, estudios de caso y experimentos prácticos, este curso prepara a los estudiantes para apoyar la salud mental y neurológica de los astronautas en el espacio.",
@@ -1360,12 +1371,12 @@
       "review_score": 4.8,
       "reviews": [
         {
-          "student_id": 14,
+          "studentId": 14,
           "rating": 5,
           "comment": "Este curso ha cambiado completamente mi perspectiva sobre la importancia de la neurociencia en la exploración espacial."
         },
         {
-          "student_id": 20,
+          "studentId": 20,
           "rating": 4.9,
           "comment": "Una mirada profunda e impresionante a la neurología en condiciones extremas."
         }
@@ -1374,7 +1385,7 @@
       "course_level": "Experto",
       "student_ratings": [
         {
-          "student_id": 18,
+          "studentId": 18,
           "rating": 5,
           "comment": "Informativo, desafiante y perfectamente adaptado a los interesados en la medicina espacial."
         }
@@ -1387,10 +1398,10 @@
       "name": "Navegación en la Galaxia",
       "start_date": "2024-09-01",
       "end_date": "2024-11-01",
-      "studentsId": [1, 2, 3],
+      "studentId": [1, 2, 3],
       "enrollment_date": "2024-08-15",
       "schedule": "Fecha Estelar 4321.0 - 4321.9",
-      "teachersId": 1,
+      "teacherId": 1,
       "teacher_name": "Capitán James Nebula",
       "short_description": "Domina el arte de la navegación galáctica a través de lecciones teóricas y simulaciones prácticas.",
       "long_description": "Este curso está diseñado para futuros navegantes espaciales que deseen dominar las complejidades de los viajes galácticos. Bajo la guía del Capitán James Nebula, un explorador espacial experimentado con más de dos décadas de experiencia en navegación interestelar, los estudiantes aprenderán a usar eficazmente mapas estelares, navegar por las diversas regiones del espacio y comprender los principios físicos y teóricos que rigen los viajes intergalácticos. El curso combina conocimientos teóricos con simulaciones prácticas, asegurando que los estudiantes estén bien preparados para misiones espaciales reales. Al final del curso, los participantes serán capaces de trazar rutas a través de regiones inexploradas del espacio, evitar peligros cósmicos comunes y optimizar rutas para la eficiencia de combustible y la gestión del tiempo.",
@@ -1498,12 +1509,12 @@
       "review_score": 4.7,
       "reviews": [
         {
-          "student_id": 1,
+          "studentId": 1,
           "rating": 5,
           "comment": "Un curso excelente para entender los fundamentos de la navegación galáctica."
         },
         {
-          "student_id": 3,
+          "studentId": 3,
           "rating": 4.5,
           "comment": "Desafiante pero gratificante, excelentes simulaciones prácticas."
         }
@@ -1512,12 +1523,12 @@
       "course_level": "Intermedio",
       "student_ratings": [
         {
-          "student_id": 1,
+          "studentId": 1,
           "rating": 5,
           "comment": "La mejor experiencia educativa intergaláctica que he tenido."
         },
         {
-          "student_id": 2,
+          "studentId": 2,
           "rating": 4,
           "comment": "Buena cobertura de los temas, pero algunas simulaciones fueron difíciles."
         }
@@ -1528,10 +1539,10 @@
       "name": "Exploración de Planetas Exóticos",
       "start_date": "2024-10-01",
       "end_date": "2024-12-15",
-      "studentsId": [4, 5, 7, 9],
+      "studentId": [4, 5, 7, 9],
       "enrollment_date": "2024-09-15",
       "schedule": "Fecha Estelar 4325.3 - 4328.6",
-      "teachersId": 8,
+      "teacherId": 8,
       "teacher_name": "Exploradora Luna Stardust",
       "short_description": "Descubre los secretos de planetas no mapeados en nuestro curso práctico de exploración planetaria.",
       "long_description": "Prepárate para ser parte de la vanguardia de la exploración espacial aprendiendo a manejar ambientes desconocidos y extremos en este curso detallado. Bajo la experta tutela de la Exploradora Luna Stardust, explorarás técnicas de supervivencia, recolección de datos y análisis de muestras planetarias que te capacitarán para liderar misiones en nuevos mundos. Este curso es esencial para aquellos que aspiran a expandir los límites conocidos del espacio habitable y descubrir nuevos recursos.",
@@ -1625,12 +1636,12 @@
       "review_score": 4.9,
       "reviews": [
         {
-          "student_id": 4,
+          "studentId": 4,
           "rating": 5,
           "comment": "Una experiencia transformadora que me ha preparado para ser pionero en nuevos mundos."
         },
         {
-          "student_id": 7,
+          "studentId": 7,
           "rating": 4.8,
           "comment": "Muy desafiante, pero increíblemente gratificante. Las simulaciones son de primer nivel."
         }
@@ -1639,7 +1650,7 @@
       "course_level": "Avanzado",
       "student_ratings": [
         {
-          "student_id": 9,
+          "studentId": 9,
           "rating": 5,
           "comment": "El curso superó todas mis expectativas con su profundidad y aplicación práctica."
         }
@@ -1650,10 +1661,10 @@
       "name": "Astroingeniería Avanzada",
       "start_date": "2024-09-15",
       "end_date": "2024-12-15",
-      "studentsId": [2, 4, 6],
+      "studentId": [2, 4, 6],
       "enrollment_date": "2024-08-20",
       "schedule": "Fecha Estelar 4332.0 - 4336.0",
-      "teachersId": 3,
+      "teacherId": 3,
       "teacher_name": "Ingeniero Leo Starcrafter",
       "short_description": "Construye y mantén estructuras espaciales utilizando las últimas tecnologías en astroingeniería.",
       "long_description": "Este curso sumerge a los estudiantes en los principios avanzados y aplicaciones prácticas de la ingeniería espacial. A través de una combinación de teoría detallada y extensos proyectos prácticos, los participantes aprenderán sobre la construcción de naves espaciales, estaciones espaciales y la infraestructura necesaria para futuras colonias en otros planetas. Bajo la tutela del Ingeniero Leo Starcrafter, los estudiantes no solo adquirirán conocimientos técnicos, sino también habilidades prácticas en el uso de herramientas de astroingeniería en entornos de microgravedad.",
@@ -1728,12 +1739,12 @@
       "review_score": 4.8,
       "reviews": [
         {
-          "student_id": 2,
+          "studentId": 2,
           "rating": 5,
           "comment": "Curso imprescindible para cualquier aspirante a ingeniero espacial."
         },
         {
-          "student_id": 4,
+          "studentId": 4,
           "rating": 4.5,
           "comment": "Los proyectos prácticos fueron increíblemente enriquecedores."
         }
@@ -1742,7 +1753,7 @@
       "course_level": "Avanzado",
       "student_ratings": [
         {
-          "student_id": 6,
+          "studentId": 6,
           "rating": 4.9,
           "comment": "La combinación de teoría y práctica fue perfecta."
         }
@@ -1753,10 +1764,10 @@
       "name": "Tácticas de Supervivencia Cósmica",
       "start_date": "2024-10-05",
       "end_date": "2024-12-20",
-      "studentsId": [3, 8, 10],
+      "studentId": [3, 8, 10],
       "enrollment_date": "2024-09-20",
       "schedule": "Fecha Estelar 4333.0 - 4338.0",
-      "teachersId": 4,
+      "teacherId": 4,
       "teacher_name": "Comandante Sarah Galaxy",
       "short_description": "Aprende a sobrevivir en los entornos más hostiles del cosmos con técnicas avanzadas de supervivencia.",
       "long_description": "En este curso, los estudiantes se entrenarán para manejar situaciones extremas en ambientes espaciales, incluyendo vacío espacial, planetas con atmósferas tóxicas y campos de asteroides. Guiados por la Comandante Sarah Galaxy, una veterana en misiones de alto riesgo, los participantes desarrollarán habilidades críticas que van desde la creación de refugios temporales hasta la reparación de trajes espaciales en condiciones de emergencia. El curso está diseñado no solo para enseñar tácticas de supervivencia, sino también para fortalecer la resiliencia mental y física necesaria para enfrentar y superar desafíos imprevistos en el espacio.",
@@ -1833,12 +1844,12 @@
       "review_score": 4.9,
       "reviews": [
         {
-          "student_id": 3,
+          "studentId": 3,
           "rating": 5,
           "comment": "Un curso desafiante que te prepara para lo inesperado en el espacio."
         },
         {
-          "student_id": 10,
+          "studentId": 10,
           "rating": 4.8,
           "comment": "Las simulaciones de supervivencia fueron increíblemente realistas y útiles."
         }
@@ -1847,7 +1858,7 @@
       "course_level": "Avanzado",
       "student_ratings": [
         {
-          "student_id": 8,
+          "studentId": 8,
           "rating": 4.9,
           "comment": "Excelente entrenamiento para situaciones críticas, totalmente recomendado para futuros exploradores."
         }
@@ -1858,10 +1869,10 @@
       "name": "Comunicaciones Intergalácticas",
       "start_date": "2024-10-10",
       "end_date": "2024-12-05",
-      "studentsId": [5, 11, 13],
+      "studentId": [5, 11, 13],
       "enrollment_date": "2024-09-25",
       "schedule": "Fecha Estelar 4340.0 - 4345.0",
-      "teachersId": 5,
+      "teacherId": 5,
       "teacher_name": "Doctora Hila Signal",
       "short_description": "Domina las tecnologías de comunicación espacial para mantener conectados a los exploradores de la galaxia.",
       "long_description": "Este curso intensivo proporciona a los estudiantes una comprensión profunda de las tecnologías de comunicación que son críticas para las operaciones intergalácticas. Dirigido por la Doctora Hila Signal, una pionera en comunicaciones cuánticas, los participantes aprenderán sobre la transmisión de datos a través de vastas distancias espaciales, el manejo de señales en entornos interferentes y las últimas innovaciones en criptografía espacial. A través de lecciones teóricas y muchos ejercicios prácticos, los estudiantes estarán preparados para diseñar y mantener sistemas de comunicación que puedan operar eficazmente en el entorno espacial.",
@@ -1944,12 +1955,12 @@
       "review_score": 4.9,
       "reviews": [
         {
-          "student_id": 5,
+          "studentId": 5,
           "rating": 5,
           "comment": "El curso me proporcionó una sólida comprensión de las comunicaciones espaciales avanzadas."
         },
         {
-          "student_id": 11,
+          "studentId": 11,
           "rating": 4.8,
           "comment": "Los ejercicios prácticos fueron esenciales para entender la teoría."
         }
@@ -1958,7 +1969,7 @@
       "course_level": "Avanzado",
       "student_ratings": [
         {
-          "student_id": 13,
+          "studentId": 13,
           "rating": 4.7,
           "comment": "Increíble detalle en la enseñanza de criptografía espacial."
         }
@@ -1969,10 +1980,10 @@
       "name": "Diplomacia Intergaláctica",
       "start_date": "2024-11-01",
       "end_date": "2025-01-31",
-      "studentsId": [7, 12, 15],
+      "studentId": [7, 12, 15],
       "enrollment_date": "2024-10-15",
       "schedule": "Fecha Estelar 4346.0 - 4350.0",
-      "teachersId": 6,
+      "teacherId": 6,
       "teacher_name": "Embajador Rex Galaxion",
       "short_description": "Navega los complejos desafíos de la diplomacia en un universo multiespecie.",
       "long_description": "Este curso prepara a los estudiantes para manejar las sutilezas de la diplomacia en un contexto intergaláctico. Guiados por el Embajador Rex Galaxion, un experto en negociaciones extraterrestres, los participantes aprenderán a diseñar tratados, manejar conflictos interestelares y fomentar la paz y la cooperación entre diversas civilizaciones espaciales. A través de simulaciones interactivas, estudios de caso y ejercicios de rol, los estudiantes se convertirán en diplomáticos capaces de influir en las políticas a escala galáctica.",
@@ -2057,12 +2068,12 @@
       "review_score": 4.8,
       "reviews": [
         {
-          "student_id": 7,
+          "studentId": 7,
           "rating": 5,
           "comment": "Una formación excepcional que me ha preparado para liderar en el ámbito diplomático."
         },
         {
-          "student_id": 15,
+          "studentId": 15,
           "rating": 4.7,
           "comment": "Los ejercicios prácticos y las simulaciones fueron invaluables para mi aprendizaje."
         }
@@ -2071,7 +2082,7 @@
       "course_level": "Avanzado",
       "student_ratings": [
         {
-          "student_id": 12,
+          "studentId": 12,
           "rating": 4.9,
           "comment": "Profundamente informativo y increíblemente práctico."
         }
@@ -2082,10 +2093,10 @@
       "name": "Tecnologías de Propulsión Espacial",
       "start_date": "2024-11-15",
       "end_date": "2025-02-10",
-      "studentsId": [1, 6, 14],
+      "studentId": [1, 6, 14],
       "enrollment_date": "2024-10-30",
       "schedule": "Fecha Estelar 4351.0 - 4355.0",
-      "teachersId": 7,
+      "teacherId": 7,
       "teacher_name": "Ingeniero Mara Pulse",
       "short_description": "Explora las fronteras de la propulsión espacial y aprende a diseñar sistemas que definirán el futuro de los viajes intergalácticos.",
       "long_description": "Este curso avanzado ofrece una visión profunda de los sistemas de propulsión que impulsan las naves a través del cosmos. A cargo de la Ingeniero Mara Pulse, una innovadora en tecnología de propulsión, los estudiantes se sumergirán en la física de la propulsión, explorando desde sistemas de cohetes convencionales hasta tecnologías experimentales como la propulsión iónica y la antimateria. Los participantes tendrán la oportunidad de diseñar y simular sus propios sistemas de propulsión, evaluando su eficacia en escenarios reales y simulados.",
@@ -2170,12 +2181,12 @@
       "review_score": 4.9,
       "reviews": [
         {
-          "student_id": 1,
+          "studentId": 1,
           "rating": 5,
           "comment": "Este curso ha ampliado mi comprensión de lo que es posible en la tecnología de propulsión."
         },
         {
-          "student_id": 14,
+          "studentId": 14,
           "rating": 4.8,
           "comment": "Los proyectos y las simulaciones fueron desafiantes y extremadamente informativos."
         }
@@ -2184,7 +2195,7 @@
       "course_level": "Experto",
       "student_ratings": [
         {
-          "student_id": 6,
+          "studentId": 6,
           "rating": 5,
           "comment": "Una experiencia increíble que ha profundizado mi amor por la ingeniería espacial."
         }
@@ -2195,10 +2206,10 @@
       "name": "Exploración de Exoplanetas",
       "start_date": "2024-11-20",
       "end_date": "2025-02-20",
-      "studentsId": [8, 10, 16],
+      "studentId": [8, 10, 16],
       "enrollment_date": "2024-11-05",
       "schedule": "Fecha Estelar 4356.0 - 4360.0",
-      "teachersId": 8,
+      "teacherId": 8,
       "teacher_name": "Doctora Elara Moonwalker",
       "short_description": "Descubre y estudia nuevos mundos más allá de nuestro sistema solar.",
       "long_description": "El curso de Exploración de Exoplanetas lleva a los estudiantes en un viaje a través del cosmos para descubrir y analizar mundos fuera de nuestro sistema solar. Dirigido por la Doctora Elara Moonwalker, una renombrada astrónoma y exploradora planetaria, este curso cubre todo desde la detección de exoplanetas hasta las técnicas avanzadas para analizar su atmósfera y potencial habitabilidad. A través de conferencias, laboratorios prácticos y observaciones telescopicas, los estudiantes ganarán una comprensión profunda de cómo identificar y estudiar estos planetas distantes.",
@@ -2283,12 +2294,12 @@
       "review_score": 4.7,
       "reviews": [
         {
-          "student_id": 8,
+          "studentId": 8,
           "rating": 5,
           "comment": "Un curso fascinante que abre una ventana a nuevos mundos."
         },
         {
-          "student_id": 16,
+          "studentId": 16,
           "rating": 4.9,
           "comment": "Las sesiones prácticas y las observaciones nocturnas fueron lo más destacado para mí."
         }
@@ -2297,7 +2308,7 @@
       "course_level": "Intermedio",
       "student_ratings": [
         {
-          "student_id": 10,
+          "studentId": 10,
           "rating": 4.8,
           "comment": "Aprendí técnicas increíbles para la detección de planetas fuera de nuestro sistema solar."
         }
@@ -2308,10 +2319,10 @@
       "name": "Bioingeniería de Ecosistemas Espaciales",
       "start_date": "2024-12-01",
       "end_date": "2025-03-01",
-      "studentsId": [12, 15, 17],
+      "studentId": [12, 15, 17],
       "enrollment_date": "2024-11-15",
       "schedule": "Fecha Estelar 4361.0 - 4365.0",
-      "teachersId": 9,
+      "teacherId": 9,
       "teacher_name": "Doctor Bio Terra",
       "short_description": "Diseña e implementa ecosistemas sostenibles para la vida humana en otros planetas.",
       "long_description": "Este curso innovador introduce a los estudiantes en el campo emergente de la bioingeniería de ecosistemas espaciales. Bajo la guía del Doctor Bio Terra, un pionero en biotecnología aplicada a hábitats extraterrestres, los estudiantes aprenderán a diseñar, construir y mantener ecosistemas artificiales que soporten la vida humana en entornos espaciales. Desde la teoría hasta la implementación práctica, el curso cubre técnicas de ingeniería genética, biología sintética y manejo de recursos biológicos, preparando a los estudiantes para contribuir a futuras misiones de colonización planetaria.",
@@ -2396,12 +2407,12 @@
       "review_score": 4.8,
       "reviews": [
         {
-          "student_id": 12,
+          "studentId": 12,
           "rating": 5,
           "comment": "Un curso revolucionario que redefine lo que es posible en la bioingeniería."
         },
         {
-          "student_id": 17,
+          "studentId": 17,
           "rating": 4.7,
           "comment": "Los proyectos prácticos me dieron una verdadera comprensión de lo que se necesita para construir ecosistemas sostenibles en el espacio."
         }
@@ -2410,7 +2421,7 @@
       "course_level": "Experto",
       "student_ratings": [
         {
-          "student_id": 15,
+          "studentId": 15,
           "rating": 4.9,
           "comment": "Profundamente informativo y desafiante, este curso me preparó para contribuir a la ciencia espacial."
         }
@@ -2421,10 +2432,10 @@
       "name": "Neurociencia Espacial",
       "start_date": "2025-01-05",
       "end_date": "2025-04-05",
-      "studentsId": [14, 18, 20],
+      "studentId": [14, 18, 20],
       "enrollment_date": "2024-12-20",
       "schedule": "Fecha Estelar 4366.0 - 4370.0",
-      "teachersId": 10,
+      "teacherId": 10,
       "teacher_name": "Doctor Nero Synapse",
       "short_description": "Estudia los efectos del espacio en la neurología humana y desarrolla técnicas para mitigar los impactos negativos.",
       "long_description": "Este curso ofrece una exploración profunda de cómo el ambiente espacial afecta la función y la salud del cerebro humano. Dirigido por el Doctor Nero Synapse, un líder en el campo de la neurociencia espacial, los estudiantes investigarán temas como la adaptación cerebral a la microgravedad, el impacto de la radiación cósmica en la neurología, y las estrategias para mantener la salud cognitiva en misiones de larga duración. A través de conferencias, estudios de caso y experimentos prácticos, este curso prepara a los estudiantes para apoyar la salud mental y neurológica de los astronautas en el espacio.",
@@ -2509,12 +2520,12 @@
       "review_score": 4.8,
       "reviews": [
         {
-          "student_id": 14,
+          "studentId": 14,
           "rating": 5,
           "comment": "Este curso ha cambiado completamente mi perspectiva sobre la importancia de la neurociencia en la exploración espacial."
         },
         {
-          "student_id": 20,
+          "studentId": 20,
           "rating": 4.9,
           "comment": "Una mirada profunda e impresionante a la neurología en condiciones extremas."
         }
@@ -2523,7 +2534,7 @@
       "course_level": "Experto",
       "student_ratings": [
         {
-          "student_id": 18,
+          "studentId": 18,
           "rating": 5,
           "comment": "Informativo, desafiante y perfectamente adaptado a los interesados en la medicina espacial."
         }
@@ -2541,7 +2552,7 @@
       "evaluation": 4.5,
       "address": "Lunar Base Alpha, Moon",
       "planet_of_birth": "Earth",
-      "coursesId": [1, 3, 7],
+      "courseId": [1, 3, 7],
       "enrollmentId": 1,
       "opinion": "La experiencia en la Space Academy ha sido transformadora, superando todas mis expectativas."
     },
@@ -2555,7 +2566,7 @@
       "evaluation": 4.2,
       "address": "Mars Colony One, Mars",
       "planet_of_birth": "Mars",
-      "coursesId": [1, 2],
+      "courseId": [1, 2],
       "enrollmentId": 1,
       "opinion": "La academia ofrece una excelente combinación de teoría y práctica en un entorno innovador."
     },
@@ -2569,7 +2580,7 @@
       "evaluation": 3.8,
       "address": "Titan Station, Saturn",
       "planet_of_birth": "Saturn",
-      "coursesId": [1, 5, 10],
+      "courseId": [1, 5, 10],
       "enrollmentId": 1,
       "opinion": "Los cursos son desafiantes, pero la falta de actividades extracurriculares limita la experiencia."
     },
@@ -2583,7 +2594,7 @@
       "evaluation": 4.7,
       "address": "Europa Habitat, Jupiter",
       "planet_of_birth": "Europa",
-      "coursesId": [2, 4, 8],
+      "courseId": [2, 4, 8],
       "enrollmentId": 1,
       "opinion": "La instrucción es de primera clase, con acceso a tecnología avanzada y mentores excepcionales."
     },
@@ -2597,7 +2608,7 @@
       "evaluation": 4.3,
       "address": "Neptune Outpost, Neptune",
       "planet_of_birth": "Neptune",
-      "coursesId": [2, 5],
+      "courseId": [2, 5],
       "enrollmentId": 1,
       "opinion": "Los instructores están comprometidos y accesibles, haciendo que el aprendizaje sea interactivo y enriquecedor."
     },
@@ -2611,7 +2622,7 @@
       "evaluation": 4.0,
       "address": "Pluto Research Station, Pluto",
       "planet_of_birth": "Pluto",
-      "coursesId": [3, 6],
+      "courseId": [3, 6],
       "enrollmentId": 1,
       "opinion": "Una experiencia sólida en general, aunque algunas áreas del campus necesitan mejoras."
     }
@@ -2625,7 +2636,7 @@
       "students": [1, 2, 3],
       "enrollment_date": "2024-08-15",
       "schedule": "Star Date 4321.0 - 4321.9",
-      "teachersId": 1,
+      "teacherId": 1,
       "teacher_name": "Captain James Nebula"
     },
     {
@@ -2636,7 +2647,7 @@
       "students": [2, 4, 5],
       "enrollment_date": "2024-08-20",
       "schedule": "Star Date 4330.5 - 4333.7",
-      "teachersId": 2,
+      "teacherId": 2,
       "teacher_name": "Dr. Lyra Starbound"
     },
     {
@@ -2647,7 +2658,7 @@
       "students": [1, 6, 7],
       "enrollment_date": "2024-08-25",
       "schedule": "Star Date 4340.0 - 4341.8",
-      "teachersId": 3,
+      "teacherId": 3,
       "teacher_name": "Engineer Stella Skyforge"
     },
     {
@@ -2658,7 +2669,7 @@
       "students": [4, 8, 9],
       "enrollment_date": "2024-08-28",
       "schedule": "Star Date 4345.2 - 4349.1",
-      "teachersId": 4,
+      "teacherId": 4,
       "teacher_name": "Commander Orion Pulsar"
     },
     {
@@ -2669,7 +2680,7 @@
       "students": [3, 5, 10],
       "enrollment_date": "2024-09-10",
       "schedule": "Star Date 4350.0 - 4355.5",
-      "teachersId": 5,
+      "teacherId": 5,
       "teacher_name": "Lieutenant Nova Starflare"
     },
     {
@@ -2680,7 +2691,7 @@
       "students": [6, 7, 11],
       "enrollment_date": "2024-09-15",
       "schedule": "Star Date 4360.1 - 4362.3",
-      "teachersId": 6,
+      "teacherId": 6,
       "teacher_name": "Navigator Vega Lightyear"
     },
     {
@@ -2691,7 +2702,7 @@
       "students": [1, 9, 12],
       "enrollment_date": "2024-09-20",
       "schedule": "Star Date 4365.4 - 4370.2",
-      "teachersId": 7,
+      "teacherId": 7,
       "teacher_name": "Ambassador Luna Eclipse"
     },
     {
@@ -2702,7 +2713,7 @@
       "students": [4, 10, 13],
       "enrollment_date": "2024-09-25",
       "schedule": "Star Date 4372.7 - 4375.6",
-      "teachersId": 8,
+      "teacherId": 8,
       "teacher_name": "Explorer Kai Meteor"
     },
     {
@@ -2713,7 +2724,7 @@
       "students": [8, 11, 14],
       "enrollment_date": "2024-09-30",
       "schedule": "Star Date 4377.5 - 4380.9",
-      "teachersId": 9,
+      "teacherId": 9,
       "teacher_name": "Professor Celeste Comet"
     },
     {
@@ -2724,7 +2735,7 @@
       "students": [3, 12, 15],
       "enrollment_date": "2024-10-10",
       "schedule": "Star Date 4385.0 - 4390.0",
-      "teachersId": 10,
+      "teacherId": 10,
       "teacher_name": "Analyst Rigel Matrix"
     }
   ],
@@ -2738,7 +2749,7 @@
       "title": "Capitán",
       "specialty": "Navegación Galáctica",
       "planet_of_origin": "Terra Nova",
-      "coursesId": 1,
+      "courseId": 1,
       "rating": 4.8,
       "missions": {
         "total": 13,
@@ -2755,7 +2766,7 @@
       "title": "Doctora",
       "specialty": "Exploración Planetaria",
       "planet_of_origin": "Vulcanis",
-      "coursesId": 2,
+      "courseId": 2,
       "rating": 4.7,
       "missions": {
         "total": 9,
@@ -2772,7 +2783,7 @@
       "title": "Ingeniero",
       "specialty": "Astroingeniería Avanzada",
       "planet_of_origin": "Mechanis",
-      "coursesId": 3,
+      "courseId": 3,
       "rating": 4.9,
       "missions": {
         "total": 5,
@@ -2789,7 +2800,7 @@
       "title": "Comandante",
       "specialty": "Supervivencia Cósmica",
       "planet_of_origin": "Frontiera",
-      "coursesId": 4,
+      "courseId": 4,
       "rating": 4.6,
       "missions": {
         "total": 10,
@@ -2806,7 +2817,7 @@
       "title": "Doctora",
       "specialty": "Comunicaciones Intergalácticas",
       "planet_of_origin": "Signalis",
-      "coursesId": 5,
+      "courseId": 5,
       "rating": 4.5,
       "missions": {
         "total": 8,
@@ -2823,7 +2834,7 @@
       "title": "Embajador",
       "specialty": "Diplomacia Intergaláctica",
       "planet_of_origin": "Pacifica",
-      "coursesId": 6,
+      "courseId": 6,
       "rating": 4.8,
       "missions": {
         "total": 18,
@@ -2840,7 +2851,7 @@
       "title": "Ingeniero",
       "specialty": "Propulsión Espacial",
       "planet_of_origin": "Thrustar",
-      "coursesId": 7,
+      "courseId": 7,
       "rating": 4.7,
       "missions": {
         "total": 10,
@@ -2857,7 +2868,7 @@
       "title": "Doctora",
       "specialty": "Exploración de Exoplanetas",
       "planet_of_origin": "Lunaria",
-      "coursesId": 8,
+      "courseId": 8,
       "rating": 4.9,
       "missions": {
         "total": 12,
@@ -2874,7 +2885,7 @@
       "title": "Doctor",
       "specialty": "Bioingeniería de Ecosistemas Espaciales",
       "planet_of_origin": "Gaia",
-      "coursesId": 9,
+      "courseId": 9,
       "rating": 4.85,
       "missions": {
         "total": 6,
@@ -2891,7 +2902,7 @@
       "title": "Doctor",
       "specialty": "Neurociencia Espacial",
       "planet_of_origin": "Neurotica",
-      "coursesId": 10,
+      "courseId": 10,
       "rating": 4.95,
       "missions": {
         "total": 14,

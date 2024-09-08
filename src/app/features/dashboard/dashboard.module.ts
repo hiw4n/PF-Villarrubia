@@ -11,9 +11,11 @@ import { CoursesSpaceComponent } from './courses-space/courses-space.component';
 import { SharedModule } from '../../shared/shared.module';
 import { NavModule } from '../../shared/component/nav/nav.module';
 import { EnrollmentsModule } from './enrollments/enrollments.module';
+import { TeachersComponent } from './teachers/teachers.component';
+import { TeachersModule } from './teachers/teachers.module';
 
 @NgModule({
-  declarations: [DashboardComponent, CoursesSpaceComponent],
+  declarations: [DashboardComponent, CoursesSpaceComponent, TeachersComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,
@@ -21,6 +23,7 @@ import { EnrollmentsModule } from './enrollments/enrollments.module';
     /* material */
     SharedModule,
     /* AuthModule, */
+    TeachersModule,
     StudentsModule,
     CoursesModule,
     NavModule,

@@ -4,9 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-
-import { StoreModule } from '@ngrx/store';
-
 /* APP MODULES */
 import { SharedModule } from './shared/shared.module';
 import { provideNativeDateAdapter } from '@angular/material/core';
@@ -19,12 +16,15 @@ import {
 } from '@angular/common/http';
 /* import { IndexComponent } from './features/dashboard/index/index.component'; */
 import { NavModule } from './shared/component/nav/nav.module';
-import { rootReducer } from './core/store';
-import { EffectsModule } from '@ngrx/effects';
-import { CoreModule } from './core/core.module';
-import { reducers, metaReducers } from './reducers';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { FeaturesModule } from './features/features.module';
+import { rootReducer } from './core/store';
+import { CoreModule } from './core/core.module';
+// NGRX
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+
 //import { StudentsDialogComponent } from './src/app/features/dashboard/students/components/students-dialog/students-dialog.component';
 
 @NgModule({
@@ -35,7 +35,6 @@ import { FeaturesModule } from './features/features.module';
   ],
   exports: [MaterialModule],
   imports: [
-    StoreModule.forRoot(rootReducer, {}),
     CoreModule,
     BrowserModule,
     AppRoutingModule,
@@ -45,9 +44,12 @@ import { FeaturesModule } from './features/features.module';
     SharedModule,
     /* MaterialModule, */
     NavModule,
-    EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     FeaturesModule,
+    StoreModule.forRoot(rootReducer, {}),
+    StoreDevtoolsModule.instrument({ name: 'TEST' }),
+    // StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    // EffectsModule.forRoot([]),
+    // StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     /*    StoreModule.forRoot(reducers, {
       metaReducers,
     }),

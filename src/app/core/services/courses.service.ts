@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { Course } from '../models/course.interface';
+import { Course } from '../interfaces/course.interface';
 import { courseList } from '../data/course.json';
 
 @Injectable({
@@ -18,7 +18,7 @@ export class CoursesService {
       }, this.timeLoading);
     });
   }
-  getById(id: string): Observable<Course | undefined> {
+  getById(id: string | number): Observable<Course | undefined> {
     return this.get().pipe(map((m) => m.find((e) => e.id === id)));
   }
   add(data: Course): Observable<Course[]> {
@@ -30,16 +30,16 @@ export class CoursesService {
       }, this.timeLoading);
     });
   }
-  editById(id: string, data: Course) {
+  editById(id: string | number, data: Course) {
     this.MY_DB = this.MY_DB.map((e) => (e.id === id ? { ...data, id } : e));
     return this.get();
   }
 
-  deletedById(id: string): Observable<Course[]> {
+  deletedById(id: string | number): Observable<Course[]> {
     this.MY_DB = this.MY_DB.filter((e) => e.id != id);
     return this.get();
   }
-  deletedBAll(id: string): Observable<Course[]> {
+  deletedBAll(id: string | number): Observable<Course[]> {
     this.MY_DB = [];
     return this.get();
   }
