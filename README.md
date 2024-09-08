@@ -13,6 +13,9 @@
 (---)
 
 ### BACKEND
+
+base data is in: data/bd.json
+
 ```
  // Resources
   // http://localhost:3000/usersOld
