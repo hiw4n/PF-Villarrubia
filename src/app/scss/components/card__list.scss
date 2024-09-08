@@ -1,0 +1,89 @@
+.card{
+  &__list__content{
+    font-family: Rajdhani;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8));
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  $s-thumb: $size-thumb;
+  &__list{
+    &:nth-child(even){
+      margin-left: $s-thumb;
+    }
+    $m:12px;
+    margin-top:0;
+    margin-bottom:0;
+    position: relative;
+    min-height: $s-thumb;
+    display: flex;
+    &__content{
+      display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 18px;
+
+    }
+    &-image{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      @include image-round($s-thumb);
+      position: absolute;
+      top:0;
+      left:0;
+    }
+    &-text{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+      $mtb:12px;
+      $p:12px;
+      // margin-top: $mtb;
+      // margin-bottom: $mtb;
+      // padding-top: $p;
+      // padding-bottom: $p;
+        color: $color-white;
+        $s-left: $s-thumb/2;
+      h3, &__content  {
+        margin-left: $s-left*2!important;
+      }
+      &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        // gap:12px;
+        margin-left: $s-left!important;
+        padding-left: $s-left+12px;
+        padding-right: $s-left;
+        padding-top: $p;
+        padding-bottom: $p;
+          background-color: $color-violet-opacity;
+          @include bg-blur();
+          border-top-right-radius: $size-border-radius;
+          border-bottom-right-radius: $size-border-radius;
+        }
+        h3{
+          font-size: 18px;
+          font-weight: 800;
+          filter: drop-shadow(0px 4px 4px rgb(151, 59, 122));
+          }
+        p{
+          font-size: 16px;
+        }
+        .txt-small{
+          font-size: 12px;
+          font-weight: 800;
+        }
+    }
+    &-button{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-right: $s-thumb/2y;
+    }
+  }
+}

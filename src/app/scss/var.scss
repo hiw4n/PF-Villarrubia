@@ -1,14 +1,24 @@
 
   // Color
   $color-white: rgb(255,255,255);
+  $color-white-opacity: rgba(255,255,255, 0.8);
   $color-violet: rgb(151, 59 ,122);
   $color-violet-opacity: rgba(151, 59, 122, 0.2);
   $color-grey-neutral: rgb(147, 147,147);
-$color-opacity: rgba(0,0,0,0);
+  $color-opacity: rgba(0,0,0,0);
   $color-bg: rgb(12 4 14);
 
 
   $color-text-violet: rgb(223 196 233);
+  @mixin bg-blur($bgC:"12, 4, 14", $bgO:0.8, $blur:10px){
+    background-color: ($bgC, $bgO);
+    -webkit-backdrop-filter: blur($blur);
+    backdrop-filter: blur($blur);
+  }
+  @mixin bg-white-blur($o:0.5, $b:10px){
+    background-color: rgba(255,255,255, $o);
+    @include bg-blur($b);
+  }
 
 
   $border-radius: 10px;
@@ -16,6 +26,25 @@ $color-opacity: rgba(0,0,0,0);
 
 
   $botton-padding: 10px;
+
+  $size-border-radius: 10000px;
+
+
+  //image
+  $size-thumb: 150px;
+  $size-thumb-big: 200px;
+  $size-thumb-small: 100px;
+
+  @mixin image-round($s: $size-thumb){
+    width: $s;
+    height: $s;
+    border-radius: $size-border-radius;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
 
 
 
@@ -25,5 +54,7 @@ $card-round: 300px;
 .card{
   --bs-card-bg: rgba(255,255,255,0);
 }
+
+
 //butons
 $button-float-size:50px;

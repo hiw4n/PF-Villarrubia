@@ -1,15 +1,25 @@
 body{
-
-  font-family: Inter, sans-serif;
+  // font-family: Inter, sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
-h1,h2,h3,h4,h5,h6, p, a, button, li{
+@mixin fontGeneral(){
+  font-family: "Rajdhani", sans-serif!important;
   line-height: 1.2;
   margin: 0!important;
   padding: 0!important;
 }
-h1,h2,h3,h4,h5,h6{
-  color: $color-white;
+.mat-typography{
+  @include fontGeneral();
+  h1,h2,h3,h4,h5,h6, p, a, button, li{
+    @include fontGeneral();
+  }
 }
+h1,h2,h3,h4,h5,h6, p, a, button, li{
+  @include fontGeneral();
+}
+// h1,h2,h3,h4,h5,h6{
+//   color: $color-white;
+// }
 
 h1{
   &.title{

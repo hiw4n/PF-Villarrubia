@@ -3,7 +3,48 @@
 @if(courses$){
 <!-- <p>cargo info</p> -->
 <!-- {{ courses$[0] | json}} -->
+@if(courses$){
+<!-- <p>cargo info</p> -->
+<!-- {{ courses$[0] | json}} -->
 
+<!-- <mat-divider /> -->
+<div class="card__list__content">
+  @for (i of courses$; track courses$) {
+  <div class="card__list">
+    <div class="card__list-text">
+      <h3>{{i.name}}</h3>
+      <div class="card__list-text__content border-animated">
+        <!-- <div>
+          <span class="text-small">Nombre:</span>
+          <h3>{{i.name}}</h3>
+        </div> -->
+        <div>
+          <p>
+            {{i.short_description}}
+          </p>
+        </div>
+        <div class=" p-1 txt-small">
+          <i>
+            <span>start: {{i.start_date}} </span>
+            <span>end: {{i.end_date}} </span>
+          </i>
+        </div>
+      </div>
+      @if(i.image){
+      <div class="card__list-image border-animated">
+        <img [src]="i.image | imageUrl" [alt]="i.name">
+      </div>
+      }
+      <div class="card__list-button">
+        <mat-icon>home</mat-icon>
+      </div>
+    </div>
+  </div>
+  }
+</div>
+}@else {
+<p>Actualmente no hay cursos que mostrar</p>
+}
 <!-- <mat-divider /> -->
 <div class="grid bm-8 pt-2">
   <div class="col-12 sm:col-14 md:col-3 xl:col-3 ">
