@@ -160,6 +160,8 @@ npm install
     * Crear una Fake REST API con JSON-Server [link](https://sigdeletras.com/2020/crear-una-fake-reat-api-con-json-server-copy/)
   * Leifer Mendez:
     * [ngrx](https://www.youtube.com/playlist?list=PL_WGMLcL4jzVkzMox4UxGcsBLvFurCDax)
+  * Try to fix reducer/ngrx - NOT FIX :( :
+    * [Link post](https://timdeschryver.dev/blog/common-and-easy-to-make-mistakes-when-youre-new-to-ngrx#the-reducer)
 
 
 
