@@ -14,8 +14,13 @@
 
 ### BACKEND
 
-Data Base is at: "/data/bd.json"
+DATA Base JSON (students and Courses)
+```
+/app/core/data/xxxx.json
+```
 
+
+Data Base For JSON-SERVER is at: "/data/bd.json"
 ```
  Resources
   http://localhost:3000/posts

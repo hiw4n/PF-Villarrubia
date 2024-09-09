@@ -33,6 +33,20 @@ const routes: Routes = [
           import('./students/students.module').then((r) => r.StudentsModule),
       },
       {
+        path: 'students-jsonServer',
+        loadChildren: () =>
+          import('./student-json-server/student-json-server.module').then(
+            (r) => r.StudentJsonServerModule
+          ),
+      },
+      {
+        path: 'students-space',
+        loadChildren: () =>
+          import('./students-space/students-space.module').then(
+            (r) => r.StudentsSpaceModule
+          ),
+      },
+      {
         path: 'teachers',
         loadChildren: () =>
           import('./teachers/teachers.module').then((r) => r.TeachersModule),

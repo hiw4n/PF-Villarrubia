@@ -9,7 +9,7 @@ import { courseList } from '../data/course.json';
 export class CoursesService {
   private MY_DB = courseList;
   private timeLoading: number = 1000;
-  //return new Observable((o) => { setTimeout(() => { }, 1000)})
+
   get(): Observable<Course[]> {
     return new Observable((o) => {
       setTimeout(() => {

@@ -4,7 +4,7 @@ export interface Course {
   start_date?: string | Date;
   end_date?: string | Date;
   students?: string | number | string[] | number[];
-  enrollment_date?: string;
+  enrollment_date?: string | Date;
   schedule?: string;
   teacher_id?: string | number | string[] | number[];
   teacher_name?: string;

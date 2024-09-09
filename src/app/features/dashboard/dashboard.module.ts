@@ -13,9 +13,10 @@ import { NavModule } from '../../shared/component/nav/nav.module';
 import { EnrollmentsModule } from './enrollments/enrollments.module';
 import { TeachersComponent } from './teachers/teachers.component';
 import { TeachersModule } from './teachers/teachers.module';
+import { StudentJsonServerComponent } from './student-json-server/student-json-server.component';
 
 @NgModule({
-  declarations: [DashboardComponent, CoursesSpaceComponent, TeachersComponent],
+  declarations: [DashboardComponent, CoursesSpaceComponent, TeachersComponent, StudentJsonServerComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,

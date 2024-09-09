@@ -1,65 +1,90 @@
-@if(isLoading){
-<mat-spinner></mat-spinner>
-}@else{
-<button (click)="openDialog()" mat-flat-button>
-  <mat-icon>
-    add
-  </mat-icon>
-  Crear curso
-</button>
-<!-- <div *ngIf="nombreCurso" class="p-3">
-    <p>Nombre Curso Creado: {{nombreCurso}}</p>
-  </div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="title">Cursos</h1>
+      <div class="data__colapse" style="display: flex; flex-direction: row; gap: 12px;">
 
-<div class="table table-courses p-3">
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <div class="data-colapse">
+          <p class="d-inline-flex gap-1">
+            <a class="btn btn-inv" data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false"
+              aria-controls="collapse1">
+              <mat-icon>group_work</mat-icon> Ver DATA PROFESORES
+            </a>
+          </p>
+          <div class="collapse" id="collapse1">
+            <pre>
+        {{ dataSource | json}}
+      </pre>
+          </div>
+        </div>
 
-    <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
+      </div>
+    </div>
+    <div class="col-12">
+      <button (click)="openDialog()" class="btn btn-custom">
+        <mat-icon>
+          add
+        </mat-icon>
+        Crear curso
+      </button>
+    </div>
+    <div class="col-12">
 
-    <!-- id Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> Id </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container>
+      @if(isLoading){
+      <mat-spinner></mat-spinner>
+      }@else{
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Nombre </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
 
-    <!-- startDate Column -->
-    <ng-container matColumnDef="startDate">
-      <th mat-header-cell *matHeaderCellDef> Fecha Inicio </th>
-      <td mat-cell *matCellDef="let element"> {{element.startDate | date: 'dd/mm/yyyy' }} </td>
-    </ng-container>
+      <div class="table table-courses p-3">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!-- endDate Column -->
-    <ng-container matColumnDef="endDate">
-      <th mat-header-cell *matHeaderCellDef> Fecha Fin </th>
-      <td mat-cell *matCellDef="let element"> {{ element.endDate | date: 'dd/mm/yyyy' }} </td>
-    </ng-container>
+          <!-- id Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let e"> {{e.id}} </td>
+          </ng-container>
 
-    <!-- Action Column -->
-    <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let element">
-        <button (click)="deleteById(element.id)" mat-icon-button>
-          <mat-icon>deleted</mat-icon>
-        </button>
-        <button (click)="editById(element)" mat-icon-button>
-          <mat-icon>edit</mat-icon>
-        </button>
-        <button [routerLink]="element.id" mat-icon-button>
-          <mat-icon>visibility</mat-icon>
-        </button>
-      </td>
-    </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let e"> {{e.name}} </td>
+          </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          <!-- startDate Column -->
+          <ng-container matColumnDef="startDate">
+            <th mat-header-cell *matHeaderCellDef> Fecha Inicio </th>
+            <td mat-cell *matCellDef="let element"> {{element.start_date | date: 'dd/mm/yyyy' }} </td>
+          </ng-container>
 
-  </table>
+          <!-- endDate Column -->
+          <ng-container matColumnDef="endDate">
+            <th mat-header-cell *matHeaderCellDef> Fecha Fin </th>
+            <td mat-cell *matCellDef="let element"> {{ element.end_date | date: 'dd/mm/yyyy' }} </td>
+          </ng-container>
+
+          <!-- Action Column -->
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+              <button (click)="deleteById(element.id)" mat-icon-button>
+                <mat-icon>deleted</mat-icon>
+              </button>
+              <button (click)="editById(element)" mat-icon-button>
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button [routerLink]="element.id" mat-icon-button>
+                <mat-icon>visibility</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
+      </div>
+      }
+
+    </div>
+  </div>
 </div>
-}

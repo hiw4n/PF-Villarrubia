@@ -18,21 +18,20 @@ export class CoursesComponent implements OnInit {
     'endDate',
     'actions',
   ];
-  /* dataSource = ELEMENT_DATA;*/
   dataSource: Course[] = [];
   isLoading: boolean = false;
 
   constructor(
     private matDialog: MatDialog,
-    private CoursesService: CoursesService
+    private coursesService: CoursesService
   ) {}
 
   ngOnInit(): void {
-    this.loadCourses();
+    this.loadData();
   }
-  loadCourses() {
+  loadData() {
     this.isLoading = true;
-    this.CoursesService.get().subscribe({
+    this.coursesService.get().subscribe({
       next: (o) => {
         this.dataSource = o;
       },
@@ -53,7 +52,7 @@ export class CoursesComponent implements OnInit {
           v.startDate = new Date();
           v.endDate = new Date();
           this.isLoading = true;
-          this.CoursesService.add(v).subscribe({
+          this.coursesService.add(v).subscribe({
             next: (o) => {
               this.dataSource = [...o];
             },
@@ -68,7 +67,7 @@ export class CoursesComponent implements OnInit {
   deleteById(id: string) {
     if (confirm('Esta seguro?')) {
       this.isLoading = true;
-      this.CoursesService.deletedById(id).subscribe({
+      this.coursesService.deletedById(id).subscribe({
         next: (o) => {
           this.dataSource = [...o];
         },
@@ -86,7 +85,7 @@ export class CoursesComponent implements OnInit {
       .subscribe({
         next: (e) => {
           if (!!e) {
-            this.CoursesService.editById(data.id, e).subscribe({
+            this.coursesService.editById(data.id, e).subscribe({
               next: (o) => (this.dataSource = [...o]),
             });
           }

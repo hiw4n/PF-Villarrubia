@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Teacher } from '../../../core/interfaces/teacher.interface';
 import { TeachersService } from '../../../core/services/teachers.service';
 import { CoursesService } from '../../../core/services/courses.service';
-import { CoursesServiceSpace } from '../../../core/services/courses-space.service';
+import { CoursesSpaceService } from '../../../core/services/courses-space.service';
 import { CourseSpace } from '../../../core/interfaces/course-space.interface';
 
 @Component({
   selector: 'app-teachers',
   templateUrl: './teachers.component.html',
-  styleUrl: './teachers.component.scss',
+  // styleUrl: './teachers.component.scss',
 })
 export class TeachersComponent implements OnInit {
   public data$: Teacher[] = [];
@@ -17,7 +17,7 @@ export class TeachersComponent implements OnInit {
 
   constructor(
     private teacherService: TeachersService,
-    private courseService: CoursesServiceSpace
+    private courseService: CoursesSpaceService
   ) {}
 
   ngOnInit(): void {

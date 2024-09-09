@@ -5,7 +5,7 @@ import { environments } from '../../../environments/environments';
 import { CourseSpace } from '../interfaces/course-space.interface';
 
 @Injectable({ providedIn: 'root' })
-export class CoursesServiceSpace {
+export class CoursesSpaceService {
   private baseUrl = environments.baseUrl + '/courses-space';
 
   constructor(private http: HttpClient) {}

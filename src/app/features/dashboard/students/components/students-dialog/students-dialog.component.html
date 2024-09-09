@@ -1,51 +1,45 @@
-<h2 mat-dialog-title>
-  {{editingStudent ? 'Editar Alumno: '+editingStudent.first_name : 'Dar de alta a Alumno'}} <mat-icon>face</mat-icon>
-</h2>
-<mat-dialog-content>
-  <form [formGroup]="studentForm">
-    <mat-form-field class="example-full-width">
-      <mat-label>
-        Nombre: </mat-label>
-      <input formControlName="name" placeholder="Ex: Jhon" matInput />
-      <mat-error>El campo es obligatorio, por favor incluir el valor</mat-error>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 mat-dialog-title>
+        {{editingStudent ? 'Editar Alumno: '+editingStudent.first_name : 'Dar de alta a Alumno'}}
+        <mat-icon>face</mat-icon>
+      </h2>
+    </div>
+    <div class="col-12">
+      <mat-dialog-content>
+        <form [formGroup]="studentForm">
+          <mat-form-field class="example-full-width">
+            <mat-label>
+              Nombre: </mat-label>
+            <input formControlName="first_name" placeholder="Ingrese el nombre del alumno" matInput required="" />
+            <mat-error>El campo es obligatorio, por favor incluir el valor</mat-error>
+          </mat-form-field>
 
-      <!--  <mat-hint>Errors appear instantly!</mat-hint>
-      @if (studentForm.hasError('email') && !studentForm.hasError('required')) {
-      <mat-error>Por favor oncluye un nombre válido</mat-error>
-      }
-      @if (studentForm.hasError('required')) {
-      <mat-error>Email is <strong>required</strong></mat-error>
-      } -->
+          <mat-form-field class="example-full-width">
+            <mat-label>
+              Apellidos: </mat-label>
+            <input formControlName="last_Name" placeholder="Ingrese el Apellido del alumno" matInput />
+            <mat-icon matSuffix>mode_edit</mat-icon>
+            <mat-error>El campo es obligatorio, por favor incluir el valor</mat-error>
+          </mat-form-field>
 
+          <mat-form-field class="example-full-width">
+            <mat-label>Cursos:</mat-label>
+            <mat-select formControlName="courseId" multiple>
+              @for (i of dataCourses$; track $index) {
+              <mat-option [value]="i.name">{{i.name}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
 
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>
-        Apellidos : </mat-label>
-      <input formControlName="last_name" placeholder="Ex: Smith" matInput />
-      <mat-icon matSuffix>mode_edit</mat-icon>
-      <mat-error>El campo es obligatorio, por favor incluir el valor</mat-error>
-    </mat-form-field>
-    <!--   <mat-form-field class="example-full-width">
-      <mat-label>
-        Cursos <:
-      </mat-label>
-      <input formControlName="courses" placeholder="Seleccione el curso" matInput />
-      <mat-error>El campo es obligatorio, por favor incluir el valor</mat-error>
-    </mat-form-field> -->
-    <mat-form-field class="example-full-width">
-      <mat-label>Cursos</mat-label>
-      <mat-select formControlName="courses" multiple>
-        @for (course of coursesList; track course) {
-        <mat-option [value]="course.name">{{course.name}}</mat-option>
-        }
-      </mat-select>
-    </mat-form-field>
+        </form>
+      </mat-dialog-content>
 
-  </form>
-</mat-dialog-content>
-
-<mat-dialog-actions>
-  <button mat-dialog-close mat-button>Cancelar</button>
-  <button (click)="onSubmit()" mat-button>Guardar</button>
-</mat-dialog-actions>
+      <mat-dialog-actions>
+        <button mat-dialog-close mat-button>Cancelar</button>
+        <button (click)="onSubmit()" mat-button>Guardar</button>
+      </mat-dialog-actions>
+    </div>
+  </div>
+</div>

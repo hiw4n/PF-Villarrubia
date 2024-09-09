@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { delay, switchMap } from 'rxjs';
 import { CourseSpace } from '../../../../../core/interfaces/course-space.interface';
-import { CoursesServiceSpace } from '../../../../../core/services/courses-space.service';
+import { CoursesSpaceService } from '../../../../../core/services/courses-space.service';
 
 @Component({
   selector: 'app-detail',
@@ -12,7 +12,7 @@ import { CoursesServiceSpace } from '../../../../../core/services/courses-space.
 export class DetailComponent implements OnInit {
   public course?: CourseSpace;
   constructor(
-    private courseService: CoursesServiceSpace,
+    private courseService: CoursesSpaceService,
     private activateRoute: ActivatedRoute,
     private router: Router
   ) {}

@@ -37,6 +37,8 @@ import { CardComponent } from './component/card/card.component';
     CardComponent,
     /* ANGULAR MATERIAL */
     MaterialModule,
+    NavTopComponent,
+    NavLateralComponent,
     /* Pipe */
     NamesAuthPipe,
     StudenNameLastnamePipe,

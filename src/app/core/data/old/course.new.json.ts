@@ -1,6 +1,6 @@
-import { CourseNew } from '../interfaces/course.new.interface';
+import { Course } from '../interfaces/course.interface';
 
-export let courseListNew: CourseNew[] = [
+export let courseListNew: Course[] = [
   {
     id: 1,
     name: 'Python for Beginners',

@@ -18,10 +18,6 @@ export class TeachersService {
     private coursesService: CoursesService
   ) {}
 
-  // get(): Observable<Teacher[]> {
-  //   return this.http.get<Teacher[]>(`${this.baseUrl}`);
-  // }
-
   get(): Observable<Teacher[]> {
     return this.http.get<Teacher[]>(`${this.baseUrl}`);
   }

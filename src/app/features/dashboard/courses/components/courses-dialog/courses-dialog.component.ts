@@ -30,13 +30,7 @@ export class CoursesDialogComponent {
     if (this.courseForm.valid) {
       this.matDialogRef.close(this.courseForm.value);
     } else {
-      //warning
+      alert('por favor incluye los valores requeridos');
     }
-
-    /* if (
-      this.courseForm.value.name == null ||
-      this.courseForm.value.name == ''
-    ) {
-    }  */
   }
 }

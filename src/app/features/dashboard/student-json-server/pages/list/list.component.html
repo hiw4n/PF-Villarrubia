@@ -1,0 +1,118 @@
+<p>list works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <h1 class="title">Lista de Estudiantes</h1>
+      <div class="data__colapse" style="display: flex; flex-direction: row; gap: 12px;">
+        <div class="data-colapse">
+          <p class="d-inline-flex gap-1">
+            <a class="btn btn-inv" data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false"
+              aria-controls="collapse1">
+              <mat-icon>group_work</mat-icon> Ver DATA ALUMNOS
+            </a>
+          </p>
+          <div class="collapse" id="collapse1">
+            <pre>
+              {{data$ | json}}
+            </pre>
+          </div>
+        </div>
+        <div class="data-colapse">
+          <p class="d-inline-flex gap-1">
+            <a class="btn btn-inv" data-bs-toggle="collapse" href="#collapse2" role="button" aria-expanded="false"
+              aria-controls="collapse1">
+              <mat-icon>group_work</mat-icon> Ver DATA ALUMNOS CON CURSO
+            </a>
+          </p>
+          <div class="collapse" id="collapse2">
+            <pre>
+              {{dataWithCourse$ | json}}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+
+      <!-- <button (click)="openDialog()" class="btn">
+        <mat-icon>
+          person_add
+        </mat-icon>
+        Incluir estudiante
+      </button> -->
+    </div>
+    @if(isLoading){
+
+    <mat-spinner></mat-spinner>
+
+    }@else{
+
+    <div class="col-12">
+
+      <div class="table table-courses">
+        <table mat-table [dataSource]="dataWithCourse$" class="mat-elevation-z8">
+
+          <!-- id Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef appResaltado> Id </th>
+            <td mat-cell *matCellDef="let e"> {{e.id}} </td>
+          </ng-container>
+          <!-- image Column -->
+          <ng-container matColumnDef="image">
+            <th mat-header-cell *matHeaderCellDef appResaltado> image </th>
+            <td mat-cell *matCellDef="let e">
+              <div style="width: 50px; height: 50px; border-radius: 10000px; overflow: hidden;"><img
+                  style="width: 100%; height: auto;" [src]="e.image |imageUrl" alt="{{e.first_name}} {{e.last_name}}">
+              </div>
+            </td>
+          </ng-container>
+          <!-- first Name and last name Pipe Column -->
+          <ng-container matColumnDef="first_name">
+            <th mat-header-cell *matHeaderCellDef appResaltado> Nombre y Apellidos</th>
+            <td mat-cell *matCellDef="let e"> {{ e.first_name | studenNameLastname:e.last_name}}</td>
+          </ng-container>
+          <!-- birdrhday Column -->
+          <ng-container matColumnDef="birthdate">
+            <th mat-header-cell *matHeaderCellDef appResaltado> Fecha de nacimiento</th>
+            <td mat-cell *matCellDef="let e"> {{ e.birthdate}}</td>
+          </ng-container>
+          <!-- Courses Column -->
+          <ng-container matColumnDef="course">
+            <th mat-header-cell *matHeaderCellDef appResaltado> Cursos</th>
+            <td mat-cell *matCellDef="let e">
+              @for (i of e.courses; track $index) {
+              {{ i.name }},
+              } </td>
+          </ng-container>
+
+          <!-- Action Column -->
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let e">
+              <a [routerLink]="['../detail', e.id]">
+                <mat-icon>visibility</mat-icon>
+              </a>
+
+              <!--
+              <button (click)="deleteById(e.id)" mat-icon-button>
+                <mat-icon>person_remove</mat-icon>
+              </button>
+               -->
+              <!-- <button (click)="edit(e)" mat-icon-button>
+                <mat-icon>edit</mat-icon>
+              </button> -->
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
+      </div>
+
+    </div>
+
+    }
+  </div>
+</div>

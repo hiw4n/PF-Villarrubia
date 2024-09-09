@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
-import { CoursesServiceSpace } from '../../../../../core/services/courses-space.service';
+import { CoursesSpaceService } from '../../../../../core/services/courses-space.service';
 import { CourseSpace } from '../../../../../core/interfaces/course-space.interface';
 
 @Component({
@@ -14,7 +14,7 @@ export class SearchComponent {
   public courses: CourseSpace[] = [];
   public selectedCourse?: CourseSpace;
 
-  constructor(private coursesService: CoursesServiceSpace) {}
+  constructor(private coursesService: CoursesSpaceService) {}
   search() {
     const value: string = this.searchInput.value || '';
 

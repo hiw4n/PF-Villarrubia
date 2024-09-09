@@ -1,3 +1,5 @@
+import { CourseSpace } from './course-space.interface';
+
 export interface Student {
   id: string | number;
   first_name?: string;
@@ -9,6 +11,7 @@ export interface Student {
   address?: string;
   planet_of_birth?: string;
   courseId?: string[] | number[];
+  course?: CourseSpace[] | string[] | number[];
 
   enrollmentId?: string | number | string[] | number[];
   opinion?: string;
