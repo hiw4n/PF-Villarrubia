@@ -6,7 +6,7 @@ import { Student } from '../../core/interfaces/student.interface';
 import { StudentsService } from '../../core/services/students.service';
 import { Teacher } from '../../core/interfaces/teacher.interface';
 import { TeachersService } from '../../core/services/teachers.service';
-import { CoursesServiceSpace } from '../../core/services/courses-space.service';
+import { CoursesSpaceService } from '../../core/services/courses-space.service';
 import { CourseSpace } from '../../core/interfaces/course-space.interface';
 
 @Component({
@@ -23,7 +23,7 @@ export class IndexComponent implements OnInit {
   constructor(
     private sliderservice: SliderService,
     private studentsService: StudentsService,
-    private courseService: CoursesServiceSpace,
+    private courseService: CoursesSpaceService,
     private teacherService: TeachersService
   ) {}
 

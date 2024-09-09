@@ -1,21 +1,34 @@
+.mat-typography .btn,
 .btn{
-  &.btn-custom{
-    display: flex;
-    justify-content: center;
-    font-weight: 700;
-    color:$color-white;
-    text-transform: uppercase;
-    background-color: $color-violet;
-    padding: 6px !important;
-    gap: 6px;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color:$color-white;
+  text-transform: uppercase;
+  background-color: $color-violet;
+  padding: 6px !important;
+  gap: 6px;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  &:hover{
+    background-color: $color-white-opacity;
+    &,mat-icon{
+      color:$color-violet;
+    }
+  }
+  &.btn-inv{
+    background-color: $color-white-opacity;
+    &,mat-icon{
+      color:$color-violet;
+    }
     &:hover{
-      background-color: $color-white-opacity;
+      background-color: $color-violet;
       &,mat-icon{
-        color:$color-violet;
+        color:$color-white;
       }
     }
   }
+  // &.btn-custom{
+  // }
 }
