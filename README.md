@@ -12,6 +12,13 @@
 
 (---)
 
+### TEST: spec.ts
+```
+/src/app/app.component.spec.ts
+
+/src/app/features/auth/login/login.component.spec.ts
+```
+
 ### BACKEND
 
 DATA Base JSON (students and Courses)

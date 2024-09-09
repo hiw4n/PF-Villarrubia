@@ -8,6 +8,7 @@ import { Teacher } from '../../core/interfaces/teacher.interface';
 import { TeachersService } from '../../core/services/teachers.service';
 import { CoursesSpaceService } from '../../core/services/courses-space.service';
 import { CourseSpace } from '../../core/interfaces/course-space.interface';
+import { StudentJsService } from '../../core/services/studentsJS.service';
 
 @Component({
   selector: 'app-index',
@@ -22,7 +23,7 @@ export class IndexComponent implements OnInit {
 
   constructor(
     private sliderservice: SliderService,
-    private studentsService: StudentsService,
+    private studentsService: StudentJsService,
     private courseService: CoursesSpaceService,
     private teacherService: TeachersService
   ) {}
