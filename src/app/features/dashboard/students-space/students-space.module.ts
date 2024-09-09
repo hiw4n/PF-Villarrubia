@@ -15,7 +15,7 @@ import { SharedModule } from '../../../shared/shared.module';
     SharedModule,
     StudentsSpaceRoutingModule,
     EffectsModule.forRoot([StudentEffects]),
-    // EffectsModule.forFeature([StudentEffects]),
+    EffectsModule.forFeature([StudentEffects]),
     StoreModule.forFeature(studentFeature),
   ],
 })
