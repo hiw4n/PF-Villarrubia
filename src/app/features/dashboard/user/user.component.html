@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="title">Perfil de Usuario</h3>
+      <h1 class="title">{{dataUser$.first_name}} {{ dataUser$.last_name}}</h1>
+
+      <div class="data__colapse" style="display: flex; flex-direction: row; gap: 12px;">
+
+        <div class="data-colapse">
+          <p class="d-inline-flex gap-1">
+            <a class="btn btn-inv" data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false"
+              aria-controls="collapse1">
+              <mat-icon>group_work</mat-icon> Ver DATA USER COMPLETO
+            </a>
+          </p>
+          <div class="collapse" id="collapse1">
+            <pre>
+        {{ dataSource$ | json}}
+      </pre>
+          </div>
+        </div>
+        <div class="data-colapse">
+          <p class="d-inline-flex gap-1">
+            <a class="btn btn-inv" data-bs-toggle="collapse" href="#collapse2" role="button" aria-expanded="false"
+              aria-controls="collapse2">
+              <mat-icon>group_work</mat-icon> Ver DATA USER ACTUAL
+            </a>
+          </p>
+          <div class="collapse" id="collapse2">
+            <pre>
+        {{ dataUser$ | json}}
+      </pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="border-animated">
+        <img style="width: 100%; height: auto;" [src]="dataUser$.image | imageUrl">
+      </div>
+    </div>
+    <div class="col-8">
+      <table class="table" style="margin: 0;">
+        <tbody>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="row">{{dataUser$.id}}</th>
+          </tr>
+          <tr>
+            <th scope="col">Nombre</th>
+            <td>{{dataUser$.first_name}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Apellido</th>
+            <td>{{dataUser$.last_name}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Inscripciones</th>
+            <td>{{dataUser$.enrollements}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Email</th>
+            <td>{{dataUser$.email}}</td>
+          </tr>
+          <tr>
+            <th scope="col">Rol</th>
+            <td>{{dataUser$.role}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+</div>

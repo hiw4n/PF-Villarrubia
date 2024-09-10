@@ -1,67 +1,11 @@
 {
-  "posts": [
-    {
-      "id": "1",
-      "title": "a title",
-      "views": 100,
-      "commentId": "1"
-    },
-    {
-      "id": "2",
-      "title": "another title",
-      "views": 200
-    }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "slider": [
     {
       "text": "Formate como explorador",
       "image": "slider1.jpg"
     }
   ],
-  "products": [
-    {
-      "id": "f459",
-      "name": "test",
-      "price": 5000
-    }
-  ],
-  "students_NGRX": [],
   "enrollments": [],
-  "usersOld": [
-    {
-      "id": "43j9",
-      "firstName": "Josue",
-      "lastName": "Baez",
-      "email": "jbaez@mail.com",
-      "password": "123456",
-      "token": "jfsdk43dsakdjasb4Dsdsa$@#fS",
-      "role": "ADMIN"
-    },
-    {
-      "id": "53j9",
-      "firstName": "Naruto",
-      "lastName": "Uzumaki",
-      "email": "test@mail.com",
-      "password": "123456",
-      "token": "jfsdk43bghkr3db4Dsdsa$d@#S",
-      "role": "EMPLOYEE"
-    }
-  ],
   "users": [
     {
       "id": "1",
@@ -69,9 +13,10 @@
       "email": "admin",
       "password": "admin",
       "role": "ADMIN",
-      "firstName": "Nombre1",
-      "lastName": "Apellido1",
-      "token": "2"
+      "first_name": "Nombre1",
+      "last_name": "Apellido1",
+      "token": "2",
+      "enrollemens": []
     },
     {
       "id": "2",
@@ -79,19 +24,23 @@
       "email": "test@test.com",
       "password": "12345",
       "role": "ADMIN",
-      "firstName": "Nombre1",
-      "lastName": "Apellido1",
-      "token": "1"
+      "first_name": "Nombre1",
+      "last_name": "Apellido1",
+      "token": "1",
+      "enrollements": []
     },
     {
       "id": "3",
       "user": "admin@admin.com",
       "email": "admin@admin.com",
       "password": "admin",
+      "image": "student2.jpg",
       "role": "ADMIN",
-      "firstName": "Nombre1",
-      "lastName": "Apellido1",
-      "token": "2"
+      "first_name": "John",
+      "last_name": "Smith",
+      "token": "1234Token",
+      "enrollements": ["Navegación en la Galaxia"],
+      "enrollementId": [1]
     }
   ],
   "courses": [

@@ -1,15 +1,18 @@
 export type UserRole = 'ADMIN' | 'EMPLOYEE';
 
 export interface User {
-  id: string | number;
+  id?: string | number;
 
   user: string;
-  email: string;
-  password: string;
+  image?: string;
+  email: string | null | undefined;
+  first_name?: string;
+  last_name?: string;
+  password?: string;
 
-  role: UserRole;
-  firstName: string;
-  lastName: string;
+  role?: UserRole;
 
-  token: string;
+  token?: string;
+  enrollements?: string | string[] | number | number[];
+  enrollementId?: string | string[] | number | number[];
 }

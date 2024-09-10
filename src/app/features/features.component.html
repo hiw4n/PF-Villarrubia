@@ -52,6 +52,9 @@
       <mat-nav-list class="border-animated">
         <ul>
           <li>
+            <a (click)=" sidenav.toggle()" routerLink="dashboard/user"><mat-icon>account_circle</mat-icon>Ver perfil</a>
+          </li>
+          <li>
             <a (click)=" sidenav.toggle()" routerLink="/auth/login"><mat-icon>account_circle</mat-icon> Login</a>
           </li>
           <li>

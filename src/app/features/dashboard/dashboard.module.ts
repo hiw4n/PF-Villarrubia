@@ -14,9 +14,16 @@ import { EnrollmentsModule } from './enrollments/enrollments.module';
 import { TeachersComponent } from './teachers/teachers.component';
 import { TeachersModule } from './teachers/teachers.module';
 import { StudentJsonServerComponent } from './student-json-server/student-json-server.component';
+import { UserModule } from './user/user.module';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
-  declarations: [DashboardComponent, CoursesSpaceComponent, TeachersComponent, StudentJsonServerComponent],
+  declarations: [
+    DashboardComponent,
+    CoursesSpaceComponent,
+    TeachersComponent,
+    StudentJsonServerComponent,
+  ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
